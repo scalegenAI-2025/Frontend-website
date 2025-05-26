@@ -11,7 +11,10 @@ const useStyles = createUseStyles({
     backgroundColor: "#000000",
     color: "#fff",
     height: "130px",
-    position: "relative",
+    width: "100%",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
   },
 
   logo: {
@@ -20,7 +23,7 @@ const useStyles = createUseStyles({
     "@media (max-width: 900px)": {
       margin: "0 auto",
       position: "absolute",
-      width: "150px",
+      width: "130px",
       left: "50%",
       transform: "translateX(-50%)",
     },
@@ -74,6 +77,11 @@ const useStyles = createUseStyles({
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
+      color: "purple",
+    },
+    "&:select": {
+      textDecoration: "underline",
+      color: "purple",
     },
   },
 
@@ -92,6 +100,10 @@ const useStyles = createUseStyles({
     "@media (max-width: 900px)": {
       display: "flex",
     },
+  },
+  highlight: {
+    ///paddingLeft: "100px",
+    //paddingTop: "30px",
   },
 });
 
@@ -129,8 +141,11 @@ const Navbar = () => {
         <Link to="/ecosystem" className={classes.navLink}>
           Ecosystem
         </Link>
-
-        <Link to="/meet-us" className={classes.navLink}>
+        <span>|</span>
+        <Link
+          to="/meet-us"
+          className={`${classes.navLink} ${classes.highlight}`}
+        >
           Meet Us
         </Link>
       </div>
