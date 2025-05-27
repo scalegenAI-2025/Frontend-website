@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
   container: {
     position: "relative",
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "2000px",
     margin: "20px auto",
     overflow: "hidden",
     borderRadius: "8px",

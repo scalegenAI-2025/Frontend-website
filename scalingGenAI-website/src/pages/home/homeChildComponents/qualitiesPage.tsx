@@ -1,8 +1,17 @@
 import { createUseStyles } from "react-jss";
+import Data from "../../../assets/data.jpg";
+import Technology from "../../../assets/technology.jpg";
+import People from "../../../assets//people.png";
+import Customer from "../../../assets/customer.png";
 
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#e8e0d4",
+    maxWidth: "2000px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    //alignItems: "center",
   },
   header: {
     display: "flex",
@@ -13,6 +22,7 @@ const useStyles = createUseStyles({
     fontSize: "35px",
     fontWeight: "normal",
     padding: "25px 25px",
+
     color: "#333",
     margin: 0,
   },
@@ -30,7 +40,7 @@ const useStyles = createUseStyles({
   divider: {
     height: 1,
     backgroundColor: "#333",
-    marginBottom: 60,
+    marginBottom: 30,
   },
   // grid: {
   //   display: "grid",
@@ -80,6 +90,7 @@ const useStyles = createUseStyles({
     padding: "30px 20px",
     borderBottom: "1px solid #333",
     borderRight: "1px solid #333",
+    paddingTop: "5px",
     height: "80%",
     display: "flex",
     paddingBottom: "0px",
@@ -97,7 +108,8 @@ const useStyles = createUseStyles({
     fontSize: 36,
     fontWeight: "normal",
     color: "#333",
-    marginBottom: 20,
+    marginBottom: 10,
+    marginTop: 10,
     lineHeight: 1.2,
   },
   cardSeparator: {
@@ -122,32 +134,32 @@ const QualitiesPage = () => {
       title: "Customer",
       description:
         "The success of a business hinges on three key factors: delivering value to customers, generating profits, and managing customer relationships effectively. GenAI can enhance these factors by creating differentiated content to boost value and profits while fostering trust through responsible AI adoption. Understanding customer perspectives on GenAI is crucial, making customer the first readiness area of readiness rocket",
-      image: "data:image/svg+xml;base64,...", // Replace with real image
+      image: Customer,
     },
     {
       title: "Technology",
       description:
         "GenAI systems demand a strong technological foundation to support complex computations, scalable resources, and smooth integration with existing IT systems. Efficient management of technical debt is crucial to maximize the value and performance of these solutions. This makes technology the second readiness area of readiness rocket",
-      image: "data:image/svg+xml;base64,...",
+      image: Technology,
     },
     {
       title: "Data",
       description:
         "For GenAI models to perform accurately, they rely on high-quality, diverse data that is clean, well-structured, and readily available across systems. Proper data governance with clear policies and security measures ensures its integrity while enabling users to extract valuable insights. This makes data the third readiness area of readiness rocket.",
-      image: "data:image/svg+xml;base64,...",
+      image: Data,
     },
     {
       title: "People",
       description:
         "Competent people are needed to develop, implement, and maintain genAI systems effectively. For its successful implementation, it is important that leaders should nurture a culture of continuous learning and collaboration among employees. This makes people the fourth readiness area of the readiness rocket.",
-      image: "data:image/svg+xml;base64,...",
+      image: People,
     },
   ];
 
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <h1 className={classes.title}>Our Qualities</h1>
+        <h1 className={classes.title}>Readiness Areas</h1>
       </div>
 
       <div className={classes.divider}></div>

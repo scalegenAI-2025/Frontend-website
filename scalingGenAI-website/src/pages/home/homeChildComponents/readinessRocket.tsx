@@ -14,8 +14,11 @@ const useStyles = createUseStyles({
   },
   mainContainer: {
     display: "flex",
+
     gap: "40px",
-    alignItems: "flex-start",
+    maxWidth: "2000px",
+    justifyContent: "center",
+    alignItems: "center",
   },
   leftSection: {
     flex: 1,
@@ -212,8 +215,6 @@ const ReadinessRocketPage = () => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.header}>7. Text and Pics will be provided</div>
-
       <div className={classes.mainContainer}>
         <div className={classes.leftSection}>
           <h1 className={classes.title}>Readiness Rocket Framework</h1>
