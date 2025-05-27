@@ -8,6 +8,7 @@ import { MdOutlineMenu } from "react-icons/md";
 const useStyles = createUseStyles({
   navbar: {
     display: "flex",
+    alignItems: "center",
     backgroundColor: "#000000",
     color: "#fff",
     height: "130px",
@@ -15,6 +16,9 @@ const useStyles = createUseStyles({
     position: "sticky",
     top: 0,
     zIndex: 1000,
+    padding: "0 1rem",
+    // borderTop: "0.5px solid white",
+    // borderBottom: "0.5px solid white",
   },
 
   logo: {
@@ -63,8 +67,9 @@ const useStyles = createUseStyles({
     gap: "1rem",
     justifyContent: "center",
     alignItems: "center",
+    paddingLeft: "200px",
+    paddingTop: "25px",
     backgroundColor: "#000000",
-    marginLeft: "100px",
 
     "@media (max-width: 900px)": {
       display: "none",
@@ -79,9 +84,15 @@ const useStyles = createUseStyles({
       textDecoration: "underline",
       color: "purple",
     },
-    "&:select": {
-      textDecoration: "underline",
-      color: "purple",
+  },
+
+  meetUsLinkWrapper: {
+    marginLeft: "auto",
+    //marginRight: "2rem",
+    paddingTop: "25px",
+
+    "@media (max-width: 900px)": {
+      display: "none",
     },
   },
 
@@ -101,10 +112,6 @@ const useStyles = createUseStyles({
       display: "flex",
     },
   },
-  highlight: {
-    ///paddingLeft: "100px",
-    //paddingTop: "30px",
-  },
 });
 
 const Navbar = () => {
@@ -122,33 +129,34 @@ const Navbar = () => {
       {/* Logo */}
       <img src={logo} alt="Logo" className={classes.logo} />
 
-      {/* Lock Icon */}
-
       {/* Desktop Nav */}
-      <div className={classes.mainLinks}>
-        <Link to="/assets" className={classes.navLink}>
-          Assets
-        </Link>
-        <span>|</span>
-        <Link to="/assessments" className={classes.navLink}>
-          Assessments
-        </Link>
-        <span>|</span>
-        <Link to="/courses" className={classes.navLink}>
-          Courses
-        </Link>
-        <span>|</span>
-        <Link to="/ecosystem" className={classes.navLink}>
-          Ecosystem
-        </Link>
-        <span>|</span>
-        <Link
-          to="/meet-us"
-          className={`${classes.navLink} ${classes.highlight}`}
-        >
-          Meet Us
-        </Link>
+      <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
+        <div className={classes.mainLinks}>
+          <Link to="/assets" className={classes.navLink}>
+            Assets
+          </Link>
+          <span>|</span>
+          <Link to="/assessments" className={classes.navLink}>
+            Assessments
+          </Link>
+          <span>|</span>
+          <Link to="/courses" className={classes.navLink}>
+            Courses
+          </Link>
+          <span>|</span>
+          <Link to="/ecosystem" className={classes.navLink}>
+            Ecosystem
+          </Link>
+        </div>
+
+        <div className={classes.meetUsLinkWrapper}>
+          <Link to="/meet-us" className={classes.navLink}>
+            Meet Us
+          </Link>
+        </div>
       </div>
+
+      {/* Lock Icon */}
       <IoIosLock className={classes.lockIcon} />
 
       {/* Mobile Dropdown */}

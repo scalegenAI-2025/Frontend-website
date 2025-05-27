@@ -1,64 +1,3 @@
-// import { createUseStyles } from "react-jss";
-import { BsArrows } from "react-icons/bs";
-
-// const useStyles = createUseStyles({
-//   container: {
-//     backgroundColor: "#000",
-//     color: "#fff",
-//     padding: "2rem",
-//     //height: "80vh",
-//     height: "600px",
-//     display: "flex",
-//     flexDirection: "column",
-//     alignItems: "center",
-//     justifyContent: "flex-start",
-//     textAlign: "center",
-//   },
-//   heading1: {
-//     margin: "0",
-//     fontSize: "70px",
-//     fontWeight: 500,
-//     paddingTop: "150px",
-//   },
-//   row: {
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   heading3: {
-//     fontSize: "20px",
-//     fontWeight: 400,
-//   },
-//   arrow: {
-//     fontSize: "2rem",
-//     width: "100px",
-//   },
-// });
-
-// const Mitigate = () => {
-//   const classes = useStyles();
-
-//   return (
-//     <div className={classes.container}>
-//       <h1 className={classes.heading1}>Mitigate Huge Gap</h1>
-
-//       <div className={classes.row}>
-//         <h3 className={classes.heading3}>
-//           Scaling <br></br>Enterprises <br></br> (10%)
-//         </h3>
-//         <BsArrows className={classes.arrow} size={40}>
-//           AL
-//         </BsArrows>
-//         <h3 className={classes.heading3}>
-//           Lagging <br></br>Enterprises<br></br> (90%)
-//         </h3>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Mitigate;
-
 import { useState, useRef, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 
@@ -91,19 +30,6 @@ const useStyles = createUseStyles({
     cursor: "default",
     overflow: "hidden", // Prevent content overflow
   },
-  row: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  heading3: {
-    fontSize: "20px",
-    fontWeight: 400,
-  },
-  arrow: {
-    fontSize: "2rem",
-    width: "100px",
-  },
   spacer: {
     height: "400px", // Fixed height instead of viewport units
     backgroundColor: "#111111",
@@ -121,7 +47,6 @@ const useStyles = createUseStyles({
     color: "#ffffff",
     fontFamily: 'Georgia, "Times New Roman", serif',
     textAlign: "center",
-    justifyContent: "center",
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "2rem",
@@ -132,7 +57,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const Mitigate = () => {
+const BlinkingTextComponent = () => {
   const classes = useStyles();
   const [shouldBlink, setShouldBlink] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
@@ -169,22 +94,12 @@ const Mitigate = () => {
           ref={textRef}
           className={`${classes.text} ${shouldBlink ? classes.blinking : ""}`}
         >
-          Mitigate Huge Gap
-          <div className={classes.row}>
-            <h3 className={classes.heading3}>
-              Scaling <br></br>Enterprises <br></br> (10%)
-            </h3>
-            <BsArrows className={classes.arrow} size={40}>
-              AL
-            </BsArrows>
-            <h3 className={classes.heading3}>
-              Lagging <br></br>Enterprises<br></br> (90%)
-            </h3>
-          </div>
+          Real value of Generative AI <br></br>lies in its{" "}
+          <i>Scaled Adoption</i>
         </div>
       </div>
     </>
   );
 };
 
-export default Mitigate;
+export default BlinkingTextComponent;

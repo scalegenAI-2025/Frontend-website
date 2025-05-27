@@ -84,6 +84,7 @@ import Navbar from "../../components/navbar/navbar";
 import ReadinessRocket from "./homeChildComponents/readinessRocket";
 import QualitiesPage from "./homeChildComponents/qualitiesPage";
 import PhotoScroller from "./homeChildComponents/scrollingPhoto";
+import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -112,6 +113,7 @@ function Home() {
       <ReadinessRocket />
       <QualitiesPage />
       <PhotoScroller />
+      <BlinkingTextComponent />
     </>
   );
 }

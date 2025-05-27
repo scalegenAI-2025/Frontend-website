@@ -147,7 +147,7 @@ const useStyles = createUseStyles({
     alignContent: "center",
     alignItems: "center",
     backgroundColor: "gray",
-    padding: "14px 20px",
+    padding: "14px 2px",
     gap: "5px",
   },
   boostersSection: {
@@ -155,7 +155,7 @@ const useStyles = createUseStyles({
     padding: "10px 0",
     paddingTop: "0px",
     marginTop: "5px",
-    width: "200px",
+    width: "180px",
     border: "1px solid #aaa",
     marginBottom: "4px",
     display: "flex",
@@ -197,12 +197,12 @@ const useStyles = createUseStyles({
   },
   launchpad: {
     backgroundColor: "#333333",
-    padding: "16px 20px",
+    padding: "6px 2px",
     fontSize: "14px",
     fontWeight: "bold",
     color: "white",
     textAlign: "center",
-    width: "200px",
+    width: "250px",
     "&:hover": {
       backgroundColor: "#444",
       transform: "scale(1.05)",
