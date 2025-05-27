@@ -6,7 +6,8 @@ const useStyles = createUseStyles({
     backgroundColor: "#000",
     color: "#fff",
     padding: "2rem",
-    marginTop: "50px",
+    //height: "80vh",
+    height: "600px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -15,8 +16,9 @@ const useStyles = createUseStyles({
   },
   heading1: {
     margin: "0",
-    fontSize: "50px",
+    fontSize: "70px",
     fontWeight: 500,
+    paddingTop: "150px",
   },
   row: {
     display: "flex",
