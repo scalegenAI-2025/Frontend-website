@@ -10,6 +10,9 @@ const useStyles = createUseStyles({
     display: "flex",
     alignItems: "center",
     // backgroundColor: "#000000",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // semi-transparent black
+    backdropFilter: "blur(1px)",
+    WebkitBackdropFilter: "blur(1px)",
     color: "#fff",
     height: "130px",
     width: "100%",

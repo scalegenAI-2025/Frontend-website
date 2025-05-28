@@ -73,6 +73,7 @@
 // import "./App.css";
 // import Navbar from "../../components/navbar";
 // import Home from "./pages/home/home";
+
 import useGlobalStyles from "../../styles/useGlobalStyles";
 
 import { createUseStyles } from "react-jss";
@@ -87,27 +88,30 @@ import PhotoScroller from "./homeChildComponents/scrollingPhoto";
 import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
 import YouNeedToScaleCards from "./homeChildComponents/youNeedToScaleCards";
 import ContactUsPage from "./homeChildComponents/contactUs";
+import PolyOpportunityHero from "./homeChildComponents/colorfullBackground";
+import Footer from "../../components/footer/footer";
 
 // JSS styles
 const useStyles = createUseStyles({
   backgroundWrapper: {
     position: "relative",
     height: "100vh",
-    overflow: "hidden",
+    //overflow: "hidden",
   },
   backgroundOverlay: {
     backgroundImage: `url(${Rocket})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center", // This centers the middle part of the image
+    backgroundPosition: "left 36%", // shifted downward
     position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    opacity: 0.9,
+    opacity: 1,
     zIndex: 0,
   },
+
   contentWrapper: {
     position: "relative",
     zIndex: 1,
@@ -134,7 +138,9 @@ function Home() {
       <PhotoScroller />
       <BlinkingTextComponent />
       <YouNeedToScaleCards />
+      <PolyOpportunityHero />
       <ContactUsPage />
+      <Footer />
     </>
   );
 }

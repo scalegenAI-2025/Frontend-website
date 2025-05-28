@@ -26,13 +26,13 @@ const useStyles = createUseStyles({
   },
   homeHeader1: {
     margin: "0",
-    fontSize: "50px",
+    fontSize: "clamp(2rem, 6vw, 6rem)",
     fontWeight: 500,
     opacity: 1,
   },
   homeHeader2: {
     margin: "0",
-    fontSize: "50px",
+    fontSize: "clamp(2rem, 6vw, 6rem)",
     fontWeight: 500,
     opacity: 1,
   },
