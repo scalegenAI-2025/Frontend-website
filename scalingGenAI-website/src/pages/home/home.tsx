@@ -79,22 +79,38 @@ import { createUseStyles } from "react-jss";
 // import ReadinessRocket from "./pages/home/homeChildComponents/readinessRocket";
 import FirstPage from "./homeChildComponents/firstPage";
 import Mitigate from "./homeChildComponents/mitigate";
-import Rocket from "../../assets/rocket.png";
+import Rocket from "../../assets/rocketBackground.png";
 import Navbar from "../../components/navbar/navbar";
 import ReadinessRocket from "./homeChildComponents/readinessRocket";
 import QualitiesPage from "./homeChildComponents/qualitiesPage";
 import PhotoScroller from "./homeChildComponents/scrollingPhoto";
 import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
+import YouNeedToScaleCards from "./homeChildComponents/youNeedToScaleCards";
+import ContactUsPage from "./homeChildComponents/contactUs";
 
 // JSS styles
 const useStyles = createUseStyles({
   backgroundWrapper: {
+    position: "relative",
+    height: "100vh",
+    overflow: "hidden",
+  },
+  backgroundOverlay: {
     backgroundImage: `url(${Rocket})`,
     backgroundSize: "cover",
-
-    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    minHeight: "100vh",
+    backgroundPosition: "center", // This centers the middle part of the image
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    opacity: 0.9,
+    zIndex: 0,
+  },
+  contentWrapper: {
+    position: "relative",
+    zIndex: 1,
   },
 });
 
@@ -105,15 +121,20 @@ function Home() {
   return (
     <>
       <div className={classes.backgroundWrapper}>
-        <Navbar />
-        <FirstPage />
+        <div className={classes.backgroundOverlay}></div>
+        <div className={classes.contentWrapper}>
+          <Navbar />
+          <FirstPage />
+        </div>
       </div>
-      <Mitigate />
 
+      <Mitigate />
       <ReadinessRocket />
       <QualitiesPage />
       <PhotoScroller />
       <BlinkingTextComponent />
+      <YouNeedToScaleCards />
+      <ContactUsPage />
     </>
   );
 }

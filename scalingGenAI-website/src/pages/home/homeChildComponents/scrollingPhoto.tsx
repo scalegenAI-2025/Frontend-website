@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     position: "relative",
     width: "100%",
     maxWidth: "2000px",
-    margin: "20px auto",
+    margin: "0px auto",
     overflow: "hidden",
     borderRadius: "8px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",

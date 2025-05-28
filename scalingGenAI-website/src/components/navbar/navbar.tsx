@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUseStyles } from "react-jss";
-import logo from "../../assets/logoAI.png";
+import Image from "../../assets/image.png";
 import { IoIosLock } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
 
@@ -9,16 +9,15 @@ const useStyles = createUseStyles({
   navbar: {
     display: "flex",
     alignItems: "center",
-    backgroundColor: "#000000",
+    // backgroundColor: "#000000",
     color: "#fff",
     height: "130px",
     width: "100%",
     position: "sticky",
     top: 0,
     zIndex: 1000,
-    padding: "0 1rem",
-    // borderTop: "0.5px solid white",
-    // borderBottom: "0.5px solid white",
+    //padding: "0 1rem",
+    paddingRight: "1rem",
   },
 
   logo: {
@@ -69,7 +68,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
     paddingLeft: "200px",
     paddingTop: "25px",
-    backgroundColor: "#000000",
+    //backgroundColor: "#000000",
 
     "@media (max-width: 900px)": {
       display: "none",
@@ -127,7 +126,7 @@ const Navbar = () => {
       />
 
       {/* Logo */}
-      <img src={logo} alt="Logo" className={classes.logo} />
+      <img src={Image} alt="Logo" className={classes.logo} />
 
       {/* Desktop Nav */}
       <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
