@@ -1,11 +1,16 @@
 @font-face {
-  font-family: 'SuisseBPIntl';
+  font-family: 'Suisse Works, Arial, sans-serif';
   src: url('/fonts/SuisseBPIntl.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  font-family: SuisseBPIntl, Arial, sans-serif;
+  font-family: Suisse Works, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

@@ -1,17 +1,23 @@
+// App.js
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home/home";
-import useGlobalStyles from "./styles/useGlobalStyles";
+import Assets from "./pages/assets/assets";
 
-// JSS styles
+import useGlobalStyles from "./styles/useGlobalStyles";
 
 function App() {
   useGlobalStyles();
-  //const classes = useStyles();
 
   return (
     <>
-      <Home />
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/assets" element={<Assets />} />
+        {/* Add more routes here */}
+      </Routes>
     </>
   );
 }

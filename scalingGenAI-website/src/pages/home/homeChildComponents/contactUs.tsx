@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   container: {
-    backgroundColor: "#FF4500",
+    backgroundColor: "#e8e0d4",
 
     padding: 40,
 

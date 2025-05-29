@@ -88,8 +88,9 @@ import PhotoScroller from "./homeChildComponents/scrollingPhoto";
 import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
 import YouNeedToScaleCards from "./homeChildComponents/youNeedToScaleCards";
 import ContactUsPage from "./homeChildComponents/contactUs";
-import PolyOpportunityHero from "./homeChildComponents/colorfullBackground";
+import PolyOpportunityHero from "./homeChildComponents/videoPage";
 import Footer from "../../components/footer/footer";
+import EcosystemText from "./homeChildComponents/EcosystemText";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -139,6 +140,7 @@ function Home() {
       <BlinkingTextComponent />
       <YouNeedToScaleCards />
       <PolyOpportunityHero />
+      <EcosystemText />
       <ContactUsPage />
       <Footer />
     </>

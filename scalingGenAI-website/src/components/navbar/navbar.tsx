@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
     top: 0,
     zIndex: 1000,
     //padding: "0 1rem",
-    paddingRight: "1rem",
+    //paddingRight: "1rem",
   },
 
   logo: {
@@ -80,7 +80,7 @@ const useStyles = createUseStyles({
 
   navLink: {
     color: "#fff",
-    backgroundColor: "#000000",
+    //backgroundColor: "#000000",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
@@ -153,7 +153,7 @@ const Navbar = () => {
 
         <div className={classes.meetUsLinkWrapper}>
           <Link to="/meet-us" className={classes.navLink}>
-            Meet Us
+            Meet Us &nbsp;&nbsp;&nbsp;
           </Link>
         </div>
       </div>
