@@ -2,26 +2,26 @@ import { createUseStyles } from "react-jss";
 import CourseImage1 from "../../../assets/CourseImage1.png";
 import CourseImage2 from "../../../assets/CourseImage2.png";
 import CourseImage3 from "../../../assets/CourseImage3.png";
-// import CourseImage4 from "../../../assets/background4.jpg";
-// import CourseImage5 from "../../../assets/background5.jpg";
 
 const useStyles = createUseStyles({
   gridContainer: {
     display: "grid",
     gridTemplateColumns: "1fr",
     backgroundColor: "#e5d8cf",
-    //gap: "1rem",
     padding: "40px",
-    alignItems: "stretch", // Ensure all items stretch to same height
+    //gap: "1rem",
+    alignItems: "stretch", // stretch children to equal height
 
     "@media (min-width: 768px)": {
       gridTemplateColumns: "repeat(3, 1fr)",
     },
   },
   card: {
-    marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
     backgroundColor: "#e5d8cf",
     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+    marginBottom: "20px",
   },
   imageWrapper: {
     height: "12rem",
@@ -33,8 +33,12 @@ const useStyles = createUseStyles({
     objectFit: "cover",
   },
   content: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     padding: "10px",
-    border: "1px solid black ",
+    border: "1px solid black",
   },
   title: {
     fontSize: "35px",
@@ -51,9 +55,10 @@ const useStyles = createUseStyles({
     padding: "0.5rem 1rem",
     border: "none",
     cursor: "pointer",
+    alignSelf: "flex-start",
   },
   description: {
-    margin: "4px",
+    margin: "4px 0",
   },
 });
 
@@ -118,11 +123,13 @@ export default function CourseCards() {
             />
           </div>
           <div className={classes.content}>
-            <h3 className={classes.title}>{course.title}</h3>
-            <p className={classes.description}>{course.audience}</p>
-            <p className={classes.description}>{course.hours}</p>
-            <p className={classes.description}>{course.mode}</p>
-            <p className={classes.description}>{course.delivery}</p>
+            <div>
+              <h3 className={classes.title}>{course.title}</h3>
+              <p className={classes.description}>{course.audience}</p>
+              <p className={classes.description}>{course.hours}</p>
+              <p className={classes.description}>{course.mode}</p>
+              <p className={classes.description}>{course.delivery}</p>
+            </div>
             <button className={classes.button}>Explore</button>
           </div>
         </div>
