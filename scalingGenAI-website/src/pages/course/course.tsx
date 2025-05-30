@@ -1,38 +1,35 @@
 import useGlobalStyles from "../../styles/useGlobalStyles";
-import AssetBckground from "../../assets/assetsBackground.jpg";
+
 import { createUseStyles } from "react-jss";
+
+import CourseAI from "../../assets/AlCourse.png";
 import Navbar from "../../components/navbar/navbar";
-import AssetsTop from "./assetsChildComponents/assetsTop";
-import AssetsSecond from "./assetsChildComponents/assetsSecond";
-import GenAILaunchpad from "./assetsChildComponents/assetsThird";
+import CourseCards from "./courseChildComponents/courseCards";
+import CourseTopPage from "./courseChildComponents/courseTop";
+import QuestionOnAI from "./courseChildComponents/questionOnAI";
+import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
 
 // JSS styles
 const useStyles = createUseStyles({
-  "@global": {
-    "html, body": {
-      margin: 0,
-      padding: 0,
-    },
-  },
   backgroundWrapper: {
     position: "relative",
     height: "100vh",
-    margin: 0,
     //overflow: "hidden",
   },
   backgroundOverlay: {
-    backgroundImage: `url(${AssetBckground})`,
+    backgroundImage: `url(${CourseAI})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "left 36%", // shifted downward
+    backgroundPosition: "left 36%",
     position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    opacity: 1,
-    zIndex: 0,
+    zIndex: -1,
+    filter: "blur(2px)", // Apply blur here
+    //transform: "scale(1.05)", // Slight scale to avoid edge bleed
   },
 
   contentWrapper: {
@@ -41,7 +38,7 @@ const useStyles = createUseStyles({
   },
 });
 
-function Assets() {
+function Course() {
   useGlobalStyles();
   const classes = useStyles();
 
@@ -51,14 +48,16 @@ function Assets() {
         <div className={classes.backgroundOverlay}></div>
         <div className={classes.contentWrapper}>
           <Navbar />
-          <AssetsTop />
+          <CourseTopPage />
+          {/* <CourseCards /> */}
         </div>
       </div>
-      <AssetsSecond />
-      <GenAILaunchpad />
+      <QuestionOnAI />
+      <CourseCards />
+      <ContactUs />
       <Footer />
     </>
   );
 }
 
-export default Assets;
+export default Course;
