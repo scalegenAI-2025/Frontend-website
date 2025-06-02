@@ -80,12 +80,16 @@ const useStyles = createUseStyles({
 
   navLink: {
     color: "#fff",
-    //backgroundColor: "#000000",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
       color: "purple",
     },
+  },
+
+  activeNavLink: {
+    textDecoration: "underline",
+    color: "purple",
   },
 
   meetUsLinkWrapper: {
@@ -129,24 +133,45 @@ const Navbar = () => {
       />
 
       {/* Logo */}
-      <img src={Image} alt="Logo" className={classes.logo} />
-
+      <Link to="/" className={classes.navLink}>
+        <img src={Image} alt="Logo" className={classes.logo} />
+      </Link>
       {/* Desktop Nav */}
       <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
         <div className={classes.mainLinks}>
-          <Link to="/assets" className={classes.navLink}>
+          <Link
+            to="/assets"
+            className={`${classes.navLink} ${
+              location.pathname === "/assets" ? classes.activeNavLink : ""
+            }`}
+          >
             Assets
           </Link>
           <span>|</span>
-          <Link to="/assessments" className={classes.navLink}>
+          <Link
+            to="/assessments"
+            className={`${classes.navLink} ${
+              location.pathname === "/assessments" ? classes.activeNavLink : ""
+            }`}
+          >
             Assessments
           </Link>
           <span>|</span>
-          <Link to="/courses" className={classes.navLink}>
+          <Link
+            to="/courses"
+            className={`${classes.navLink} ${
+              location.pathname === "/courses" ? classes.activeNavLink : ""
+            }`}
+          >
             Courses
           </Link>
           <span>|</span>
-          <Link to="/ecosystem" className={classes.navLink}>
+          <Link
+            to="/ecosystem"
+            className={`${classes.navLink} ${
+              location.pathname === "/ecosystem" ? classes.activeNavLink : ""
+            }`}
+          >
             Ecosystem
           </Link>
         </div>
@@ -166,35 +191,45 @@ const Navbar = () => {
         <div className={classes.mobileMenu}>
           <Link
             to="/assets"
-            className={classes.navLink}
+            className={`${classes.navLink} ${
+              location.pathname === "/assets" ? classes.activeNavLink : ""
+            }`}
             onClick={() => setIsMobileOpen(false)}
           >
             Assets
           </Link>
           <Link
             to="/assessments"
-            className={classes.navLink}
+            className={`${classes.navLink} ${
+              location.pathname === "/assessments" ? classes.activeNavLink : ""
+            }`}
             onClick={() => setIsMobileOpen(false)}
           >
             Assessments
           </Link>
           <Link
             to="/courses"
-            className={classes.navLink}
+            className={`${classes.navLink} ${
+              location.pathname === "/courses" ? classes.activeNavLink : ""
+            }`}
             onClick={() => setIsMobileOpen(false)}
           >
             Courses
           </Link>
           <Link
             to="/ecosystem"
-            className={classes.navLink}
+            className={`${classes.navLink} ${
+              location.pathname === "/ecosystem" ? classes.activeNavLink : ""
+            }`}
             onClick={() => setIsMobileOpen(false)}
           >
             Ecosystem
           </Link>
           <Link
             to="/meet-us"
-            className={classes.navLink}
+            className={`${classes.navLink} ${
+              location.pathname === "/meet-us" ? classes.activeNavLink : ""
+            }`}
             onClick={() => setIsMobileOpen(false)}
           >
             Meet Us
