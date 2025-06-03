@@ -30,7 +30,6 @@ const useStyles = createUseStyles({
   rightSection: {
     flex: 0,
     minWidth: "300px",
-    //paddingTop: "20px",
   },
   title: {
     fontSize: "24px",
