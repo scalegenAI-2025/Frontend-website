@@ -4,7 +4,8 @@
   font-weight: normal;
   font-style: normal;
 }
-html, body {
+/* index.css or global JSS */
+body, html {
   margin: 0;
   padding: 0;
 }

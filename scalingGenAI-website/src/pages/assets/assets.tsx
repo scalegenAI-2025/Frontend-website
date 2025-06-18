@@ -1,5 +1,5 @@
 import useGlobalStyles from "../../styles/useGlobalStyles";
-import AssetBckground from "../../assets/assetsBackground.jpg";
+import AssetBckground from "../../assets/assets_pic.jpg";
 import { createUseStyles } from "react-jss";
 import Navbar from "../../components/navbar/navbar";
 import AssetsTop from "./assetsChildComponents/assetsTop";

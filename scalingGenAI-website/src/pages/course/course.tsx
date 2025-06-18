@@ -2,7 +2,7 @@ import useGlobalStyles from "../../styles/useGlobalStyles";
 
 import { createUseStyles } from "react-jss";
 
-import CourseAI from "../../assets/assetsBackground.jpg";
+import CourseAI from "../../assets/Courses.jpg";
 import Navbar from "../../components/navbar/navbar";
 import CourseCards from "./courseChildComponents/courseCards";
 import CourseTopPage from "./courseChildComponents/courseTop";

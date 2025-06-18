@@ -74,14 +74,14 @@
 // import Navbar from "../../components/navbar";
 // import Home from "./pages/home/home";
 
-import useGlobalStyles from "../../styles/useGlobalStyles";
-
+// src/pages/home/home.tsx
 import { createUseStyles } from "react-jss";
-// import ReadinessRocket from "./pages/home/homeChildComponents/readinessRocket";
+import useGlobalStyles from "../../styles/useGlobalStyles";
+import Rocket from "../../assets/rocket.png"; // Your updated rocket image
+
+import Navbar from "../../components/navbar/navbar";
 import FirstPage from "./homeChildComponents/firstPage";
 import Mitigate from "./homeChildComponents/mitigate";
-import Rocket from "../../assets/rocketBackground.png";
-import Navbar from "../../components/navbar/navbar";
 import ReadinessRocket from "./homeChildComponents/readinessRocket";
 import QualitiesPage from "./homeChildComponents/qualitiesPage";
 import PhotoScroller from "./homeChildComponents/scrollingPhoto";
@@ -91,31 +91,35 @@ import ContactUsPage from "./homeChildComponents/contactUs";
 import PolyOpportunityHero from "./homeChildComponents/videoPage";
 import Footer from "../../components/footer/footer";
 import EcosystemText from "./homeChildComponents/EcosystemText";
+import AssessmentPromo from "./homeChildComponents/assessmentPromo";
 
-// JSS styles
 const useStyles = createUseStyles({
-  backgroundWrapper: {
+  heroSection: {
     position: "relative",
-    height: "100vh",
-    //overflow: "hidden",
+    minHeight: "100vh",
+    overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   backgroundOverlay: {
     backgroundImage: `url(${Rocket})`,
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "left 36%", // shifted downward
+    backgroundPosition: "center center",
+    backgroundColor: "#000000",
     position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    opacity: 1,
     zIndex: 0,
   },
-
   contentWrapper: {
     position: "relative",
     zIndex: 1,
+    width: "100%",
   },
 });
 
@@ -125,14 +129,14 @@ function Home() {
 
   return (
     <>
-      <div className={classes.backgroundWrapper}>
+      <div className={classes.heroSection}>
         <div className={classes.backgroundOverlay}></div>
         <div className={classes.contentWrapper}>
           <Navbar />
           <FirstPage />
         </div>
       </div>
-
+      <AssessmentPromo />
       <Mitigate />
       <ReadinessRocket />
       <QualitiesPage />

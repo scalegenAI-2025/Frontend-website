@@ -4,7 +4,8 @@ const useStyles = createUseStyles({
   container: {
     textAlign: "center",
     justifyContent: "center",
-    marginTop: "150px",
+    // marginTop: "150px",
+    paddingTop: "250px",
   },
   homeHeader: {
     backgroundColor: "none",

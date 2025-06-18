@@ -21,12 +21,12 @@ const useStyles = createUseStyles({
     },
   },
   container: {
-    height: "600px", // Fixed height instead of viewport units
+    height: "700px", // Fixed height instead of viewport units
     backgroundColor: "#000000",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "10px 2rem",
+    padding: "10px 1rem",
     cursor: "default",
     overflow: "hidden", // Prevent content overflow
   },
@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "2rem",
-    paddingTop: "8rem",
+    //  paddingTop: "8rem",
     opacity: 1,
   },
   blinking: {
@@ -95,7 +95,8 @@ const AssetsSecond = () => {
           ref={textRef}
           className={`${classes.text} ${shouldBlink ? classes.blinking : ""}`}
         >
-          Assess your AI/GenAI maturity
+          Assess your capabilities, identify the gaps, and speed up your AI
+          Journey
         </div>
       </div>
     </>

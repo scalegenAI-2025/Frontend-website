@@ -1,44 +1,65 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import Image from "../../assets/image.png";
 import { IoIosLock } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../../context/userContext";
 
 const useStyles = createUseStyles({
   navbar: {
     display: "flex",
     alignItems: "center",
-    // backgroundColor: "#000000",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // semi-transparent black
-    backdropFilter: "blur(1px)",
-    WebkitBackdropFilter: "blur(1px)",
+    justifyContent: "space-between",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     color: "#fff",
-    height: "130px",
+    height: "100px",
     width: "100%",
-    position: "sticky",
+    position: "fixed", // <<< fixed navbar
     top: 0,
+    left: 0,
     zIndex: 1000,
-    //padding: "0 1rem",
-    //paddingRight: "1rem",
+    padding: "0 1rem",
+    transition: "background-color 0.3s ease, color 0.3s ease",
+  },
+
+  scrolled: {
+    backgroundColor: "#fff !important",
+    color: "#000 !important",
+
+    "& $navLink": {
+      color: "#000",
+      "&:hover": {
+        color: "purple",
+      },
+    },
+
+    "& $authButton": {
+      color: "#000",
+      borderColor: "#000",
+      "&:hover": {
+        backgroundColor: "#000",
+        color: "#fff",
+      },
+    },
+
+    "& $lockIcon": {
+      color: "#000",
+    },
   },
 
   logo: {
     width: "200px",
     height: "auto",
     "@media (max-width: 900px)": {
-      margin: "0 auto",
-      position: "absolute",
       width: "130px",
+      position: "absolute",
       left: "50%",
       transform: "translateX(-50%)",
     },
     "@media (max-width: 550px)": {
-      margin: "0 auto",
-      position: "absolute",
       width: "100px",
-      left: "50%",
-      transform: "translateX(-50%)",
     },
   },
 
@@ -58,20 +79,14 @@ const useStyles = createUseStyles({
     position: "absolute",
     right: "1rem",
     top: "1rem",
-    "@media (max-width: 900px)": {
-      position: "absolute",
-      right: "1rem",
-    },
   },
 
   mainLinks: {
     display: "flex",
     gap: "1rem",
-    justifyContent: "center",
     alignItems: "center",
-    paddingLeft: "200px",
     paddingTop: "25px",
-    //backgroundColor: "#000000",
+    paddingLeft: "200px",
 
     "@media (max-width: 900px)": {
       display: "none",
@@ -93,9 +108,8 @@ const useStyles = createUseStyles({
   },
 
   meetUsLinkWrapper: {
-    marginLeft: "auto",
-    //marginRight: "2rem",
-    paddingTop: "25px",
+    marginLeft: "20px",
+    paddingTop: "35px",
 
     "@media (max-width: 900px)": {
       display: "none",
@@ -103,7 +117,6 @@ const useStyles = createUseStyles({
   },
 
   mobileMenu: {
-    display: "none",
     flexDirection: "column",
     gap: "1rem",
     position: "absolute",
@@ -112,119 +125,169 @@ const useStyles = createUseStyles({
     right: 0,
     backgroundColor: "#111",
     padding: "1rem",
-    zIndex: 1000,
+    zIndex: 999,
+    display: "flex",
+  },
 
+  authButtons: {
+    display: "flex",
+    gap: "1rem",
+    paddingTop: "25px",
+    marginLeft: "auto",
     "@media (max-width: 900px)": {
-      display: "flex",
+      display: "none",
     },
+  },
+
+  authButton: {
+    backgroundColor: "transparent",
+    color: "#fff",
+    border: "1px solid #fff",
+    padding: "0.5rem 1rem",
+    borderRadius: "5px",
+    cursor: "pointer",
+    fontSize: "1rem",
+    transition: "all 0.3s ease",
+    "&:hover": {
+      backgroundColor: "#fff",
+      color: "#000",
+    },
+  },
+  span: {
+    // margin: "0 0.5rem",
+    color: "inherit",
+    paddingLeft: "20px",
   },
 });
 
 const Navbar = () => {
   const classes = useStyles();
+  const location = useLocation();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { user, logout } = useUser();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className={classes.navbar}>
-      {/* Hamburger Menu */}
+    <nav className={`${classes.navbar} ${isScrolled ? classes.scrolled : ""}`}>
       <MdOutlineMenu
         className={classes.menuIcon}
         onClick={() => setIsMobileOpen(!isMobileOpen)}
       />
 
-      {/* Logo */}
       <Link to="/" className={classes.navLink}>
         <img src={Image} alt="Logo" className={classes.logo} />
       </Link>
-      {/* Desktop Nav */}
+
       <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
         <div className={classes.mainLinks}>
-          <Link
-            to="/assets"
-            className={`${classes.navLink} ${
-              location.pathname === "/assets" ? classes.activeNavLink : ""
-            }`}
+          {["assets", "assessments", "courses", "ecosystem"].map(
+            (path, index, arr) => (
+              <span key={path}>
+                <Link
+                  to={`/${path}`}
+                  className={`${classes.navLink} ${
+                    location.pathname === `/${path}`
+                      ? classes.activeNavLink
+                      : ""
+                  }`}
+                >
+                  {path.charAt(0).toUpperCase() + path.slice(1)}
+                </Link>
+                {index < arr.length - 1 && (
+                  <span className={classes.span}>|</span>
+                )}
+              </span>
+            )
+          )}
+        </div>
+
+        <div className={classes.authButtons}>
+          {/* <button
+            className={classes.authButton}
+            onClick={() => navigate("/login")}
           >
-            Assets
-          </Link>
-          <span>|</span>
-          <Link
-            to="/assessments"
-            className={`${classes.navLink} ${
-              location.pathname === "/assessments" ? classes.activeNavLink : ""
-            }`}
+            Login
+          </button>
+          <button
+            className={classes.authButton}
+            onClick={() => navigate("/register")}
           >
-            Assessments
-          </Link>
-          <span>|</span>
-          <Link
-            to="/courses"
-            className={`${classes.navLink} ${
-              location.pathname === "/courses" ? classes.activeNavLink : ""
-            }`}
-          >
-            Courses
-          </Link>
-          <span>|</span>
-          <Link
-            to="/ecosystem"
-            className={`${classes.navLink} ${
-              location.pathname === "/ecosystem" ? classes.activeNavLink : ""
-            }`}
-          >
-            Ecosystem
-          </Link>
+            Register
+          </button> */}
+          {!user ? (
+            <>
+              <button
+                onClick={() => navigate("/login")}
+                className={classes.authButton}
+              >
+                Login
+              </button>
+              <button
+                onClick={() => navigate("/register")}
+                className={classes.authButton}
+              >
+                Register
+              </button>
+            </>
+          ) : (
+            <button onClick={logout} className={classes.authButton}>
+              Logout
+            </button>
+          )}
         </div>
 
         <div className={classes.meetUsLinkWrapper}>
-          <Link to="/meet-us" className={classes.navLink}>
-            Meet Us &nbsp;&nbsp;&nbsp;
+          <Link
+            to="/meet-us"
+            className={`${classes.navLink} ${
+              location.pathname === "/meet-us" ? classes.activeNavLink : ""
+            }`}
+          >
+            Meet Us
           </Link>
         </div>
       </div>
 
-      {/* Lock Icon */}
       <IoIosLock className={classes.lockIcon} />
 
-      {/* Mobile Dropdown */}
       {isMobileOpen && (
         <div className={classes.mobileMenu}>
-          <Link
-            to="/assets"
-            className={`${classes.navLink} ${
-              location.pathname === "/assets" ? classes.activeNavLink : ""
-            }`}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            Assets
-          </Link>
-          <Link
-            to="/assessments"
-            className={`${classes.navLink} ${
-              location.pathname === "/assessments" ? classes.activeNavLink : ""
-            }`}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            Assessments
-          </Link>
-          <Link
-            to="/courses"
-            className={`${classes.navLink} ${
-              location.pathname === "/courses" ? classes.activeNavLink : ""
-            }`}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            Courses
-          </Link>
-          <Link
-            to="/ecosystem"
-            className={`${classes.navLink} ${
-              location.pathname === "/ecosystem" ? classes.activeNavLink : ""
-            }`}
-            onClick={() => setIsMobileOpen(false)}
-          >
-            Ecosystem
-          </Link>
+          {["assets", "assessments", "courses", "ecosystem"].map((path) => (
+            <Link
+              key={path}
+              to={`/${path}`}
+              className={`${classes.navLink} ${
+                location.pathname === `/${path}` ? classes.activeNavLink : ""
+              }`}
+              onClick={() => setIsMobileOpen(false)}
+            >
+              {path.charAt(0).toUpperCase() + path.slice(1)}
+            </Link>
+          ))}
+          <div className={classes.authButtons}>
+            <button
+              className={classes.authButton}
+              onClick={() => console.log("Login clicked")}
+            >
+              Login
+            </button>
+            <button
+              className={classes.authButton}
+              onClick={() => console.log("Register clicked")}
+            >
+              Register
+            </button>
+          </div>
           <Link
             to="/meet-us"
             className={`${classes.navLink} ${

@@ -13,8 +13,11 @@ const useStyles = createUseStyles({
   container: {
     textAlign: "center",
     justifyContent: "center",
-    marginTop: "150px",
+    // marginTop: "150px", // keep or increase this to push text below navbar
+    paddingTop: "150px", // extra space so content doesn't overlap navbar
+    color: "#fff", // ensure text is white
   },
+
   homeHeader: {
     backgroundColor: "none",
     color: "#ffffff",

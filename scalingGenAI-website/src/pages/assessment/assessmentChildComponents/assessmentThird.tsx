@@ -27,10 +27,12 @@ const useStyles = createUseStyles({
   buttonGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(4, 1fr)",
-    gap: 16,
+    gap: 20,
+    paddingTop: "100px",
     marginBottom: 32,
   },
   button: {
+    // height: "50px",
     backgroundColor: "#002c3e",
     color: "white",
     padding: "8px 16px",
@@ -146,9 +148,23 @@ export default function AssessmentThirdComponent() {
         {/* Left Side: Buttons and Download Section */}
         <div className={classes.leftColumn}>
           <div className={classes.buttonGrid}>
-            <button className={classes.button}>GenAI Maturity</button>
-            <button className={classes.button}>Mindset assesment</button>
-            <button className={classes.button}>AI Maturity assessment</button>
+            <button className={classes.button}>Generative AI Maturity</button>
+            <button className={classes.button}>AI Maturity</button>
+            <button className={classes.button}>AI/GenAI Mindset</button>
+            <button className={classes.button}>AI Reskilling Journey</button>
+            <button className={classes.button}>VITA</button>
+            <button className={classes.button}>AI Value chain</button>
+            <button className={classes.button}>Vendor selection</button>
+            <button className={classes.button}>AI/GenAI Capabilities</button>
+            <button className={classes.button}>Infrastructure readiness</button>
+            <button className={classes.button}>Green AI</button>
+            <button className={classes.button}>Customer Readiness</button>
+            <button className={classes.button}>Technology Readiness</button>
+            <button className={classes.button}>Data Readiness</button>
+            <button className={classes.button}>People Readiness</button>
+            <button className={classes.button}>
+              Comprehensive Operational Readiness
+            </button>
           </div>
 
           <div className={classes.downloadSection}>

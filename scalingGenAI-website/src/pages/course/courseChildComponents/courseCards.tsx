@@ -99,13 +99,6 @@ const courses = [
     mode: "Instructor-led",
     delivery: "Online or In-person",
   },
-  {
-    title: "Generative AI Technical Masterclass",
-    audience: "For Technical professionals",
-    hours: "30 hours",
-    mode: "Instructor-led",
-    delivery: "Online or in-person",
-  },
 ];
 
 export default function CourseCards() {

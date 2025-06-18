@@ -75,19 +75,19 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles({
   container: {
     display: "flex",
-    //alignItems: "center",
     justifyContent: "space-between",
     background: "linear-gradient(135deg, #000 60%, #1a1a1a 100%)",
     color: "#fff",
-    paddingLeft: "5rem",
+    paddingLeft: "2rem",
     maxWidth: "2000px",
     flexWrap: "wrap",
     minHeight: "700px",
+    paddingRight: "2rem",
     boxSizing: "border-box",
   },
 
   textSection: {
-    flex: "1 1 40%", // Increased text section width
+    flex: "1 1 35%", // Adjusted to give more space to video
     minWidth: "280px",
   },
   heading: {
@@ -112,16 +112,14 @@ const useStyles = createUseStyles({
     marginRight: "0.5rem",
   },
   videoWrapper: {
-    flex: "1 1 60%", // Reduced video wrapper width
+    flex: "1 1 65%", // Increased width for video
     height: "600px",
     position: "relative",
-    minWidth: "300px",
     overflow: "hidden",
     backgroundColor: "#000",
 
-    // Oval mask - unchanged except using new pqr.svg
-    maskImage: 'url("/pqr.svg")',
-    WebkitMaskImage: 'url("/pqr.svg")',
+    maskImage: 'url("/aaa.svg")',
+    WebkitMaskImage: 'url("/aaa.svg")',
     maskRepeat: "no-repeat",
     WebkitMaskRepeat: "no-repeat",
     maskSize: "100% 100%",
@@ -140,8 +138,10 @@ const useStyles = createUseStyles({
   },
 
   video: {
-    width: "100%",
     height: "100%",
+    width: "100%",
+    objectFit: "cover",
+    transform: "scale(1.2)", // ⬅️ enlarge video
   },
 });
 

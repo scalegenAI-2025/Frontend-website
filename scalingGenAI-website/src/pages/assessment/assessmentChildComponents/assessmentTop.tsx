@@ -4,7 +4,8 @@ const useStyles = createUseStyles({
   container: {
     textAlign: "center",
     justifyContent: "center",
-    marginTop: "150px",
+    //marginTop: "150px",
+    paddingTop: "250px",
   },
   homeHeader: {
     backgroundColor: "none",
@@ -52,7 +53,7 @@ const AssessmentTop = () => {
     <div className={classes.container}>
       <div className={classes.homeHeader}>
         <h1 className={classes.homeHeader1}>
-          The first step to Scaling Generative AI
+          The first step to <br></br>Scaling Generative AI
         </h1>
       </div>
       <h3 className={classes.homeHeader3}>

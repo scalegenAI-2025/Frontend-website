@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
-import Assessments from "../../../assets/assessment.png";
-import Assets from "../../../assets/assests.png";
+import Assessments from "../../../assets/assessment.jpg";
+import Assets from "../../../assets/assets_pic.jpg";
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
@@ -115,9 +115,8 @@ const YouNeedToScaleCards = () => {
           <div className={classes.cardContent}>
             <h2 className={classes.cardTitle}>Assets</h2>
             <p className={classes.cardDescription}>
-              Our festival this year includes four in-person gatherings across
-              four continents, a 12-week digital learning journey, and a series
-              of online public forums.
+              Accelerate AI Adoption with curated, enterprise-grade, and
+              downloadable assets
             </p>
             <button className={classes.darkButton}>Explore</button>
           </div>
@@ -131,9 +130,8 @@ const YouNeedToScaleCards = () => {
           <div className={classes.cardContent}>
             <h2 className={classes.cardTitle}>Assessments</h2>
             <p className={classes.cardDescription}>
-              Become a more active member of our community, support our mission,
-              and benefit from exclusive programming and special rates for
-              events.
+              Assess your capabilities, identify the gaps, and speed up your AI
+              Journey
             </p>
             <button className={classes.darkButton}>Explore</button>
           </div>

@@ -1,8 +1,9 @@
 import { createUseStyles } from "react-jss";
+import Rocket from "../../../assets/rocketFrame.png";
 
 const useStyles = createUseStyles({
   container: {
-    backgroundColor: "#f5f5f5",
+    //backgroundColor: "#f5f5f5",
     //minHeight: "100vh",
     padding: "40px",
     fontFamily: "Arial, sans-serif",
@@ -215,6 +216,17 @@ const useStyles = createUseStyles({
       transform: "scale(1.05)",
     },
   },
+  rocketWrapper: {
+    position: "relative",
+    width: 400, // increased size from 256 to 400
+  },
+  rocketImage: {
+    width: "100%",
+    height: "auto",
+  },
+  rightColumn: {
+    flexShrink: 0,
+  },
 });
 
 const ReadinessRocketPage = () => {
@@ -280,7 +292,7 @@ const ReadinessRocketPage = () => {
         </div>
 
         <div className={classes.rightSection}>
-          <div className={classes.rocketContainer}>
+          {/* <div className={classes.rocketContainer}>
             <div className={classes.rocketTopTriangle}>
               <div className={classes.maturityText}>
                 <br />
@@ -313,9 +325,14 @@ const ReadinessRocketPage = () => {
             </div>
 
             <div className={classes.launchpad}>Launchpad</div>
+          </div> */}
+          <div className={classes.rightColumn}>
+            <div className={classes.rocketWrapper}>
+              <img src={Rocket} className={classes.rocketImage} alt="Rocket" />
+            </div>
           </div>
         </div>
-        <span>©</span>
+        {/* <span>©</span> */}
       </div>
     </div>
   );
