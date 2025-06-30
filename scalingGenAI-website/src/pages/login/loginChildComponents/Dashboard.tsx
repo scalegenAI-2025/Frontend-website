@@ -1,10 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-// TODO: Implement Dashboard page
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+interface User {
+  email: string;
+  // Add other fields if needed
+}
 const Dashboard: React.FC = () => {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const token = localStorage.getItem("token");

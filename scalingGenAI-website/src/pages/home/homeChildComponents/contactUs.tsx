@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { toast } from "react-toastify";
@@ -163,7 +162,9 @@ const ContactUs = () => {
     moreDetails: "",
   });
 
-  const handleInputChange = (e: { target: { name: any; value: any } }) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -200,8 +201,12 @@ const ContactUs = () => {
         role: "",
         moreDetails: "",
       });
-    } catch (err: any) {
-      toast.error("Error: " + err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        toast.error("Error: " + err.message);
+      } else {
+        toast.error("An unknown error occurred");
+      }
     }
   };
 

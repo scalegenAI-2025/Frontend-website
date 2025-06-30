@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
+import { useNavigate } from "react-router-dom";
+import api from "../../api/axios";
 
 const useStyles = createUseStyles({
   container: {
@@ -67,12 +68,81 @@ const useStyles = createUseStyles({
   },
 });
 
-const AdminLogin = () => {
+// const AdminLogin = () => {
+//   const classes = useStyles();
+
+//   const [form, setForm] = useState({ email: "", password: "" });
+//   const [error, setError] = useState("");
+//   const [token, setToken] = useState("");
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setError("");
+
+//     try {
+//       const res = await fetch("http://localhost:9000/api/auth/admin-login", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({
+//           email: form.email,
+//           password: form.password,
+//         }),
+//       });
+
+//       const data = await res.json();
+//       if (!res.ok) throw new Error(data.error);
+
+//       setToken(data.token);
+//       localStorage.setItem("adminToken", data.token);
+//       alert("Login successful!");
+//     } catch (err: any) {
+//       setError(err.message);
+//     }
+//   };
+
+//   return (
+//     <form className={classes.container} onSubmit={handleSubmit}>
+//       <div className={classes.logo} aria-label="Logo">
+//         A
+//       </div>
+//       <h2 className={classes.heading}>Admin Login</h2>
+//       {error && <p className={classes.error}>{error}</p>}
+//       <input
+//         name="email"
+//         type="email"
+//         value={form.email}
+//         onChange={handleChange}
+//         placeholder="Email"
+//         required
+//         className={classes.input}
+//       />
+//       <input
+//         name="password"
+//         type="password"
+//         value={form.password}
+//         onChange={handleChange}
+//         placeholder="Password"
+//         required
+//         className={classes.input}
+//       />
+//       <button type="submit" className={classes.button}>
+//         Login
+//       </button>
+//     </form>
+//   );
+// };
+
+const AdminLogin: React.FC = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
-  const [token, setToken] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -81,26 +151,18 @@ const AdminLogin = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:9000/api/auth/admin-login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: form.email,
-          password: form.password,
-        }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-
-      setToken(data.token);
-      localStorage.setItem("adminToken", data.token);
+      const res = await api.post("/admin-login", form);
+      localStorage.setItem("adminToken", res.data.token);
       alert("Login successful!");
+      navigate("/"); // Redirect admin after login
     } catch (err: any) {
-      setError(err.message);
+      setError(err.response?.data?.error || "An unexpected error occurred");
     }
+
+    setLoading(false);
   };
 
   return (
@@ -109,7 +171,9 @@ const AdminLogin = () => {
         A
       </div>
       <h2 className={classes.heading}>Admin Login</h2>
+
       {error && <p className={classes.error}>{error}</p>}
+
       <input
         name="email"
         type="email"
@@ -128,8 +192,8 @@ const AdminLogin = () => {
         required
         className={classes.input}
       />
-      <button type="submit" className={classes.button}>
-        Login
+      <button type="submit" className={classes.button} disabled={loading}>
+        {loading ? "Logging in..." : "Login"}
       </button>
     </form>
   );

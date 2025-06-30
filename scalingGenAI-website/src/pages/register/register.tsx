@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import api from "../../api/axios";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { GoogleLogin } from "@react-oauth/google";
-
+import { AxiosError } from "axios";
 const useStyles = createUseStyles({
   wrapper: {
     minHeight: "100vh",
@@ -119,6 +118,23 @@ const Register: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setMessage("");
+  //   setError("");
+
+  //   try {
+  //     const res = await api.post("/register", form);
+  //     setMessage(res.data.message);
+  //   } catch (err: any) {
+  //     const msg =
+  //       err.response?.data?.error ||
+  //       err.response?.data?.errors?.[0] ||
+  //       "Registration failed";
+  //     setError(msg);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage("");
@@ -127,15 +143,19 @@ const Register: React.FC = () => {
     try {
       const res = await api.post("/register", form);
       setMessage(res.data.message);
-    } catch (err: any) {
-      const msg =
-        err.response?.data?.error ||
-        err.response?.data?.errors?.[0] ||
-        "Registration failed";
+    } catch (err: unknown) {
+      let msg = "Registration failed";
+
+      if (err instanceof AxiosError) {
+        msg =
+          err.response?.data?.error ||
+          err.response?.data?.errors?.[0] ||
+          "Registration failed";
+      }
+
       setError(msg);
     }
   };
-
   return (
     <div className={classes.wrapper}>
       <div className={classes.card}>
