@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Navbar from "../../../components/navbar/navbar";
+//import Navbar from "../../../components/navbar/navbar";
 
 const useStyles = createUseStyles({
   container: {
@@ -175,8 +175,6 @@ const PartnerForm = () => {
 
   return (
     <>
-      <Navbar />
-
       <form onSubmit={handleSubmit} className={classes.container} noValidate>
         <div className={classes.header}>Become a Member</div>
         <div className={classes.subHeader}>
