@@ -5,6 +5,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
     justifyContent: "center",
     //marginTop: "150px",
+    fontFamily: 'Georgia, "Times New Roman", serif',
     paddingTop: "250px",
   },
   homeHeader: {

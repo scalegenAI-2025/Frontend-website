@@ -75,7 +75,7 @@ const useStyles = createUseStyles({
     body: {
       margin: 0,
       padding: 0,
-      //fontFamily: 'Georgia, "Times New Roman", serif',
+      fontFamily: 'Georgia, "Times New Roman", serif',
     },
     "*": {
       boxSizing: "border-box",

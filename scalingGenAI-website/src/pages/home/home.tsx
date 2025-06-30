@@ -92,6 +92,8 @@ import PolyOpportunityHero from "./homeChildComponents/videoPage";
 import Footer from "../../components/footer/footer";
 import EcosystemText from "./homeChildComponents/EcosystemText";
 import AssessmentPromo from "./homeChildComponents/assessmentPromo";
+import ScalingSteps from "./homeChildComponents/ScalingSteps";
+import MemberButton from "./homeChildComponents/memberButton";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -136,14 +138,18 @@ function Home() {
           <FirstPage />
         </div>
       </div>
-      <AssessmentPromo />
+      <MemberButton />
+
+      <ScalingSteps />
       <Mitigate />
       <ReadinessRocket />
       <QualitiesPage />
       <PhotoScroller />
       <BlinkingTextComponent />
       <YouNeedToScaleCards />
+      <AssessmentPromo />
       <PolyOpportunityHero />
+
       <EcosystemText />
       <ContactUsPage />
       <Footer />

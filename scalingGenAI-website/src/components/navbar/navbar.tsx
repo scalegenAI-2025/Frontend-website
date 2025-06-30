@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate, type To } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 import Image from "../../assets/image.png";
 import { IoIosLock } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/userContext";
 
 const useStyles = createUseStyles({
@@ -12,11 +11,12 @@ const useStyles = createUseStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    flexWrap: "wrap",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     color: "#fff",
     height: "100px",
     width: "100%",
-    position: "fixed", // <<< fixed navbar
+    position: "fixed",
     top: 0,
     left: 0,
     zIndex: 1000,
@@ -25,11 +25,11 @@ const useStyles = createUseStyles({
   },
 
   scrolled: {
-    backgroundColor: "#fff !important",
-    color: "#000 !important",
+    backgroundColor: "#000000 !important",
+    color: "#ffffff !important",
 
     "& $navLink": {
-      color: "#000",
+      color: "#ffffff",
       "&:hover": {
         color: "purple",
       },
@@ -52,7 +52,7 @@ const useStyles = createUseStyles({
   logo: {
     width: "200px",
     height: "auto",
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       width: "130px",
       position: "absolute",
       left: "50%",
@@ -67,7 +67,7 @@ const useStyles = createUseStyles({
     fontSize: "2rem",
     cursor: "pointer",
     display: "none",
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       display: "block",
     },
   },
@@ -77,7 +77,7 @@ const useStyles = createUseStyles({
     width: "30px",
     height: "30px",
     position: "absolute",
-    right: "1rem",
+    right: "2rem",
     top: "1rem",
   },
 
@@ -87,8 +87,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
     paddingTop: "25px",
     paddingLeft: "200px",
-
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       display: "none",
     },
   },
@@ -108,33 +107,18 @@ const useStyles = createUseStyles({
   },
 
   meetUsLinkWrapper: {
-    marginLeft: "20px",
+    marginLeft: "auto", // Pushes the element to the right
     paddingTop: "35px",
-
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       display: "none",
     },
   },
-
-  mobileMenu: {
-    flexDirection: "column",
-    gap: "1rem",
-    position: "absolute",
-    top: "100%",
-    left: 0,
-    right: 0,
-    backgroundColor: "#111",
-    padding: "1rem",
-    zIndex: 999,
-    display: "flex",
-  },
-
-  authButtons: {
+  desktopAuthButtons: {
     display: "flex",
     gap: "1rem",
     paddingTop: "25px",
     marginLeft: "auto",
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       display: "none",
     },
   },
@@ -153,8 +137,24 @@ const useStyles = createUseStyles({
       color: "#000",
     },
   },
+
+  mobileMenu: {
+    flexDirection: "column",
+    gap: "1rem",
+    position: "absolute",
+    top: "100%",
+    left: 0,
+    right: 0,
+    backgroundColor: "#111",
+    padding: "1rem",
+    zIndex: 999,
+    display: "flex",
+    "@media (min-width: 901px)": {
+      display: "none",
+    },
+  },
+
   span: {
-    // margin: "0 0.5rem",
     color: "inherit",
     paddingLeft: "20px",
   },
@@ -163,10 +163,11 @@ const useStyles = createUseStyles({
 const Navbar = () => {
   const classes = useStyles();
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout } = useUser();
+
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { user, logout } = useUser();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -176,6 +177,11 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = (path: To) => {
+    navigate(path);
+    setIsMobileOpen(false);
+  };
 
   return (
     <nav className={`${classes.navbar} ${isScrolled ? classes.scrolled : ""}`}>
@@ -211,19 +217,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className={classes.authButtons}>
-          {/* <button
-            className={classes.authButton}
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
-          <button
-            className={classes.authButton}
-            onClick={() => navigate("/register")}
-          >
-            Register
-          </button> */}
+        {/* <div className={classes.desktopAuthButtons}>
           {!user ? (
             <>
               <button
@@ -244,7 +238,7 @@ const Navbar = () => {
               Logout
             </button>
           )}
-        </div>
+        </div> */}
 
         <div className={classes.meetUsLinkWrapper}>
           <Link
@@ -258,7 +252,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <IoIosLock className={classes.lockIcon} />
+      <Link to="/admin-login">
+        <IoIosLock className={classes.lockIcon} style={{ cursor: "pointer" }} />
+      </Link>
 
       {isMobileOpen && (
         <div className={classes.mobileMenu}>
@@ -274,20 +270,34 @@ const Navbar = () => {
               {path.charAt(0).toUpperCase() + path.slice(1)}
             </Link>
           ))}
-          <div className={classes.authButtons}>
+
+          {!user ? (
+            <>
+              <button
+                onClick={() => handleLinkClick("/login")}
+                className={classes.authButton}
+              >
+                Login
+              </button>
+              <button
+                onClick={() => handleLinkClick("/register")}
+                className={classes.authButton}
+              >
+                Register
+              </button>
+            </>
+          ) : (
             <button
+              onClick={() => {
+                logout();
+                setIsMobileOpen(false);
+              }}
               className={classes.authButton}
-              onClick={() => console.log("Login clicked")}
             >
-              Login
+              Logout
             </button>
-            <button
-              className={classes.authButton}
-              onClick={() => console.log("Register clicked")}
-            >
-              Register
-            </button>
-          </div>
+          )}
+
           <Link
             to="/meet-us"
             className={`${classes.navLink} ${

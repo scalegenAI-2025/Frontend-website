@@ -1,6 +1,7 @@
 // src/context/UserContext.tsx
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 interface User {
   name: string;
@@ -42,6 +43,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   const logout = () => {
     localStorage.removeItem("token");
     setUser(null);
+    toast.success("You have been logged out.");
   };
 
   return (

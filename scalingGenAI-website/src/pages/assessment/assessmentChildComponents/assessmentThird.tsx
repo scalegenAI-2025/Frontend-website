@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
     padding: 60,
     backgroundColor: "white",
     color: "black",
-    fontFamily: "sans-serif",
+    fontFamily: 'Georgia, "Times New Roman", serif',
   },
   contentRow: {
     display: "flex",

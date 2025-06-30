@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import google from "../../assets/Google.webp";
 import { useUser } from "../../context/userContext";
+import { toast } from "react-toastify";
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -47,7 +48,7 @@ const useStyles = createUseStyles({
     width: "100%",
     padding: 12,
     marginTop: 10,
-    background: "#007bff",
+    background: "#d633ff",
     color: "#fff",
     border: "none",
     borderRadius: 6,
@@ -101,7 +102,7 @@ const useStyles = createUseStyles({
     fontSize: 13,
     marginTop: 20,
     "& a": {
-      color: "#007bff",
+      color: "#d633ff",
       textDecoration: "none",
     },
   },
@@ -189,6 +190,20 @@ const Login: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setError("");
+
+  //   try {
+  //     const res = await api.post("/login", form);
+  //     localStorage.setItem("token", res.data.token); // ✅ Save token
+  //     setUser(res.data.user); // ✅ Update context
+  //     navigate("/"); // ✅ Navigate
+  //   } catch (err: any) {
+  //     setError(err.response?.data?.error || "Login failed");
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
@@ -197,9 +212,12 @@ const Login: React.FC = () => {
       const res = await api.post("/login", form);
       localStorage.setItem("token", res.data.token); // ✅ Save token
       setUser(res.data.user); // ✅ Update context
+      toast.success("Login successful!"); // ✅ Show success toast
       navigate("/"); // ✅ Navigate
     } catch (err: any) {
-      setError(err.response?.data?.error || "Login failed");
+      const errorMsg = err.response?.data?.error || "Login failed";
+      setError(errorMsg);
+      toast.error(errorMsg); // ✅ Show error toast
     }
   };
 

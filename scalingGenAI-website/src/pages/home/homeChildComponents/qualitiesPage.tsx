@@ -11,7 +11,6 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    //alignItems: "center",
   },
   header: {
     display: "flex",
@@ -58,6 +57,15 @@ const useStyles = createUseStyles({
     // borderLeft: "1px solid #333",
     // borderRight: "1px solid #333",
     // borderBottom: "1px solid #333",
+    "@media (max-width: 900px)": {
+      gridTemplateColumns: "1fr", // Switch to a single column
+    },
+    grid: {
+      display: "grid",
+      padding: "25px",
+      gridTemplateColumns: "repeat(4, 1fr)",
+      gap: 0,
+    },
   },
 
   card: {

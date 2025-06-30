@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
     width: "100%",
     padding: 12,
     marginTop: 10,
-    background: "#007bff",
+    background: "#d633ff",
     color: "#fff",
     border: "none",
     borderRadius: 6,
@@ -71,7 +71,7 @@ const useStyles = createUseStyles({
     marginTop: 15,
     fontSize: 13,
     "& a": {
-      color: "#007bff",
+      color: "#d633ff",
       textDecoration: "none",
     },
   },

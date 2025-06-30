@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
     color: "#fff",
     textAlign: "center",
     padding: "2.5rem 1.5rem",
-    fontFamily: "Arial, sans-serif",
+    fontFamily: 'Georgia, "Times New Roman", serif',
   },
   topText: {
     fontSize: "1.5rem", // increased from 1.2rem

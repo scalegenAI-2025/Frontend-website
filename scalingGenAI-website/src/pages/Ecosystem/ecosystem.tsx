@@ -9,6 +9,13 @@ import ContactUs from "../home/homeChildComponents/contactUs";
 
 // JSS styles
 const useStyles = createUseStyles({
+  "@global": {
+    "html, body": {
+      margin: 0,
+      padding: 0,
+      fontFamily: 'Georgia, "Times New Roman", serif',
+    },
+  },
   backgroundWrapper: {
     position: "relative",
     height: "100vh",

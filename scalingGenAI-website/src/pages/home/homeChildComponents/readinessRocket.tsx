@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
     //backgroundColor: "#f5f5f5",
     //minHeight: "100vh",
     padding: "40px",
-    fontFamily: "Arial, sans-serif",
+    fontFamily: 'Georgia, "Times New Roman", serif',
   },
   header: {
     fontSize: "18px",

@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
     backgroundColor: "#e5d8cf",
     padding: "40px",
     //gap: "1rem",
+    fontFamily: 'Georgia, "Times New Roman", serif',
     alignItems: "stretch", // stretch children to equal height
 
     "@media (min-width: 768px)": {
@@ -68,6 +69,7 @@ const courseImages = [
   CourseImage3,
   CourseImage3,
   CourseImage2,
+  CourseImage1,
 ];
 
 const courses = [
@@ -94,6 +96,20 @@ const courses = [
   },
   {
     title: "Essential Competencies of AI Leader",
+    audience: "For executives and middle managers",
+    hours: "12 hours",
+    mode: "Instructor-led",
+    delivery: "Online or In-person",
+  },
+  {
+    title: "Cultivating AI/GenAI Mindset",
+    audience: "For executives and middle managers",
+    hours: "12  hours",
+    mode: "Instructor-led",
+    delivery: "Online or in-person",
+  },
+  {
+    title: "AI/GenAI Operational Readiness",
     audience: "For executives and middle managers",
     hours: "12 hours",
     mode: "Instructor-led",

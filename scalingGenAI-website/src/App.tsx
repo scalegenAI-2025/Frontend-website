@@ -15,6 +15,10 @@ import Forgot from "./pages/login/loginChildComponents/Forgot";
 import Reset from "./pages/login/loginChildComponents/Reset";
 import Dashboard from "./pages/login/loginChildComponents/Dashboard";
 import ActivateAccount from "./pages/login/loginChildComponents/ActivateAccount";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import PartnerForm from "./pages/home/homeChildComponents/becomeMember";
+import AdminLogin from "./pages/adminLogin/adminLogin";
 
 function App() {
   useGlobalStyles();
@@ -34,8 +38,19 @@ function App() {
         <Route path="/reset-password/:token" element={<Reset />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/activate-account/:token" element={<ActivateAccount />} />
+        <Route path="/member" element={<PartnerForm />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+
         {/* Add more routes here */}
       </Routes>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop
+        pauseOnHover
+        //theme="dark"
+      />
     </>
   );
 }

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
+import { toast } from "react-toastify";
 
 const useStyles = createUseStyles({
   container: {
@@ -122,7 +124,7 @@ const useStyles = createUseStyles({
     minHeight: 120,
     resize: "vertical",
     color: "#000",
-    fontFamily: "inherit",
+    fontFamily: 'Georgia, "Times New Roman", serif',
     "&::placeholder": {
       color: "#000", // <-- black placeholder
     },
@@ -161,7 +163,7 @@ const ContactUs = () => {
     moreDetails: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -169,9 +171,38 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    alert("Form submitted successfully!");
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch("http://localhost:9000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          organization: formData.organization,
+          role: formData.role,
+          moreDetails: formData.moreDetails,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) throw new Error(result.error || "Submission failed");
+
+      toast.success("Message sent successfully!");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        organization: "",
+        role: "",
+        moreDetails: "",
+      });
+    } catch (err: any) {
+      toast.error("Error: " + err.message);
+    }
   };
 
   return (
