@@ -2,7 +2,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Framework from "../../../../assets/framework.png";
-import speaker from "../../../../assets/amitsirfirstpic.png";
+//import speaker from "../../../../assets/amitsirfirstpic.png";
 
 const useStyles = createUseStyles({
   container: {
