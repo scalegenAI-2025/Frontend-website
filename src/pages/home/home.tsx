@@ -75,6 +75,7 @@
 // import Home from "./pages/home/home";
 
 // src/pages/home/home.tsx
+
 import { createUseStyles } from "react-jss";
 import useGlobalStyles from "../../styles/useGlobalStyles";
 import Rocket from "../../assets/rocket.png"; // Your updated rocket image

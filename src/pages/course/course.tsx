@@ -9,6 +9,7 @@ import CourseTopPage from "./courseChildComponents/courseTop";
 import QuestionOnAI from "./courseChildComponents/questionOnAI";
 import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
+//import EssentialCompetencies from "./courseChildComponents/AI/GenAILeaderBook";
 
 const useStyles = createUseStyles({
   "@global": {
@@ -61,6 +62,7 @@ function Course() {
       <QuestionOnAI />
       <CourseCards />
       <ContactUs />
+
       <Footer />
     </>
   );

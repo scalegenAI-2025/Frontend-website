@@ -20,6 +20,9 @@ import "react-toastify/dist/ReactToastify.css";
 import PartnerForm from "./pages/home/homeChildComponents/becomeMember";
 import AdminLogin from "./pages/adminLogin/adminLogin";
 
+//import LandingSlide from "./pages/course/AIGenAILeadersBook/AIGenAIChild/GenAILeaderBook";
+import AIGenAILeadersBook from "./pages/course/AIGenAILeadersBook/AIGenAILeadersBook";
+
 function App() {
   useGlobalStyles();
 
@@ -30,6 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/assets" element={<Assets />} />
         <Route path="/courses" element={<Course />} />
+        <Route path="/courses/course1" element={<AIGenAILeadersBook />} />
         <Route path="/assessments" element={<Assessment />} />
         <Route path="/ecosystem" element={<Ecosystem />} />
         <Route path="/register" element={<Register />} />
@@ -39,6 +43,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/activate-account/:token" element={<ActivateAccount />} />
         <Route path="/member" element={<PartnerForm />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
 
         {/* Add more routes here */}
