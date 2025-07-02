@@ -1,7 +1,7 @@
 import React from "react";
 import coach from "../../../../assets/amitsirsecondpic.png";
 
-const CoachingPage: React.FC = () => {
+const GenAIMindsetCoach: React.FC = () => {
   const styles = {
     container: {
       fontFamily: "Arial, sans-serif",
@@ -86,26 +86,21 @@ const CoachingPage: React.FC = () => {
             <ul style={styles.bulletList}>
               <li style={styles.bulletItem}>
                 <span style={styles.purpleText}>
-                  Growth Mindset Cultivation Framework
+                  Readiness Rocket Framework
                 </span>{" "}
-                to ensure readiness to Reskilling for 10 New AI/GenAI Job Roles
+                an operational readiness framework for Scaling Generative AI
               </li>
               <li style={styles.bulletItem}>
-                Reinforcing connections with Key AI Stakeholders through{" "}
-                <span style={styles.purpleText}>12-Week Empathy program</span>
+                Assessments such as AI maturity, GenAI maturity, AI/GenAI
+                Mindsets, VITA scores
               </li>
               <li style={styles.bulletItem}>
-                Identifying AI/GenAI{" "}
-                <span style={styles.purpleText}>investment areas</span> based on
-                Informed Decision-Making Framework
+                Implementation of readiness areas: customer, technology, data,
+                and people
               </li>
               <li style={styles.bulletItem}>
-                7 important{" "}
-                <span style={styles.purpleText}>scaling actions</span> to be
-                taken using the Fast Execution and{" "}
-                <span style={styles.purpleText}>
-                  Rocket Readiness Framework
-                </span>
+                Setting the foundations: boosters and launchpad, for readiness
+                rocket
               </li>
             </ul>
           </div>
@@ -134,7 +129,7 @@ const CoachingPage: React.FC = () => {
             </li>
             <li style={styles.bulletItem}>
               Continuous <span style={styles.purpleText}>check-ins</span> on
-              implementation of the four competencies
+              strategy creation and execution
             </li>
             <li style={styles.bulletItem}>
               Problem-solving and{" "}
@@ -142,7 +137,7 @@ const CoachingPage: React.FC = () => {
             </li>
             <li style={styles.bulletItem}>
               Continuous <span style={styles.purpleText}>feedback</span> on the
-              personal development
+              operational readiness development
             </li>
           </ul>
         </div>
@@ -151,4 +146,4 @@ const CoachingPage: React.FC = () => {
   );
 };
 
-export default CoachingPage;
+export default GenAIMindsetCoach;

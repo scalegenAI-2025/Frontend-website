@@ -1,7 +1,7 @@
 import React from "react";
 import coach from "../../../../assets/amitsirsecondpic.png";
 
-const CoachingPage: React.FC = () => {
+const GenAITransformationCoach: React.FC = () => {
   const styles = {
     container: {
       fontFamily: "Arial, sans-serif",
@@ -151,4 +151,4 @@ const CoachingPage: React.FC = () => {
   );
 };
 
-export default CoachingPage;
+export default GenAITransformationCoach;

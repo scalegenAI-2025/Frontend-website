@@ -1,6 +1,6 @@
 import React from "react";
 
-const CourseContentPage: React.FC = () => {
+const GenAITransformationContain: React.FC = () => {
   const styles = {
     container: {
       fontFamily: "Arial, sans-serif",
@@ -181,4 +181,4 @@ const CourseContentPage: React.FC = () => {
   );
 };
 
-export default CourseContentPage;
+export default GenAITransformationContain;

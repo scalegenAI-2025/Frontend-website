@@ -22,6 +22,10 @@ import AdminLogin from "./pages/adminLogin/adminLogin";
 
 //import LandingSlide from "./pages/course/AIGenAILeadersBook/AIGenAIChild/GenAILeaderBook";
 import AIGenAILeadersBook from "./pages/course/AIGenAILeadersBook/AIGenAILeadersBook";
+import GenerativeAI from "./pages/course/GenerativeAI/GenerativeAI";
+import GenAITransformation from "./pages/course/GenAITransformation/GenAITransformation";
+import GenAIOperational from "./pages/course/GenAIOperational/GenAIOperational";
+import GenAIMindset from "./pages/course/GenAIMindset/GenAIMindset";
 
 function App() {
   useGlobalStyles();
@@ -34,6 +38,10 @@ function App() {
         <Route path="/assets" element={<Assets />} />
         <Route path="/courses" element={<Course />} />
         <Route path="/courses/course1" element={<AIGenAILeadersBook />} />
+        <Route path="/courses/course2" element={<GenerativeAI />} />
+        <Route path="/courses/course3" element={<GenAITransformation />} />
+        <Route path="/courses/course6" element={<GenAIOperational />} />
+        <Route path="/courses/course4" element={<GenAIMindset />} />
         <Route path="/assessments" element={<Assessment />} />
         <Route path="/ecosystem" element={<Ecosystem />} />
         <Route path="/register" element={<Register />} />

@@ -34,7 +34,7 @@ const CoachingPage: React.FC = () => {
       fontWeight: "bold",
     },
     bulletList: {
-      margin: "0 0 50px 0",
+      //margin: "0 0 50px 0",
       paddingLeft: "20px",
     },
     bulletItem: {
@@ -42,6 +42,11 @@ const CoachingPage: React.FC = () => {
       color: "#333333",
       marginBottom: "12px",
       lineHeight: "1.5",
+    },
+    subList: {
+      listStyleType: "circle",
+      paddingLeft: "20px",
+      marginTop: "8px",
     },
     purpleText: {
       color: "#8B4F9F",
@@ -85,27 +90,28 @@ const CoachingPage: React.FC = () => {
 
             <ul style={styles.bulletList}>
               <li style={styles.bulletItem}>
-                <span style={styles.purpleText}>
-                  Growth Mindset Cultivation Framework
-                </span>{" "}
-                to ensure readiness to Reskilling for 10 New AI/GenAI Job Roles
+                Three types of technical professionals would enroll in the
+                course:
+                <ul style={styles.subList}>
+                  <li>TType A: Same role, same job description, No AI/GenAI</li>
+                  <li>
+                    Type B: Same role, modified job description, Partial
+                    AI/GenAI
+                  </li>
+                  <li>Type C: New role, new job description, Full AI/GenAI</li>
+                </ul>
               </li>
               <li style={styles.bulletItem}>
-                Reinforcing connections with Key AI Stakeholders through{" "}
-                <span style={styles.purpleText}>12-Week Empathy program</span>
+                For Type A, coaching will include transition to Type B or Type
+                C, based on participant’s interest
               </li>
               <li style={styles.bulletItem}>
-                Identifying AI/GenAI{" "}
-                <span style={styles.purpleText}>investment areas</span> based on
-                Informed Decision-Making Framework
+                For Type B, coaching will include dealing with change in job
+                description
               </li>
               <li style={styles.bulletItem}>
-                7 important{" "}
-                <span style={styles.purpleText}>scaling actions</span> to be
-                taken using the Fast Execution and{" "}
-                <span style={styles.purpleText}>
-                  Rocket Readiness Framework
-                </span>
+                For Type C, coaching will include bringing innovations and
+                productivity into daily jobs
               </li>
             </ul>
           </div>
