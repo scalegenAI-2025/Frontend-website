@@ -24,7 +24,14 @@ const useStyles = createUseStyles({
   heading: {
     fontSize: 36,
     fontWeight: "bold",
+    marginBottom: 2,
+    color: "#222",
+  },
+  heading2: {
+    fontSize: 46,
+    fontWeight: "bold",
     marginBottom: 20,
+    marginTop: "0px",
     color: "#222",
   },
   description: {
@@ -59,11 +66,11 @@ const BecomeMemberPage = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <h1 className={classes.heading}>Join the scaling generative AI</h1>
+        <h1 className={classes.heading}>Join The scaling Generative AI</h1>
+        <h1 className={classes.heading2}>Ecosystem</h1>
         <p className={classes.description}>
-          Be part of an innovative community focused on advancing AI research
-          and applications across Sweden. Click the button below to get started
-          and apply for membership and we will get back to you.
+          fill out the membership form and we shall get back to you for a
+          consultation.
         </p>
         <button className={classes.button} onClick={handleClick}>
           Become a member →

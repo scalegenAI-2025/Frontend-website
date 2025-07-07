@@ -97,6 +97,9 @@ const Footer = () => {
           <a href="#" className={classes.link}>
             Terms and Conditions
           </a>
+          <a href="/admin-login" className={classes.link}>
+            admin login
+          </a>
         </div>
       </div>
       <img

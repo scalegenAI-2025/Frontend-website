@@ -5,6 +5,7 @@ import GenerativeAITop from "./GenerativeAIChild/GenerativeAITop";
 import CourseOverview from "./GenerativeAIChild/GenerativeAIOverview";
 import TechnicalAIContentPage from "./GenerativeAIChild/TechnicalAIContentPage";
 import CoachingPage from "./GenerativeAIChild/GenerativeAICoach";
+import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -36,6 +37,7 @@ function GenerativeAI() {
           <CourseOverview />
           <TechnicalAIContentPage />
           <CoachingPage />
+          <EcosystemPage />
         </div>
       </div>
 

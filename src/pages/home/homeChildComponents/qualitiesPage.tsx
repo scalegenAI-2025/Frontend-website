@@ -1,8 +1,8 @@
 import { createUseStyles } from "react-jss";
-import Data from "../../../assets/data.jpg";
-import Technology from "../../../assets/technology.jpg";
-import People from "../../../assets//people.png";
-import Customer from "../../../assets/customer.png";
+import Data from "../../../assets/data_homepage.jpg";
+import Technology from "../../../assets/tech_homepage.jpg";
+import People from "../../../assets/people_homepage.jpg";
+import Customer from "../../../assets/customer_homepage.jpg";
 
 const useStyles = createUseStyles({
   container: {

@@ -171,7 +171,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { useNavigate } from "react-router-dom";
-import graph from "../../../assets/graph.png";
+import graph from "../../../assets/scale.png";
 import { useUser } from "../../../context/userContext"; // Adjust path if needed
 
 const useStyles = createUseStyles({

@@ -5,6 +5,7 @@ import GenAIMindsetTop from "./GenAIMindsetChild/GenAIMindsetTop";
 import GenAIMindsetOverview from "./GenAIMindsetChild/GenAIMindsetOverview";
 import GenAIMindsetContain from "./GenAIMindsetChild/GenAIMindsetContain";
 import GenAIOperationalCoach from "../GenAIOperational/GenAIOperationalChild/GenAIOperationalCoach";
+import EcosystemPage from "./GenAIMindsetChild/ecosystem";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -36,6 +37,7 @@ function GenAIMindset() {
           <GenAIMindsetOverview />
           <GenAIMindsetContain />
           <GenAIOperationalCoach />
+          <EcosystemPage />
         </div>
       </div>
 

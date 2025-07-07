@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axios";
+import { toast } from "react-toastify";
 
 const useStyles = createUseStyles({
   container: {
@@ -156,8 +157,9 @@ const AdminLogin: React.FC = () => {
     try {
       const res = await api.post("/admin-login", form);
       localStorage.setItem("adminToken", res.data.token);
-      alert("Login successful!");
-      navigate("/"); // Redirect admin after login
+      toast.success("Login successful!", { position: "top-right" });
+
+      navigate("/user-register"); // Redirect admin after login
     } catch (err: any) {
       setError(err.response?.data?.error || "An unexpected error occurred");
     }

@@ -5,6 +5,7 @@ import GenAIOperationalTop from "./GenAIOperationalChild/GenAIOperationalTop";
 import GenAIOperationalOverView from "./GenAIOperationalChild/GenAIOperationalOverView";
 import GenAIOperationalContent from "./GenAIOperationalChild/GenAIOperationalContent";
 import GenAIOperationalCoach from "./GenAIOperationalChild/GenAIOperationalCoach";
+import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -36,6 +37,7 @@ function GenAIOperational() {
           <GenAIOperationalOverView />
           <GenAIOperationalContent />
           <GenAIOperationalCoach />
+          <EcosystemPage />
         </div>
       </div>
 

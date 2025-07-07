@@ -5,6 +5,7 @@ import LandingSlide from "./AIGenAIChild/GenAILeaderBook";
 import CourseOverview from "./AIGenAIChild/CourseOverview";
 import CourseContentPage from "./AIGenAIChild/CourseContentPage";
 import CoachingPage from "./AIGenAIChild/CoachingPage";
+import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -36,6 +37,7 @@ function AIGenAILeadersBook() {
           <CourseOverview />
           <CourseContentPage />
           <CoachingPage />
+          <EcosystemPage />
         </div>
       </div>
 

@@ -206,7 +206,7 @@ const PartnerForm = () => {
 
         <div className={classes.inputGroup}>
           <label htmlFor="location" className={classes.label}>
-            Location (head office in Sweden)*
+            Location
           </label>
           <input
             id="location"
@@ -276,7 +276,7 @@ const PartnerForm = () => {
 
         <div className={classes.inputGroup}>
           <label htmlFor="partnerCategory" className={classes.label}>
-            Partner category*
+            Enterprises category*
           </label>
           <select
             id="partnerCategory"
@@ -287,9 +287,10 @@ const PartnerForm = () => {
             required
           >
             <option value="">Please Select</option>
-            <option value="Academia">Academia</option>
-            <option value="Startup">Startup</option>
-            <option value="Industry">Industry</option>
+            <option value="Academia">Large</option>
+            <option value="Startup">Medium</option>
+            <option value="Industry">Small</option>
+            <option value="Industry">Startup</option>
           </select>
         </div>
 

@@ -5,6 +5,7 @@ import GenAITransformationTop from "./GenAITransformationChild/GenAITransformati
 import CourseOverview from "./GenAITransformationChild/GenAITransformationOverview";
 import GenAITransformationContain from "./GenAITransformationChild/GenAITransformationContain";
 import GenAITransformationCoach from "./GenAITransformationChild/GenAITransformationCoach";
+import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -36,6 +37,7 @@ function GenAITransformation() {
           <CourseOverview />
           <GenAITransformationContain />
           <GenAITransformationCoach />
+          <EcosystemPage />
         </div>
       </div>
 

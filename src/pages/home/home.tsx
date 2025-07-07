@@ -76,13 +76,99 @@
 
 // src/pages/home/home.tsx
 
+// import { createUseStyles } from "react-jss";
+// import useGlobalStyles from "../../styles/useGlobalStyles";
+// import Rocket from "../../assets/rocket.png"; // Your updated rocket image
+// import CloudyBackground from "../../assets/rocketBlack.png";
+// import Navbar from "../../components/navbar/navbar";
+// import FirstPage from "./homeChildComponents/firstPage";
+// //import Mitigate from "./homeChildComponents/mitigate";
+// import ReadinessRocket from "./homeChildComponents/readinessRocket";
+// import QualitiesPage from "./homeChildComponents/qualitiesPage";
+// import PhotoScroller from "./homeChildComponents/scrollingPhoto";
+// import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
+// import YouNeedToScaleCards from "./homeChildComponents/youNeedToScaleCards";
+// import ContactUsPage from "./homeChildComponents/contactUs";
+// import PolyOpportunityHero from "./homeChildComponents/videoPage";
+// import Footer from "../../components/footer/footer";
+// import EcosystemText from "./homeChildComponents/EcosystemText";
+// import AssessmentPromo from "./homeChildComponents/assessmentPromo";
+// import ScalingSteps from "./homeChildComponents/ScalingSteps";
+// import MemberButton from "./homeChildComponents/memberButton";
+// import ScalingStepsEmail from "./homeChildComponents/ScalingStepsEmail";
+
+// const useStyles = createUseStyles({
+//   heroSection: {
+//     position: "relative",
+//     minHeight: "110vh",
+//     overflow: "hidden",
+//     display: "flex",
+//     flexDirection: "column",
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   backgroundOverlay: {
+//     backgroundImage: `url(${Rocket}), url(${CloudyBackground})`,
+//     backgroundSize: "contain, cover", // Rocket fits nicely, cloud image fills screen
+//     backgroundRepeat: "no-repeat",
+//     backgroundPosition: "center center",
+//     backgroundColor: "#000000",
+//     position: "absolute",
+//     top: 0,
+//     left: 0,
+//     right: 0,
+//     bottom: 0,
+//     zIndex: 0,
+//   },
+//   contentWrapper: {
+//     position: "relative",
+//     zIndex: 1,
+//     width: "100%",
+//   },
+// });
+
+// function Home() {
+//   useGlobalStyles();
+//   const classes = useStyles();
+
+//   return (
+//     <>
+//       <div className={classes.heroSection}>
+//         <div className={classes.backgroundOverlay}></div>
+//         <div className={classes.contentWrapper}>
+//           <Navbar />
+//           <FirstPage />
+//         </div>
+//       </div>
+//       <MemberButton />
+
+//       <ScalingSteps />
+//       {/* <Mitigate /> */}
+//       <ScalingStepsEmail />
+//       <ReadinessRocket />
+//       <QualitiesPage />
+//       <PhotoScroller />
+//       <BlinkingTextComponent />
+//       <YouNeedToScaleCards />
+//       <AssessmentPromo />
+//       <PolyOpportunityHero />
+
+//       <EcosystemText />
+//       <ContactUsPage />
+//       <Footer />
+//     </>
+//   );
+// }
+
+// export default Home;
+
+// src/pages/home/home.tsx
 import { createUseStyles } from "react-jss";
 import useGlobalStyles from "../../styles/useGlobalStyles";
-import Rocket from "../../assets/rocket.png"; // Your updated rocket image
-
+import Rocket from "../../assets/rocket.png";
+import CloudyBackground from "../../assets/rocketBlack.png";
 import Navbar from "../../components/navbar/navbar";
 import FirstPage from "./homeChildComponents/firstPage";
-import Mitigate from "./homeChildComponents/mitigate";
 import ReadinessRocket from "./homeChildComponents/readinessRocket";
 import QualitiesPage from "./homeChildComponents/qualitiesPage";
 import PhotoScroller from "./homeChildComponents/scrollingPhoto";
@@ -95,11 +181,12 @@ import EcosystemText from "./homeChildComponents/EcosystemText";
 import AssessmentPromo from "./homeChildComponents/assessmentPromo";
 import ScalingSteps from "./homeChildComponents/ScalingSteps";
 import MemberButton from "./homeChildComponents/memberButton";
+import ScalingStepsEmail from "./homeChildComponents/ScalingStepsEmail";
 
 const useStyles = createUseStyles({
   heroSection: {
     position: "relative",
-    minHeight: "100vh",
+    minHeight: "110vh",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
@@ -107,10 +194,14 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   backgroundOverlay: {
-    backgroundImage: `url(${Rocket})`,
-    backgroundSize: "contain",
+    backgroundImage: `
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+      url(${Rocket}), 
+      url(${CloudyBackground})
+    `,
+    backgroundSize: "contain, contain, cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
+    backgroundPosition: "top center, center center, center center",
     backgroundColor: "#000000",
     position: "absolute",
     top: 0,
@@ -140,9 +231,8 @@ function Home() {
         </div>
       </div>
       <MemberButton />
-
-      <ScalingSteps />
-      <Mitigate />
+      {/* <ScalingSteps /> */}
+      <ScalingStepsEmail />
       <ReadinessRocket />
       <QualitiesPage />
       <PhotoScroller />
@@ -150,7 +240,6 @@ function Home() {
       <YouNeedToScaleCards />
       <AssessmentPromo />
       <PolyOpportunityHero />
-
       <EcosystemText />
       <ContactUsPage />
       <Footer />
