@@ -353,6 +353,7 @@ const useStyles = createUseStyles({
     },
     "@media (max-width: 550px)": {
       width: "100px",
+      position: "static",
     },
   },
 
@@ -362,6 +363,10 @@ const useStyles = createUseStyles({
     display: "none",
     "@media (max-width: 1200px)": {
       display: "block",
+    },
+    "@media (max-width: 550px)": {
+      width: "100px",
+      position: "static",
     },
   },
 
