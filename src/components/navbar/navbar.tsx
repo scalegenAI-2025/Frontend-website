@@ -378,7 +378,7 @@ const useStyles = createUseStyles({
     right: "2rem",
     top: "1rem",
     "@media (max-width: 550px)": {
-      right: "9rem",
+      right: "11rem",
     },
   },
 
