@@ -179,7 +179,7 @@ import PolyOpportunityHero from "./homeChildComponents/videoPage";
 import Footer from "../../components/footer/footer";
 import EcosystemText from "./homeChildComponents/EcosystemText";
 import AssessmentPromo from "./homeChildComponents/assessmentPromo";
-import ScalingSteps from "./homeChildComponents/ScalingSteps";
+//import ScalingSteps from "./homeChildComponents/ScalingSteps";
 import MemberButton from "./homeChildComponents/memberButton";
 import ScalingStepsEmail from "./homeChildComponents/ScalingStepsEmail";
 
