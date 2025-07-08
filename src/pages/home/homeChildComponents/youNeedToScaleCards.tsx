@@ -1,6 +1,8 @@
 import { createUseStyles } from "react-jss";
 import Assessments from "../../../assets/assessment.jpg";
 import Assets from "../../../assets/assets_pic.jpg";
+import Ecosystem from "../../../assets/eco_pic.jpg";
+import Course from "../../../assets/Courses.jpg";
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
@@ -132,6 +134,36 @@ const YouNeedToScaleCards = () => {
             <p className={classes.cardDescription}>
               Assess your capabilities, identify the gaps, and speed up your AI
               Journey
+            </p>
+            <button className={classes.darkButton}>Explore</button>
+          </div>
+        </div>
+      </div>
+      <div className={classes.cardsContainer}>
+        {/* Dark Card */}
+        <div className={classes.darkCard}>
+          <div className={classes.darkCardImage}>
+            <img src={Course} alt="Logo" />
+          </div>
+          <div className={classes.cardContent}>
+            <h2 className={classes.cardTitle}>Courses</h2>
+            <p className={classes.cardDescription}>
+              We do not offer just courses. We offer personalized continuous AI
+              Reskilling Journey
+            </p>
+            <button className={classes.darkButton}>Explore</button>
+          </div>
+        </div>
+
+        {/* Light Card */}
+        <div className={classes.darkCard}>
+          <div className={classes.darkCardImage}>
+            <img src={Ecosystem} alt="Logo" />
+          </div>
+          <div className={classes.cardContent}>
+            <h2 className={classes.cardTitle}>Ecosystems</h2>
+            <p className={classes.cardDescription}>
+              Explore the power of collaboration through Ecosystems
             </p>
             <button className={classes.darkButton}>Explore</button>
           </div>

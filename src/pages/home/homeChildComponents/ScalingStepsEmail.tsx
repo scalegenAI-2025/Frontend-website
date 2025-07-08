@@ -224,9 +224,9 @@ import scalingImage from "../../../assets/scale.png";
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
-    minHeight: "110vh",
+    /// minHeight: "110vh",
     color: "#fff",
-    padding: "40px 20px",
+    padding: "90px 20px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

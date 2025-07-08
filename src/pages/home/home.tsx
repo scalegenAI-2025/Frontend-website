@@ -175,13 +175,15 @@ import PhotoScroller from "./homeChildComponents/scrollingPhoto";
 import BlinkingTextComponent from "./homeChildComponents/adoptionComponent";
 import YouNeedToScaleCards from "./homeChildComponents/youNeedToScaleCards";
 import ContactUsPage from "./homeChildComponents/contactUs";
-import PolyOpportunityHero from "./homeChildComponents/videoPage";
+// import PolyOpportunityHero from "./homeChildComponents/videoPage";
 import Footer from "../../components/footer/footer";
-import EcosystemText from "./homeChildComponents/EcosystemText";
-import AssessmentPromo from "./homeChildComponents/assessmentPromo";
+// import EcosystemText from "./homeChildComponents/EcosystemText";
+// import AssessmentPromo from "./homeChildComponents/assessmentPromo";
 //import ScalingSteps from "./homeChildComponents/ScalingSteps";
 import MemberButton from "./homeChildComponents/memberButton";
 import ScalingStepsEmail from "./homeChildComponents/ScalingStepsEmail";
+import ConsultationCard from "./homeChildComponents/ConsultationCard";
+import ReadinessRocketSection from "./homeChildComponents/ReadinessRocketSection";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -233,14 +235,16 @@ function Home() {
       <MemberButton />
       {/* <ScalingSteps /> */}
       <ScalingStepsEmail />
+      <ConsultationCard />
       <ReadinessRocket />
+      <ReadinessRocketSection />
       <QualitiesPage />
       <PhotoScroller />
       <BlinkingTextComponent />
       <YouNeedToScaleCards />
-      <AssessmentPromo />
+      {/* <AssessmentPromo />
       <PolyOpportunityHero />
-      <EcosystemText />
+      <EcosystemText /> */}
       <ContactUsPage />
       <Footer />
     </>

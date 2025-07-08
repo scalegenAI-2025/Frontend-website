@@ -292,7 +292,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate, type To } from "react-router-dom";
 import { createUseStyles } from "react-jss";
-import Image from "../../assets/Logo (1).jpg";
+import Image from "../../assets/scaling_genai_transparent.png";
 import { IoIosLock } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
@@ -343,16 +343,16 @@ const useStyles = createUseStyles({
   },
 
   logo: {
-    width: "240px",
-    height: "100px",
+    width: "200px",
+    height: "120px",
     "@media (max-width: 1200px)": {
       width: "130px",
       position: "absolute",
       left: "50%",
       transform: "translateX(-50%)",
     },
-    "@media (max-width: 550px)": {
-      width: "100px",
+    "@media (max-width: 900px)": {
+      // width: "100px",
       position: "static",
     },
   },
@@ -363,10 +363,16 @@ const useStyles = createUseStyles({
     display: "none",
     "@media (max-width: 1200px)": {
       display: "block",
+      width: "100px",
+      marginRight: "100px",
     },
     "@media (max-width: 550px)": {
-      width: "100px",
-      position: "static",
+      width: "60px",
+      position: "relative",
+      display: "flex",
+      justifyContent: "flex-end", // Aligns content (like the logo) to the right
+      alignItems: "center",
+      marginRight: "100px",
     },
   },
 
@@ -377,8 +383,8 @@ const useStyles = createUseStyles({
     position: "absolute",
     right: "2rem",
     top: "1rem",
-    "@media (max-width: 550px)": {
-      right: "11rem",
+    "@media (max-width: 900px)": {
+      display: "none", // 👈 hide lock icon on smaller screens
     },
   },
 
@@ -585,16 +591,10 @@ const Navbar = () => {
           {!user ? (
             <>
               <button
-                onClick={() => handleLinkClick("/login")}
+                onClick={() => handleLinkClick("/user-login")}
                 className={classes.authButton}
               >
-                Login
-              </button>
-              <button
-                onClick={() => handleLinkClick("/register")}
-                className={classes.authButton}
-              >
-                Register
+                User Login
               </button>
             </>
           ) : (
