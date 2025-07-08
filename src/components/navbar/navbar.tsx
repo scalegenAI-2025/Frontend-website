@@ -377,6 +377,9 @@ const useStyles = createUseStyles({
     position: "absolute",
     right: "2rem",
     top: "1rem",
+    "@media (max-width: 550px)": {
+      right: "9rem",
+    },
   },
 
   mainLinks: {
