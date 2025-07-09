@@ -7,164 +7,105 @@ const useStyles = createUseStyles({
     backgroundColor: "white",
     color: "black",
     fontFamily: 'Georgia, "Times New Roman", serif',
+    "@media (max-width: 768px)": {
+      padding: 20,
+    },
   },
   contentRow: {
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "space-between",
     gap: 32,
+    "@media (max-width: 768px)": {
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   leftColumn: {
     flex: 1,
   },
   rightColumn: {
     flexShrink: 0,
+    "@media (max-width: 768px)": {
+      alignSelf: "center",
+      marginTop: 32,
+    },
   },
-  heading: {
-    fontSize: 18,
-    marginBottom: 24,
-  },
-  buttonGrid: {
+  assetGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
-    gap: 16,
-    marginBottom: 32,
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    gap: 24,
+    marginBottom: 40,
   },
-  button: {
+  assetBox: {
+    border: "1px solid #d1d5db",
+    borderRadius: 8,
+    padding: 16,
+    backgroundColor: "#f9fafb",
+    textAlign: "center",
+  },
+  assetTitle: {
+    fontWeight: "bold",
+    marginBottom: 12,
+    fontSize: 14,
+  },
+  downloadButton: {
     backgroundColor: "#002c3e",
     color: "white",
     padding: "8px 16px",
     borderRadius: 8,
     border: "none",
     cursor: "pointer",
+    fontSize: 14,
   },
   moreText: {
     marginBottom: 40,
     textAlign: "center",
     fontWeight: "600",
   },
-  downloadSection: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: 8,
-    marginBottom: 40,
-  },
-  downloadButton: {
-    backgroundColor: "black",
-    color: "white",
-    padding: "8px 16px",
-    borderRadius: 4,
-    cursor: "pointer",
-    border: "none",
-  },
-  downloadNote: {
-    fontSize: 14,
-    textAlign: "center",
-    maxWidth: 400,
-  },
   rocketWrapper: {
     position: "relative",
-    width: 400, // increased size from 256 to 400
+    width: 400,
+    "@media (max-width: 768px)": {
+      width: "100%",
+      maxWidth: 300,
+    },
   },
   rocketImage: {
     width: "100%",
     height: "auto",
-  },
-  maturityText: {
-    position: "absolute",
-    top: 8,
-    left: "50%",
-    transform: "translateX(-50%)",
-    fontSize: 10,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  strategyBox: {
-    position: "absolute",
-    top: 40,
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "#d1d5db",
-    padding: "4px 8px",
-    fontSize: 14,
-    fontWeight: "500",
-  },
-  readinessStack: {
-    position: "absolute",
-    top: 80,
-    left: "50%",
-    transform: "translateX(-50%)",
-    color: "white",
-    fontSize: 14,
-    textAlign: "center",
-  },
-  readinessItem: {
-    backgroundColor: "#374151",
-    padding: 4,
-    marginBottom: 4,
-  },
-  boosters: {
-    position: "absolute",
-    top: 208,
-    left: "50%",
-    transform: "translateX(-50%)",
-    fontSize: 10,
-    color: "#1f2937",
-    display: "flex",
-    justifyContent: "space-between",
-    width: "100%",
-    padding: "0 8px",
-  },
-  boosterItem: {
-    backgroundColor: "#e5e7eb",
-    padding: 4,
-    textAlign: "center",
-  },
-  launchpad: {
-    position: "absolute",
-    bottom: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "black",
-    color: "white",
-    padding: "4px 8px",
-    fontSize: 14,
-  },
-  assetsFooter: {
-    marginTop: 40,
-    fontWeight: "bold",
   },
 });
 
 export default function GenAILaunchpad() {
   const classes = useStyles();
 
+  const assets = [
+    "Customer Readiness Audit",
+    "Business Case Selection",
+    "Productivity Gain Calculation",
+    "Pilot Selection",
+    "Vendor Evaluation",
+    "Green AI Evaluation",
+    "TBA",
+  ];
+
   return (
     <div className={classes.container}>
       <div className={classes.contentRow}>
-        {/* Left Side: Buttons and Download Section */}
+        {/* Left Column: Boxes with asset titles and download buttons */}
         <div className={classes.leftColumn}>
-          <div className={classes.buttonGrid}>
-            <button className={classes.button}>Customer Readiness Audit</button>
-            <button className={classes.button}>Business Case Selection</button>
-            <button className={classes.button}>
-              Productivity Gain Calculation
-            </button>
-            <button className={classes.button}>Pilot Selection</button>
-            <button className={classes.button}>Vendor Evaluation</button>
-            <button className={classes.button}>Green AI Evaluation</button>
-            <button className={classes.button}>TBA</button>
-          </div>
-
-          <div className={classes.moreText}>More to be added...</div>
-
-          <div className={classes.downloadSection}>
-            <button className={classes.downloadButton}>Download Now</button>
+          <div className={classes.assetGrid}>
+            {assets.map((title, index) => (
+              <div key={index} className={classes.assetBox}>
+                <div className={classes.assetTitle}>{title}</div>
+                <button className={classes.downloadButton}>Download</button>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Side: Rocket Image */}
+        {/* Right Column: Rocket Image */}
         <div className={classes.rightColumn}>
           <div className={classes.rocketWrapper}>
             <img src={Rocket} className={classes.rocketImage} alt="Rocket" />

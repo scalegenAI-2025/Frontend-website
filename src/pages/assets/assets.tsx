@@ -6,6 +6,7 @@ import AssetsTop from "./assetsChildComponents/assetsTop";
 import AssetsSecond from "./assetsChildComponents/assetsSecond";
 import GenAILaunchpad from "./assetsChildComponents/assetsThird";
 import Footer from "../../components/footer/footer";
+import ConsultationCard from "../home/homeChildComponents/ConsultationCard";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -73,6 +74,7 @@ function Assets() {
       </div>
       <AssetsSecond />
       <GenAILaunchpad />
+      <ConsultationCard />
       <Footer />
     </>
   );

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { toast } from "react-toastify";
-
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#e8e0d4",
-
     padding: 40,
-
     position: "relative",
+    "@media (max-width: 700px)": {
+      padding: 20,
+    },
   },
   hireButton: {
     position: "absolute",
@@ -25,6 +25,11 @@ const useStyles = createUseStyles({
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.2)",
     },
+    "@media (max-width: 700px)": {
+      position: "static",
+      marginBottom: 20,
+      width: "100%",
+    },
   },
   title: {
     fontSize: "35px",
@@ -32,28 +37,30 @@ const useStyles = createUseStyles({
     color: "#000",
     marginBottom: 20,
     letterSpacing: "-0.5px",
+    "@media (max-width: 700px)": {
+      fontSize: 28,
+      textAlign: "center",
+    },
   },
   separator: {
     width: "100%",
     height: "1.3px",
     backgroundColor: "#000",
-    marginBottom: 60,
+    marginBottom: 40,
   },
   mainContent: {
     display: "flex",
     alignItems: "flex-start",
     gap: 120,
     maxWidth: 1400,
-
     "@media (max-width: 700px)": {
       flexDirection: "column",
-      gap: 20,
+      gap: 40,
     },
   },
   leftSection: {
     flex: 1,
     maxWidth: 500,
-
     "@media (max-width: 700px)": {
       maxWidth: "100%",
     },
@@ -65,7 +72,8 @@ const useStyles = createUseStyles({
     lineHeight: 1.1,
     letterSpacing: "-1px",
     "@media (max-width: 700px)": {
-      fontSize: 40,
+      fontSize: 36,
+      textAlign: "center",
     },
   },
   formSection: {
@@ -84,6 +92,10 @@ const useStyles = createUseStyles({
     display: "flex",
     gap: 20,
     flexWrap: "nowrap",
+    "@media (max-width: 700px)": {
+      flexDirection: "column",
+      gap: 12,
+    },
   },
   input: {
     flex: 1,
@@ -98,7 +110,7 @@ const useStyles = createUseStyles({
       backgroundColor: "rgba(0, 0, 0, 0.05)",
     },
     "&::placeholder": {
-      color: "#000", // <-- black placeholder
+      color: "#000",
     },
   },
   fullWidthInput: {
@@ -115,7 +127,7 @@ const useStyles = createUseStyles({
       backgroundColor: "rgba(0, 0, 0, 0.05)",
     },
     "&::placeholder": {
-      color: "#000", // <-- black placeholder
+      color: "#000",
     },
   },
   textarea: {
@@ -125,10 +137,9 @@ const useStyles = createUseStyles({
     color: "#000",
     fontFamily: 'Georgia, "Times New Roman", serif',
     "&::placeholder": {
-      color: "#000", // <-- black placeholder
+      color: "#000",
     },
   },
-
   submitButton: {
     alignSelf: "flex-end",
     padding: "12px 32px",
