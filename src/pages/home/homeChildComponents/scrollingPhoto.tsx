@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { createUseStyles } from "react-jss";
+import ai1 from "../../../assets/ai1.jpg";
+import ai2 from "../../../assets/ai2.jpg";
+import ai3 from "../../../assets/ai3.jpg";
+import ai4 from "../../../assets/ai4.jpg";
 
 const useStyles = createUseStyles({
   container: {
@@ -68,10 +72,10 @@ const PhotoScroller = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const photos = [
-    "https://picsum.photos/300/320?random=1",
-    "https://picsum.photos/300/320?random=2",
-    "https://picsum.photos/300/320?random=3",
-    "https://picsum.photos/300/320?random=4",
+    ai1,
+    ai2,
+    ai3,
+    ai4,
     "https://picsum.photos/300/320?random=5",
     "https://picsum.photos/300/320?random=6",
     "https://picsum.photos/300/320?random=7",

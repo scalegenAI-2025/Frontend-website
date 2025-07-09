@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Rocket from "../../../assets/Scaling GenAI_Cover.jpg";
+
 const useStyles = createUseStyles({
   container: {
     padding: "40px 20px",
@@ -128,7 +129,16 @@ const ReadinessRocketSection: React.FC = () => {
           </div>
 
           <div className={classes.buttonContainer}>
-            <button className={classes.orderButton}>Order</button>
+            <button
+              className={classes.orderButton}
+              onClick={() =>
+                (window.location.href =
+                  "https://www.amazon.com/Scaling-Generative-Operational-Readiness-Enterprises/dp/1637427980")
+              }
+            >
+              Order
+            </button>
+
             <div className={classes.arrow}>↗</div>
           </div>
         </div>

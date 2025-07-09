@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //import Navbar from "../../../components/navbar/navbar";
@@ -61,6 +62,7 @@ const useStyles = createUseStyles({
     color: "#fff",
     border: "none",
     borderRadius: 4,
+    marginLeft: 10,
     cursor: "pointer",
     fontSize: 16,
     "&:disabled": {
@@ -93,7 +95,7 @@ const PartnerForm = () => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
+  const navigate = useNavigate();
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -345,6 +347,10 @@ const PartnerForm = () => {
 
         <button type="submit" className={classes.button} disabled={loading}>
           {loading ? "Submitting..." : "Submit Application"}
+        </button>
+
+        <button className={classes.button} onClick={() => navigate("/")}>
+          Go Back
         </button>
       </form>
       <ToastContainer position="top-center" autoClose={3000} />

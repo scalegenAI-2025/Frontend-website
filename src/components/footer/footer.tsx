@@ -76,7 +76,7 @@ const Footer = () => {
         <div className={classes.follow}>
           Follow us on
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/scaling-genai/about/"
             target="_blank"
             rel="noopener noreferrer"
             className={classes.link}
@@ -88,10 +88,10 @@ const Footer = () => {
           <a href="#" className={classes.link}>
             About Us
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/privacy-policy" className={classes.link}>
             Privacy Policy
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/cookie-policy" className={classes.link}>
             Cookie Policy
           </a>
           <a href="#" className={classes.link}>

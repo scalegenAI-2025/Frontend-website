@@ -346,7 +346,7 @@ const useStyles = createUseStyles({
     width: "200px",
     height: "120px",
     "@media (max-width: 1200px)": {
-      width: "130px",
+      //width: "130px",
       position: "absolute",
       left: "50%",
       transform: "translateX(-50%)",
@@ -415,7 +415,7 @@ const useStyles = createUseStyles({
 
   meetUsLinkWrapper: {
     marginLeft: "auto",
-    paddingTop: "35px",
+    paddingTop: "10px",
     "@media (max-width: 1200px)": {
       display: "none",
     },
@@ -553,12 +553,12 @@ const Navbar = () => {
 
         <div className={classes.meetUsLinkWrapper}>
           <Link
-            to="/meet-us"
+            to="/user-login"
             className={`${classes.navLink} ${
               location.pathname === "/meet-us" ? classes.activeNavLink : ""
             }`}
           >
-            Meet Us
+            User Login
           </Link>
         </div>
       </div>

@@ -21,18 +21,35 @@ const useStyles = createUseStyles({
     margin: 0,
     //overflow: "hidden",
   },
+  // backgroundOverlay: {
+  //   backgroundImage: `url(${AssetBckground})`,
+  //   backgroundSize: "cover",
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundPosition: "left 36%", // shifted downward
+  //   position: "absolute",
+  //   top: 0,
+  //   left: 0,
+  //   right: 0,
+  //   bottom: 0,
+  //   opacity: 1,
+  //   zIndex: 0,
+  // },
   backgroundOverlay: {
-    backgroundImage: `url(${AssetBckground})`,
-    backgroundSize: "cover",
+    backgroundImage: `
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+    url(${AssetBckground})
+  `,
+    backgroundSize: "contain, cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "left 36%", // shifted downward
+    backgroundPosition: "top center, center center",
+    backgroundColor: "#000000",
     position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    opacity: 1,
     zIndex: 0,
+    //filter: "blur(8px)", // <-- adds the blur effect here
   },
 
   contentWrapper: {
