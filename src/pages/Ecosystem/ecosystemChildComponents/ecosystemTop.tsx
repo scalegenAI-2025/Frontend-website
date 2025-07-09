@@ -5,7 +5,7 @@ const useStyles = createUseStyles({
     textAlign: "center",
     justifyContent: "center",
     //marginTop: "150px",
-    paddingTop: "250px",
+    paddingTop: "200px",
   },
   homeHeader: {
     backgroundColor: "none",
@@ -29,10 +29,12 @@ const useStyles = createUseStyles({
     opacity: 1,
   },
   homeHeader3: {
+    marginTop: "1.5rem",
     fontWeight: 400,
-    opacity: 1,
-    backgroundColor: "transparent",
+    fontSize: "clamp(1.2rem, 4vw, 2rem)",
     color: "#ffffff",
+    // maxWidth: "90%",
+    textShadow: "2px 2px 6px rgba(0, 0, 0, 0.7)",
   },
   title: {
     fontSize: "2rem",
@@ -53,7 +55,8 @@ const EcosystemTop = () => {
     <div className={classes.container}>
       <div className={classes.homeHeader}>
         <h1 className={classes.homeHeader1}>
-          Explore the power of collaboration through Ecosystems
+          How fast a firm scales GenAI shall largely depend on a firm’s ability
+          to work in Ecosystems
         </h1>
       </div>
       <h3 className={classes.homeHeader3}>Scale 3X through ecosystems</h3>

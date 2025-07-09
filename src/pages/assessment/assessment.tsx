@@ -7,6 +7,7 @@ import AssetsSecond from "./assessmentChildComponents/assessmentSecond";
 import AssessmentThirdComponent from "./assessmentChildComponents/assessmentThird";
 import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
+import ConsultationCardAssessment from "./assessmentChildComponents/ConsultationCardAssessment";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -74,6 +75,7 @@ function Assessment() {
       </div>
       <AssetsSecond />
       <AssessmentThirdComponent />
+      <ConsultationCardAssessment />
       <ContactUs />
       <Footer />
     </>

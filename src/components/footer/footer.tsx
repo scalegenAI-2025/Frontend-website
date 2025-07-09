@@ -38,6 +38,9 @@ const useStyles = createUseStyles({
       "&:hover": {
         textDecoration: "underline",
       },
+      "@media (max-width: 600px)": {
+        fontSize: "20px",
+      },
     },
   },
   navLinks: {

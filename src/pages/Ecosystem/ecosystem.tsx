@@ -1,11 +1,14 @@
 import useGlobalStyles from "../../styles/useGlobalStyles";
-import AssetBckground from "../../assets/assetsBackground.jpg";
+import AssetBckground from "../../assets/eco_pic.jpg";
 import { createUseStyles } from "react-jss";
 import Navbar from "../../components/navbar/navbar";
 
 import Footer from "../../components/footer/footer";
 import EcosystemTop from "./ecosystemChildComponents/ecosystemTop";
 import ContactUs from "../home/homeChildComponents/contactUs";
+import HowItWorks from "./ecosystemChildComponents/HowItWorks";
+import EcosystemHero from "./ecosystemChildComponents/EcosystemHero";
+import CollaborationHero from "./ecosystemChildComponents/CollabirationnHero";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -55,6 +58,10 @@ function Ecosystem() {
           <EcosystemTop />
         </div>
       </div>
+      <EcosystemHero />
+      <CollaborationHero />
+      <HowItWorks />
+
       <ContactUs />
       <Footer />
     </>
