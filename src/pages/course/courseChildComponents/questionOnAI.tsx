@@ -144,50 +144,51 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   "@global": {
-    "@keyframes fadeIn": {
-      "0%": { opacity: 0 },
-      "100%": { opacity: 1 },
+    "@keyframes fadeSlideIn": {
+      "0%": { opacity: 0, transform: "translateY(20px)" },
+      "100%": { opacity: 1, transform: "translateY(0)" },
     },
     "@keyframes drawLine": {
       "0%": { width: "0%" },
       "100%": { width: "100%" },
     },
-    "@keyframes showBottomText": {
-      "0%": { opacity: 0 },
-      "100%": { opacity: 1 },
-    },
   },
   container: {
-    height: "800px",
-    backgroundColor: "#000000",
+    height: "500px",
+    backgroundColor: "#000",
     display: "flex",
     alignItems: "center",
-    flexDirection: "column",
     justifyContent: "center",
     padding: "10px 2rem",
     overflow: "hidden",
-    position: "relative",
     fontFamily: 'Georgia, "Times New Roman", serif',
+    flexDirection: "column",
+    textAlign: "center",
+    "@media (max-width: 500px)": {
+      height: "300px",
+    },
   },
-  text: {
+  textBlock: {
     fontSize: "clamp(2rem, 6vw, 6rem)",
     fontWeight: 400,
-    lineHeight: "1.1",
-    letterSpacing: "-0.02em",
-    color: "#ffffff",
-    fontFamily: 'Georgia, "Times New Roman", serif',
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "2rem",
+    color: "#fff",
+    lineHeight: 1.2,
+    maxWidth: "1000px",
+    animation: "$fadeSlideIn 1s ease-out forwards",
     opacity: 0,
+    "@media (max-width: 500px)": {
+      fontSize: "25px",
+    },
   },
   textTop: {
-    fontWeight: 300,
     fontSize: "35px",
-    margin: "10px",
+    fontWeight: 300,
+    marginBottom: "1rem",
+    "@media (max-width: 500px)": {
+      fontSize: "22px",
+    },
   },
-  textToBeCrossed: {
+  crossedText: {
     position: "relative",
     display: "inline-block",
     "&::after": {
@@ -199,48 +200,37 @@ const useStyles = createUseStyles({
       backgroundColor: "red",
       width: "0%",
       transform: "translateY(-50%)",
+      animation: "$drawLine 1.5s ease forwards 1s",
     },
-  },
-  animateUpper: {
-    animation: "$fadeIn 1s ease forwards",
-  },
-  animateLine: {
-    "&::after": {
-      animation: "$drawLine 2s ease forwards",
-      animationDelay: "1s",
-    },
-  },
-  animateBottom: {
-    animation: "$showBottomText 1.5s ease forwards",
-    animationDelay: "3.5s",
   },
 });
 
 const QuestionOnAI = () => {
   const classes = useStyles();
-  const [trigger, setTrigger] = useState(0);
+  const [showFirst, setShowFirst] = useState(true);
 
-  // Loop the animation every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setTrigger((prev) => prev + 1);
-    }, 8000);
+      setShowFirst((prev) => !prev);
+    }, 6000); // switch every 6 seconds
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className={classes.container} key={trigger}>
-      <div className={`${classes.text} ${classes.animateUpper}`}>
-        <p className={classes.textTop}>The question should not be –</p>
-        <span className={`${classes.textToBeCrossed} ${classes.animateLine}`}>
-          Will AI take away my jobs?
-        </span>
-      </div>
-
-      <div className={`${classes.text} ${classes.animateBottom}`}>
-        <p className={classes.textTop}>It should be –</p>
-        Will you allow AI to take away your jobs?
-      </div>
+    <div className={classes.container}>
+      {showFirst ? (
+        <div className={classes.textBlock} key="first">
+          <p className={classes.textTop}>The question should not be –</p>
+          <span className={classes.crossedText}>
+            Will AI take away my jobs?
+          </span>
+        </div>
+      ) : (
+        <div className={classes.textBlock} key="second">
+          <p className={classes.textTop}>It should be –</p>
+          Will you allow AI to take away your jobs?
+        </div>
+      )}
     </div>
   );
 };

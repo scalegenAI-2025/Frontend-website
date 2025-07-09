@@ -8,11 +8,20 @@ const useStyles = createUseStyles({
     color: "black",
     fontFamily: 'Georgia, "Times New Roman", serif',
   },
+  heading: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 24,
+  },
   contentRow: {
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "space-between",
     gap: 32,
+    flexWrap: "wrap",
+    "@media (max-width: 768px)": {
+      flexDirection: "column",
+    },
   },
   leftColumn: {
     flex: 1,
@@ -20,30 +29,34 @@ const useStyles = createUseStyles({
   rightColumn: {
     flexShrink: 0,
   },
-  heading: {
-    fontSize: 18,
-    marginBottom: 24,
-  },
-  buttonGrid: {
+  boxGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
-    gap: 20,
-    paddingTop: "100px",
-    marginBottom: 32,
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gap: 24,
+    marginBottom: 40,
   },
-  button: {
-    // height: "50px",
+  box: {
     backgroundColor: "#002c3e",
     color: "white",
-    padding: "8px 16px",
-    borderRadius: 8,
-    border: "none",
+    padding: 20,
+    borderRadius: 12,
     cursor: "pointer",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    transition: "transform 0.2s ease",
+    "&:hover": {
+      transform: "scale(1.02)",
+    },
   },
-  moreText: {
-    marginBottom: 40,
-    textAlign: "center",
-    fontWeight: "600",
+  boxTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 8,
+  },
+  boxDescription: {
+    fontSize: 14,
+    lineHeight: 1.5,
   },
   downloadSection: {
     display: "flex",
@@ -60,119 +73,121 @@ const useStyles = createUseStyles({
     cursor: "pointer",
     border: "none",
   },
-  downloadNote: {
-    fontSize: 14,
-    textAlign: "center",
-    maxWidth: 400,
-  },
   rocketWrapper: {
     position: "relative",
-    width: 400, // increased size from 256 to 400
+    width: "100%",
+    maxWidth: 400,
   },
   rocketImage: {
     width: "100%",
     height: "auto",
-  },
-  maturityText: {
-    position: "absolute",
-    top: 8,
-    left: "50%",
-    transform: "translateX(-50%)",
-    fontSize: 10,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  strategyBox: {
-    position: "absolute",
-    top: 40,
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "#d1d5db",
-    padding: "4px 8px",
-    fontSize: 14,
-    fontWeight: "500",
-  },
-  readinessStack: {
-    position: "absolute",
-    top: 80,
-    left: "50%",
-    transform: "translateX(-50%)",
-    color: "white",
-    fontSize: 14,
-    textAlign: "center",
-  },
-  readinessItem: {
-    backgroundColor: "#374151",
-    padding: 4,
-    marginBottom: 4,
-  },
-  boosters: {
-    position: "absolute",
-    top: 208,
-    left: "50%",
-    transform: "translateX(-50%)",
-    fontSize: 10,
-    color: "#1f2937",
-    display: "flex",
-    justifyContent: "space-between",
-    width: "100%",
-    padding: "0 8px",
-  },
-  boosterItem: {
-    backgroundColor: "#e5e7eb",
-    padding: 4,
-    textAlign: "center",
-  },
-  launchpad: {
-    position: "absolute",
-    bottom: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "black",
-    color: "white",
-    padding: "4px 8px",
-    fontSize: 14,
-  },
-  assetsFooter: {
-    marginTop: 40,
-    fontWeight: "bold",
   },
 });
 
 export default function AssessmentThirdComponent() {
   const classes = useStyles();
 
+  const boxes = [
+    {
+      title: "GenAI Maturity",
+      description:
+        "Gauge your organization’s maturity level: 1 to 5, for GenAI",
+    },
+    {
+      title: "AI Maturity",
+      description:
+        "Gauge your organization’s maturity level: 1 to 5, for traditional AI",
+    },
+    {
+      title: "VITA",
+      description:
+        "Find out the impact of GenAI on your organization through VITA score",
+    },
+    {
+      title: "Value chain",
+      description: "Know the strength of your position in GenAI value chain",
+    },
+    {
+      title: "Infrastructure",
+      description:
+        "Find out how ready your organization’s infrastructure is to scale GenAI",
+    },
+    {
+      title: "Agents",
+      description: "Find out if your organization is ready to deploy agents",
+    },
+    {
+      title: "Customer Readiness",
+      description: "Find out how ready your customers are for GenAI",
+    },
+    {
+      title: "Technology Readiness",
+      description:
+        "Find out if your organization has the adjacent technologies to scale GenAI",
+    },
+    {
+      title: "People Readiness",
+      description:
+        "Find out if your organization has the right skills and competencies to scale GenAI",
+    },
+    {
+      title: "Operational Readiness",
+      description:
+        "Find out if your organization is operationally ready to scale GenAI",
+    },
+  ];
+
   return (
     <div className={classes.container}>
       <div className={classes.contentRow}>
-        {/* Left Side: Buttons and Download Section */}
+        {/* Left Column: Heading + Boxes + Download */}
         <div className={classes.leftColumn}>
-          <div className={classes.buttonGrid}>
-            <button className={classes.button}>Generative AI Maturity</button>
-            <button className={classes.button}>AI Maturity</button>
-            <button className={classes.button}>AI/GenAI Mindset</button>
-            <button className={classes.button}>AI Reskilling Journey</button>
-            <button className={classes.button}>VITA</button>
-            <button className={classes.button}>AI Value chain</button>
-            <button className={classes.button}>Vendor selection</button>
-            <button className={classes.button}>AI/GenAI Capabilities</button>
-            <button className={classes.button}>Infrastructure readiness</button>
-            <button className={classes.button}>Green AI</button>
-            <button className={classes.button}>Customer Readiness</button>
-            <button className={classes.button}>Technology Readiness</button>
-            <button className={classes.button}>Data Readiness</button>
-            <button className={classes.button}>People Readiness</button>
-            <button className={classes.button}>
-              Comprehensive Operational Readiness
-            </button>
+          <div className={classes.heading}>Assessment Catalog</div>
+
+          <div className={classes.boxGrid}>
+            {boxes.map(({ title, description }, index) => (
+              <div key={index} className={classes.box}>
+                <div className={classes.boxTitle}>{title}</div>
+                <div className={classes.boxDescription}>{description}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className={classes.heading}>Individual Assessments</div>
+
+          <div className={classes.boxGrid}>
+            <div className={classes.box}>
+              <div className={classes.boxTitle}>AI Reskilling</div>
+              <div className={classes.boxDescription}>
+                Find out your AI journey map based on what you do, what you want
+                to do, and how to do it
+              </div>
+            </div>
+
+            <div className={classes.box}>
+              <div className={classes.boxTitle}>AI/GenAI Mindset</div>
+              <div className={classes.boxDescription}>
+                Know your mindset toward AI
+              </div>
+            </div>
+
+            <div className={classes.box}>
+              <div className={classes.boxTitle}>Leadership</div>
+              <div className={classes.boxDescription}>
+                Find out if you have the four essential competencies of a
+                digital leader
+              </div>
+            </div>
           </div>
 
           <div className={classes.downloadSection}>
-            <button className={classes.downloadButton}>Download Now</button>
+            <button className={classes.downloadButton}>
+              Download Full Report
+            </button>
           </div>
         </div>
 
-        {/* Right Side: Rocket Image */}
+        {/* Right Column: Rocket Image */}
         <div className={classes.rightColumn}>
           <div className={classes.rocketWrapper}>
             <img src={Rocket} className={classes.rocketImage} alt="Rocket" />
