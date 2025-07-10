@@ -32,6 +32,7 @@ import OtpVerification from "./pages/users/UserVerifyOtp";
 import UserDashboard from "./pages/users/Dashboard";
 import CookiePolicy from "./components/footer/CookiePolicy";
 import PrivacyPolicy from "./components/footer/PrivacyPolicy";
+import AboutUs from "./pages/aboutUs.tsx/AboutUs";
 
 function App() {
   useGlobalStyles();
@@ -66,6 +67,7 @@ function App() {
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/about-us" element={<AboutUs />} />
         {/* Add more routes here */}
       </Routes>
       <ToastContainer

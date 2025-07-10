@@ -9,6 +9,8 @@ import ContactUs from "../home/homeChildComponents/contactUs";
 import HowItWorks from "./ecosystemChildComponents/HowItWorks";
 import EcosystemHero from "./ecosystemChildComponents/EcosystemHero";
 import CollaborationHero from "./ecosystemChildComponents/CollabirationnHero";
+import AIEcosystems from "./ecosystemChildComponents/AIEcosystems";
+import Benefits from "./ecosystemChildComponents/Benefits";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -61,7 +63,8 @@ function Ecosystem() {
       <EcosystemHero />
       <CollaborationHero />
       <HowItWorks />
-
+      <AIEcosystems />
+      <Benefits />
       <ContactUs />
       <Footer />
     </>

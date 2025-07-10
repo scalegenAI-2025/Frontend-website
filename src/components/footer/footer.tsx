@@ -88,7 +88,7 @@ const Footer = () => {
           </a>
         </div>
         <div className={classes.navLinks}>
-          <a href="#" className={classes.link}>
+          <a href="/about-us" className={classes.link}>
             About Us
           </a>
           <a href="/privacy-policy" className={classes.link}>
