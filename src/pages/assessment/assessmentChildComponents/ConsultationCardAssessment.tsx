@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import earth from "../../../assets/photorealistic-earth-planet.jpg";
+//import earth from "../../../assets/photorealistic-earth-planet.jpg";
 // Define TypeScript interfaces
 interface ConsultationCardProps {
   onBookConsultation?: () => void;
@@ -13,8 +13,8 @@ const useStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     // minHeight: "100vh",
-    backgroundColor: "#000000",
-    backgroundImage: `url(${earth})`,
+    // backgroundColor: "#000000",
+    // backgroundImage: `url(${earth})`,
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     padding: "20px",

@@ -1,49 +1,74 @@
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
-  container: {
-    textAlign: "center",
-    justifyContent: "center",
-    //marginTop: "150px",
-    paddingTop: "200px",
+  "@global": {
+    "*, *::before, *::after": {
+      boxSizing: "border-box",
+    },
+    body: {
+      margin: 0,
+      padding: 0,
+      overflowX: "hidden",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      backgroundColor: "#000",
+    },
   },
-  homeHeader: {
-    backgroundColor: "none",
-    color: "#ffffff",
+
+  container: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    margin: "auto",
+    textAlign: "center",
+    paddingTop: "150px",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    minHeight: "100vh",
+    color: "#fff",
+    overflowX: "hidden",
+    maxWidth: "100vw",
   },
-  homeHeader1: {
-    margin: "0",
-    fontSize: "clamp(2rem, 6vw, 6rem)",
-    fontWeight: 500,
-    opacity: 1,
+
+  homeHeader: {
+    //display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "1.5rem",
+    width: "100%",
+    // backgroundColor: "rgba(0, 0, 0, 0.1)", // optional overlay behind text
+    padding: "1rem 2rem",
+    borderRadius: "12px",
   },
-  homeHeader2: {
-    margin: "0",
-    fontSize: "clamp(2rem, 6vw, 6rem)",
-    fontWeight: 500,
-    opacity: 1,
+
+  homeHeaderLine: {
+    margin: 0,
+    fontSize: "clamp(2.2rem, 6vw, 5rem)",
+    fontWeight: 700,
+    lineHeight: 1.1,
+    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)",
   },
+
   homeHeader3: {
     marginTop: "1.5rem",
     fontWeight: 400,
     fontSize: "clamp(1.2rem, 4vw, 2rem)",
     color: "#ffffff",
-    // maxWidth: "90%",
+    maxWidth: "90%",
     textShadow: "2px 2px 6px rgba(0, 0, 0, 0.7)",
   },
-  title: {
-    fontSize: "2rem",
-    color: "#222",
-    marginBottom: "1rem",
-  },
-  subtitle: {
-    fontSize: "1rem",
-    color: "#555",
+
+  "@media (max-width: 600px)": {
+    container: {
+      paddingTop: "100px",
+      paddingBottom: "50px",
+    },
+    homeHeaderLine: {
+      fontSize: "clamp(1.8rem, 8vw, 2.5rem)",
+    },
+    homeHeader3: {
+      fontSize: "clamp(1rem, 5vw, 1.2rem)",
+    },
   },
 });
 
@@ -54,7 +79,7 @@ const EcosystemTop = () => {
     // <div className={classes.backgroundWrapper}>
     <div className={classes.container}>
       <div className={classes.homeHeader}>
-        <h1 className={classes.homeHeader1}>
+        <h1 className={classes.homeHeaderLine}>
           How fast a firm scales GenAI shall largely depend on a firm’s ability
           to work in Ecosystems
         </h1>

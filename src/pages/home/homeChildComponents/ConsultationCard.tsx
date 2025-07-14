@@ -1,10 +1,9 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { FaRegCheckSquare } from "react-icons/fa"; // Checkmark square icon
 
 // Define TypeScript interfaces
-interface ConsultationCardProps {
-  onBookConsultation?: () => void;
-}
+type ConsultationCardProps = object;
 
 // Define styles using react-jss
 const useStyles = createUseStyles({
@@ -12,7 +11,6 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    // minHeight: "100vh",
     backgroundColor: "#f5f5f5",
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -23,7 +21,6 @@ const useStyles = createUseStyles({
     borderRadius: "12px",
     padding: "60px 80px",
     textAlign: "center",
-    //maxWidth: "600px",
     width: "100%",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     "@media (max-width: 768px)": {
@@ -62,7 +59,7 @@ const useStyles = createUseStyles({
     transition: "all 0.3s ease",
     display: "inline-flex",
     alignItems: "center",
-    gap: "8px",
+    gap: "10px",
     textDecoration: "none",
     "&:hover": {
       backgroundColor: "#2c4a6b",
@@ -78,31 +75,27 @@ const useStyles = createUseStyles({
     },
   },
   icon: {
-    width: "16px",
-    height: "16px",
-    border: "2px solid white",
-    borderRadius: "2px",
-    display: "inline-block",
+    fontSize: "18px",
   },
 });
 
-const ConsultationCard: React.FC<ConsultationCardProps> = ({
-  onBookConsultation = () => console.log("Book consultation clicked"),
-}) => {
+const ConsultationCardAssets: React.FC<ConsultationCardProps> = () => {
   const classes = useStyles();
+
+  const mailtoLink = `mailto:aishwayagorakhshinde@gmail.com?subject=Scaling%20GenAI%20consultation%20request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname`;
 
   return (
     <div className={classes.container}>
       <div className={classes.card}>
-        <h1 className={classes.title}>Need help with Scaling GenAI?</h1>
+        <h1 className={classes.title}>Need help with Assets?</h1>
         <p className={classes.subtitle}>Not sure where to start?</p>
-        <button className={classes.button} onClick={onBookConsultation}>
+        <a href={mailtoLink} className={classes.button}>
           Book a Consultation
-          <span className={classes.icon}></span>
-        </button>
+          <FaRegCheckSquare className={classes.icon} />
+        </a>
       </div>
     </div>
   );
 };
 
-export default ConsultationCard;
+export default ConsultationCardAssets;

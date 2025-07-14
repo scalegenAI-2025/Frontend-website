@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import logo from "../../assets/image.png";
+import logo from "../../assets/Logo (1).jpg";
 
 const useStyles = createUseStyles({
   "@keyframes blink": {
@@ -63,7 +63,7 @@ const useStyles = createUseStyles({
     maxWidth: 700, // increased size, can adjust px or %
     width: "100%",
     height: "auto",
-    marginTop: "1.5rem",
+    // marginTop: "1.5rem",
     animation: "$blink 1s ease-in-out 1",
     animationFillMode: "forwards",
   },

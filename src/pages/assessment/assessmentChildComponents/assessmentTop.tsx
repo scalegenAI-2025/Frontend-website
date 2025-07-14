@@ -34,6 +34,22 @@ const useStyles = createUseStyles({
   //   backgroundColor: "transparent",
   //   color: "#ffffff",
   // },
+  // homeHeaderLine: {
+  //   margin: 0,
+  //   fontSize: "clamp(2.2rem, 6vw, 5rem)",
+  //   fontWeight: 700,
+  //   lineHeight: 1.1,
+  //   textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)",
+  // },
+
+  // homeHeader3: {
+  //   marginTop: "1.5rem",
+  //   fontWeight: 400,
+  //   fontSize: "clamp(1.2rem, 4vw, 2rem)",
+  //   color: "#ffffff",
+  //   maxWidth: "100%",
+  //   textShadow: "2px 2px 6px rgba(0, 0, 0, 0.7)",
+  // },
   homeHeaderLine: {
     margin: 0,
     fontSize: "clamp(2.2rem, 6vw, 5rem)",

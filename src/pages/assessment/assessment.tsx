@@ -74,8 +74,9 @@ function Assessment() {
         </div>
       </div>
       <AssetsSecond />
-      <AssessmentThirdComponent />
       <ConsultationCardAssessment />
+      <AssessmentThirdComponent />
+
       <ContactUs />
       <Footer />
     </>

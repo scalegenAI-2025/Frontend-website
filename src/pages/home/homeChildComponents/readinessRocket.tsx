@@ -491,8 +491,8 @@ const ReadinessRocketPage = () => {
             <p className={classes.paragraph}>
               Just as trajectory optimization enables rockets gain more speed
               through gravity turn, which involves using earth's rotation for a
-              speed boost, ecosystems enables scaled adoption of GenAI 3X faster
-              by enabling collaboration between enterprises.
+              speed boost, <b>ecosystems</b> enables scaled adoption of GenAI 3X
+              faster by enabling collaboration between enterprises.
             </p>
           </div>
 

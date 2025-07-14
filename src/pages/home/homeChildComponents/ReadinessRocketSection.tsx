@@ -52,7 +52,7 @@ const useStyles = createUseStyles({
     marginBottom: "10px",
   },
   availableText: {
-    fontSize: "48px",
+    fontSize: "40px",
     fontWeight: "bold",
     color: "#333",
     lineHeight: "1.2",

@@ -5,6 +5,7 @@ import ai1 from "../../../assets/ai1.jpg";
 import ai2 from "../../../assets/ai2.jpg";
 import ai3 from "../../../assets/ai3.jpg";
 import ai4 from "../../../assets/ai4.jpg";
+import ai5 from "../../../assets/ai5.jpg";
 
 const useStyles = createUseStyles({
   container: {
@@ -76,12 +77,12 @@ const PhotoScroller = () => {
     ai2,
     ai3,
     ai4,
-    "https://picsum.photos/300/320?random=5",
-    "https://picsum.photos/300/320?random=6",
-    "https://picsum.photos/300/320?random=7",
-    "https://picsum.photos/300/320?random=8",
-    "https://picsum.photos/300/320?random=9",
-    "https://picsum.photos/300/320?random=10",
+    ai5,
+    // "https://picsum.photos/300/320?random=6",
+    // "https://picsum.photos/300/320?random=7",
+    // "https://picsum.photos/300/320?random=8",
+    // "https://picsum.photos/300/320?random=9",
+    // "https://picsum.photos/300/320?random=10",
   ];
 
   useEffect(() => {

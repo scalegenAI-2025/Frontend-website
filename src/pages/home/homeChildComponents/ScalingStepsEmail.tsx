@@ -224,14 +224,12 @@ import scalingImage from "../../../assets/scale.png";
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
-    /// minHeight: "110vh",
     color: "#fff",
     padding: "90px 20px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     fontFamily: "Arial, sans-serif",
-    //marginBottom: "50px",
   },
   title: {
     fontSize: 36,
@@ -248,7 +246,6 @@ const useStyles = createUseStyles({
     width: "80%",
     position: "relative",
     "@media (max-width: 500px)": {
-      justifyContent: "center",
       flexDirection: "row",
       gap: 10,
       marginBottom: 30,
@@ -320,6 +317,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
+    cursor: "pointer",
     "&:hover": {
       transform: "scale(1.05)",
       backgroundColor: "#eee",
@@ -371,7 +369,6 @@ const useStyles = createUseStyles({
       marginBottom: 30,
     },
   },
-  // ✅ Updated: Desktop scaling label row - more width for text, image pushed right
   scalingLabelContainer: {
     position: "absolute",
     bottom: `${6 * 60 + 60}px`,
@@ -379,7 +376,7 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-end",
-    width: 400, // ⬅️ Wider container pushes image right
+    width: 400,
     maxWidth: "100%",
     color: "#ccc",
     fontSize: 14,
@@ -408,7 +405,7 @@ const useStyles = createUseStyles({
     marginTop: 6,
   },
   scalingImageDesktop: {
-    maxWidth: 100, // ⬅️ Reduce image size for spacing if needed
+    maxWidth: 100,
     width: "100%",
     height: "auto",
   },
@@ -418,11 +415,10 @@ const useStyles = createUseStyles({
     height: "auto",
   },
   highlight: {
-    color: "purple",
+    color: "#FF00FF",
     fontWeight: "bold",
-    fontSize: "1.0rem",
+    fontSize: "1rem",
     display: "inline-block",
-    marginRight: "0.5rem",
   },
 });
 
@@ -445,6 +441,22 @@ const ScalingStepsEmail: React.FC = () => {
     window.location.href = mailtoLink;
   };
 
+  const handleRouteClick = (stepIndex: number) => {
+    const routes = [
+      "/member",
+      "/assessments",
+      "/assets",
+      "/ecosystem",
+      "", // Step 5: opens email
+      "/courses",
+      "", // Step 7: opens email
+    ];
+    const route = routes[stepIndex];
+    if (route) {
+      window.location.href = route;
+    }
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.title}>Mitigate Huge Gap</div>
@@ -453,20 +465,16 @@ const ScalingStepsEmail: React.FC = () => {
         <span className={classes.arrowLabelLeft}>
           Lagging Enterprises (80%)
         </span>
-
         <div className={classes.arrowLine}></div>
-
         <span className={classes.arrowIcon}>→</span>
-
         <span className={classes.arrowLabelRight}>
           Scaling Enterprises (100%)
         </span>
       </div>
 
-      {/* MOBILE SCALING LABEL + IMAGE (right aligned) */}
       <div className={classes.mobileScalingContainer}>
         <div className={classes.mobileScalingLabel}>
-          I am now a <span className={classes.highlight}>Scaling</span>
+          I am now a <span className={classes.highlight}>Scaling</span>{" "}
           Enterprise
         </div>
         <img
@@ -477,7 +485,6 @@ const ScalingStepsEmail: React.FC = () => {
       </div>
 
       <div className={classes.stairsWrapper}>
-        {/* Rocket near Step 4 */}
         <img
           src={rocket}
           alt="rocket"
@@ -488,25 +495,22 @@ const ScalingStepsEmail: React.FC = () => {
           }}
         />
 
-        {/* Steps */}
         {steps.map((step, i) => (
           <div
             key={i}
             className={classes.step}
             onClick={
-              i === 0 || i === steps.length - 1 ? handleEmailClick : undefined
+              i === 4 || i === 6 ? handleEmailClick : () => handleRouteClick(i)
             }
             style={{
               bottom: `${i * 60}px`,
               left: `${i * 80}px`,
-              cursor: i === 0 || i === steps.length - 1 ? "pointer" : "default",
             }}
           >
             {step}
           </div>
         ))}
 
-        {/* DESKTOP SCALING LABEL + IMAGE (now wider text + image right) */}
         <div className={classes.scalingLabelContainer}>
           <div className={classes.scalingLabel}>
             I am now a <span className={classes.highlight}>Scaling</span>{" "}
@@ -520,7 +524,7 @@ const ScalingStepsEmail: React.FC = () => {
         </div>
 
         <div className={classes.bottomLabel}>
-          I am a <span className={classes.highlight}>Lagging </span>Enterprise
+          I am a <span className={classes.highlight}>Lagging </span> Enterprise
         </div>
 
         <div className={classes.scalingText}>Scaling Steps</div>

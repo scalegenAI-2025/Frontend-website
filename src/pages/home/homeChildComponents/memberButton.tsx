@@ -66,10 +66,10 @@ const BecomeMemberPage = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <h1 className={classes.heading}>Join The scaling Generative AI</h1>
+        <h1 className={classes.heading}>Join the Scaling Generative AI</h1>
         <h1 className={classes.heading2}>Ecosystem</h1>
         <p className={classes.description}>
-          fill out the membership form and we shall get back to you for a
+          Fill out the membership form and we shall get back to you for a
           consultation.
         </p>
         <button className={classes.button} onClick={handleClick}>

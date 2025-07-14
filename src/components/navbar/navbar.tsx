@@ -343,7 +343,7 @@ const useStyles = createUseStyles({
   },
 
   logo: {
-    width: "200px",
+    width: "300px",
     height: "120px",
     "@media (max-width: 1200px)": {
       //width: "130px",
@@ -404,13 +404,13 @@ const useStyles = createUseStyles({
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
-      color: "purple",
+      color: "#FF00FF",
     },
   },
 
   activeNavLink: {
     textDecoration: "underline",
-    color: "purple",
+    color: "#FF00FF",
   },
 
   meetUsLinkWrapper: {
@@ -558,7 +558,7 @@ const Navbar = () => {
               location.pathname === "/meet-us" ? classes.activeNavLink : ""
             }`}
           >
-            User Login
+            Login
           </Link>
         </div>
       </div>

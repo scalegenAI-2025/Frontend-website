@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 import { toast } from "react-toastify";
 const useStyles = createUseStyles({
   container: {
-    backgroundColor: "#e8e0d4",
+    backgroundColor: "#ffffff",
     padding: 40,
     position: "relative",
     "@media (max-width: 700px)": {
@@ -162,7 +162,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const ContactUs = () => {
+const ContactUsCourse = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -302,4 +302,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsCourse;
