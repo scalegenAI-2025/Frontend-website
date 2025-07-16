@@ -243,13 +243,7 @@ const courses = [
     mode: "Instructor-led",
     delivery: "Online or in-person",
   },
-  {
-    title: "Essential Competencies of AI Leader",
-    audience: "For executives and middle managers",
-    hours: "12 hours",
-    mode: "Instructor-led",
-    delivery: "Online or In-person",
-  },
+
   {
     title: "Cultivating AI/GenAI Mindset",
     audience: "For executives and middle managers",

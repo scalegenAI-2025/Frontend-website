@@ -347,12 +347,14 @@ const useStyles = createUseStyles({
     height: "120px",
     "@media (max-width: 1200px)": {
       //width: "130px",
-      position: "absolute",
+      // position: "absolute",
       left: "50%",
       transform: "translateX(-50%)",
     },
-    "@media (max-width: 900px)": {
+    "@media (max-width: 600px)": {
       // width: "100px",
+      width: "150px",
+      height: "80px",
       position: "static",
     },
   },
@@ -372,7 +374,7 @@ const useStyles = createUseStyles({
       display: "flex",
       justifyContent: "flex-end", // Aligns content (like the logo) to the right
       alignItems: "center",
-      marginRight: "100px",
+      marginRight: "50px",
     },
   },
 
