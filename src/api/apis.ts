@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: 'https://backend-1-9qjs.onrender.com/api/auth',
 });
 
 export const registerUser = (data: {
