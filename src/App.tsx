@@ -34,6 +34,7 @@ import CookiePolicy from "./components/footer/CookiePolicy";
 import PrivacyPolicy from "./components/footer/PrivacyPolicy";
 import AboutUs from "./pages/aboutUs.tsx/AboutUs";
 import GeneralTerms from "./components/footer/TermsAndCondition";
+import { AdminRoute } from "./pages/adminLogin/AdminRoute";
 
 function App() {
   useGlobalStyles();
@@ -61,8 +62,18 @@ function App() {
         <Route path="/activate-account/:token" element={<ActivateAccount />} />
         <Route path="/member" element={<PartnerForm />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/user-register" element={<UserRegister />} />
+
+        {/* <Route path="/user-register" element={<UserRegister />} /> */}
+
+        <Route
+          path="/user-register"
+          element={
+            <AdminRoute>
+              <UserRegister />
+            </AdminRoute>
+          }
+        />
+
         <Route path="/user-login" element={<UserLogin />} />
         <Route path="/verify-otp" element={<OtpVerification />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
