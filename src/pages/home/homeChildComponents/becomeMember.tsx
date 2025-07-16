@@ -138,11 +138,14 @@ const PartnerForm = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:9000/api/member", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://backend-1-9qjs.onrender.com/api/member",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const result = await response.json();
 
