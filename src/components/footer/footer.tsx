@@ -97,7 +97,7 @@ const Footer = () => {
           <a href="/cookie-policy" className={classes.link}>
             Cookie Policy
           </a>
-          <a href="#" className={classes.link}>
+          <a href="/terms-conditions" className={classes.link}>
             Terms and Conditions
           </a>
           <a href="/admin-login" className={classes.link}>

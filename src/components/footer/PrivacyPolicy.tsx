@@ -849,14 +849,6 @@ const PrivacyPolicy: React.FC = () => {
             </p>
           </div>
         </div>
-        <section className={classes.section}>
-          <h2 className={classes.sectionTitle}>Grievances</h2>
-          <p className={classes.content}>
-            If you have any questions about this Policy or concerns about
-            privacy or grievances, please write to us at:{" "}
-            <strong>info@scalinggenai.com</strong>
-          </p>
-        </section>
       </article>
     </main>
   );
