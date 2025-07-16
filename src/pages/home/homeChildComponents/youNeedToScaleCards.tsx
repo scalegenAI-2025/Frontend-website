@@ -1,12 +1,13 @@
 import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
 import Assessments from "../../../assets/assessment.jpg";
 import Assets from "../../../assets/assets_pic.jpg";
 import Ecosystem from "../../../assets/eco_pic.jpg";
 import Course from "../../../assets/Courses.jpg";
+
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
-    //minHeight: "100vh",
     padding: 20,
     position: "relative",
   },
@@ -34,16 +35,21 @@ const useStyles = createUseStyles({
   },
   cardsContainer: {
     display: "flex",
-    gap: 24,
-    //maxWidth: 1200,
     flexWrap: "wrap",
+    gap: 24,
+    justifyContent: "center",
   },
   card: {
-    flex: 1,
-    minWidth: 400,
+    width: "calc(50% - 12px)", // Two cards per row
+    minWidth: 300,
+    maxWidth: 600,
     borderRadius: 12,
     overflow: "hidden",
     border: "1px solid rgba(255, 255, 255, 0.1)",
+    boxSizing: "border-box",
+    "@media (max-width: 768px)": {
+      width: "100%", // Stack on smaller screens
+    },
   },
   cardContent: {
     padding: 32,
@@ -69,11 +75,15 @@ const useStyles = createUseStyles({
     cursor: "pointer",
     transition: "all 0.3s ease",
   },
-  // Dark styles
   darkCard: {
     composes: "$card",
     backgroundColor: "#111",
     color: "white",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    "&:hover": {
+      transform: "translateY(-5px)",
+      boxShadow: "0 10px 20px rgba(255,255,255,0.1)",
+    },
   },
   darkCardImage: {
     width: "100%",
@@ -82,14 +92,13 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#222", // Optional fallback background
+    backgroundColor: "#222",
     "& img": {
       width: "100%",
       height: "100%",
       objectFit: "cover",
     },
   },
-
   darkButton: {
     composes: "$cardButton",
     borderColor: "white",
@@ -101,73 +110,57 @@ const useStyles = createUseStyles({
   },
 });
 
+const cardData = [
+  {
+    title: "Assets",
+    description:
+      "Accelerate AI Adoption with curated, enterprise-grade, and downloadable assets",
+    image: Assets,
+    link: "/assets",
+  },
+  {
+    title: "Assessments",
+    description:
+      "Assess your capabilities, identify the gaps, and speed up your AI Journey",
+    image: Assessments,
+    link: "/assessments",
+  },
+  {
+    title: "Courses",
+    description:
+      "We do not offer just courses. We offer personalized continuous AI Reskilling Journey",
+    image: Course,
+    link: "/courses",
+  },
+  {
+    title: "Ecosystems",
+    description: "Explore the power of collaboration through Ecosystems",
+    image: Ecosystem,
+    link: "/ecosystem",
+  },
+];
+
 const YouNeedToScaleCards = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.container}>
       <h1 className={classes.header}>All you need to Scale</h1>
-
       <div className={classes.cardsContainer}>
-        {/* Dark Card */}
-        <div className={classes.darkCard}>
-          <div className={classes.darkCardImage}>
-            <img src={Assets} alt="Logo" />
+        {cardData.map((card, index) => (
+          <div key={index} className={classes.darkCard}>
+            <div className={classes.darkCardImage}>
+              <img src={card.image} alt={card.title} />
+            </div>
+            <div className={classes.cardContent}>
+              <h2 className={classes.cardTitle}>{card.title}</h2>
+              <p className={classes.cardDescription}>{card.description}</p>
+              <Link to={card.link}>
+                <button className={classes.darkButton}>Explore</button>
+              </Link>
+            </div>
           </div>
-          <div className={classes.cardContent}>
-            <h2 className={classes.cardTitle}>Assets</h2>
-            <p className={classes.cardDescription}>
-              Accelerate AI Adoption with curated, enterprise-grade, and
-              downloadable assets
-            </p>
-            <button className={classes.darkButton}>Explore</button>
-          </div>
-        </div>
-
-        {/* Light Card */}
-        <div className={classes.darkCard}>
-          <div className={classes.darkCardImage}>
-            <img src={Assessments} alt="Logo" />
-          </div>
-          <div className={classes.cardContent}>
-            <h2 className={classes.cardTitle}>Assessments</h2>
-            <p className={classes.cardDescription}>
-              Assess your capabilities, identify the gaps, and speed up your AI
-              Journey
-            </p>
-            <button className={classes.darkButton}>Explore</button>
-          </div>
-        </div>
-      </div>
-      <div className={classes.cardsContainer}>
-        {/* Dark Card */}
-        <div className={classes.darkCard}>
-          <div className={classes.darkCardImage}>
-            <img src={Course} alt="Logo" />
-          </div>
-          <div className={classes.cardContent}>
-            <h2 className={classes.cardTitle}>Courses</h2>
-            <p className={classes.cardDescription}>
-              We do not offer just courses. We offer personalized continuous AI
-              Reskilling Journey
-            </p>
-            <button className={classes.darkButton}>Explore</button>
-          </div>
-        </div>
-
-        {/* Light Card */}
-        <div className={classes.darkCard}>
-          <div className={classes.darkCardImage}>
-            <img src={Ecosystem} alt="Logo" />
-          </div>
-          <div className={classes.cardContent}>
-            <h2 className={classes.cardTitle}>Ecosystems</h2>
-            <p className={classes.cardDescription}>
-              Explore the power of collaboration through Ecosystems
-            </p>
-            <button className={classes.darkButton}>Explore</button>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
