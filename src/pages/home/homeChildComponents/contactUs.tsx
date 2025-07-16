@@ -185,18 +185,21 @@ const ContactUs = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:9000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          organization: formData.organization,
-          role: formData.role,
-          moreDetails: formData.moreDetails,
-        }),
-      });
+      const response = await fetch(
+        "https://backend-1-9qjs.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            organization: formData.organization,
+            role: formData.role,
+            moreDetails: formData.moreDetails,
+          }),
+        }
+      );
 
       const result = await response.json();
 
