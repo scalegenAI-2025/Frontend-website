@@ -35,10 +35,52 @@ import PrivacyPolicy from "./components/footer/PrivacyPolicy";
 import AboutUs from "./pages/aboutUs.tsx/AboutUs";
 import GeneralTerms from "./components/footer/TermsAndCondition";
 import { AdminRoute } from "./pages/adminLogin/AdminRoute";
+import { useState, useEffect } from "react";
+import { createUseStyles } from "react-jss";
+const useStyles = createUseStyles({
+  loaderContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    backgroundColor: "#ffffff",
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+    animation: "$bounce 2s infinite",
+  },
+  text: {
+    fontSize: 20,
+    color: "#333",
+    fontWeight: 500,
+  },
+  "@keyframes bounce": {
+    "0%, 100%": { transform: "translateY(0)" },
+    "50%": { transform: "translateY(-15px)" },
+  },
+});
 
 function App() {
   useGlobalStyles();
+  const classes = useStyles();
+  const [loading, setLoading] = useState<boolean>(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className={classes.loaderContainer}>
+        <img src="/logo.png" alt="Loading" className={classes.logo} />
+        <p className={classes.text}>🚀 Loading Scaling GenAI...</p>
+      </div>
+    );
+  }
   return (
     <>
       {/* <Navbar /> */}
