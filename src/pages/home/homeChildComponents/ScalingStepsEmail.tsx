@@ -463,12 +463,12 @@ const ScalingStepsEmail: React.FC = () => {
 
       <div className={classes.arrowLineWrapper}>
         <span className={classes.arrowLabelLeft}>
-          Lagging Enterprises (80%)
+          Lagging Enterprises (10%)
         </span>
         <div className={classes.arrowLine}></div>
         <span className={classes.arrowIcon}>→</span>
         <span className={classes.arrowLabelRight}>
-          Scaling Enterprises (100%)
+          Scaling Enterprises (90%)
         </span>
       </div>
 
