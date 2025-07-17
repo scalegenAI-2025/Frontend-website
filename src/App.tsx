@@ -47,14 +47,14 @@ const useStyles = createUseStyles({
     backgroundColor: "#000000",
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 400,
+    height: 200,
     marginBottom: 20,
     animation: "$bounce 2s infinite",
   },
   text: {
     fontSize: 20,
-    color: "#333",
+    color: "#ffffff",
     fontWeight: 500,
   },
   "@keyframes bounce": {
