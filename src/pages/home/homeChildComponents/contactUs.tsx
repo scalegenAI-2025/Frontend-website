@@ -50,12 +50,13 @@ const useStyles = createUseStyles({
   },
   mainContent: {
     display: "flex",
-    alignItems: "flex-start",
+    //alignItems: "flex-start",
     gap: 120,
     maxWidth: 1400,
     "@media (max-width: 700px)": {
       flexDirection: "column",
       gap: 40,
+      //alignItems: "center",
     },
   },
   leftSection: {
@@ -97,6 +98,40 @@ const useStyles = createUseStyles({
       gap: 12,
     },
   },
+  // input: {
+  //   flex: 1,
+  //   padding: "12px 20px",
+  //   border: "1.3px solid #000",
+  //   borderRadius: 25,
+  //   backgroundColor: "transparent",
+  //   fontSize: 16,
+  //   color: "#000",
+  //   outline: "none",
+  //   "&:focus": {
+  //     backgroundColor: "rgba(0, 0, 0, 0.05)",
+  //   },
+  //   "&::placeholder": {
+  //     color: "#000",
+  //   },
+  // },
+  // fullWidthInput: {
+  //   flex: 1,
+  //   padding: "12px 20px",
+  //   border: "1.3px solid #000",
+  //   borderRadius: 25,
+  //   backgroundColor: "transparent",
+  //   fontSize: 16,
+  //   color: "#000",
+  //   outline: "none",
+  //   width: "95%",
+  //   "&:focus": {
+  //     backgroundColor: "rgba(0, 0, 0, 0.05)",
+  //   },
+  //   "&::placeholder": {
+  //     color: "#000",
+  //   },
+  // },
+
   input: {
     flex: 1,
     padding: "12px 20px",
@@ -112,7 +147,11 @@ const useStyles = createUseStyles({
     "&::placeholder": {
       color: "#000",
     },
+    "@media (max-width: 500px)": {
+      width: "100%", // This makes the input full width
+    },
   },
+
   fullWidthInput: {
     flex: 1,
     padding: "12px 20px",
@@ -122,14 +161,18 @@ const useStyles = createUseStyles({
     fontSize: 16,
     color: "#000",
     outline: "none",
-    width: "95%",
+    width: "95%", // existing default
     "&:focus": {
       backgroundColor: "rgba(0, 0, 0, 0.05)",
     },
     "&::placeholder": {
       color: "#000",
     },
+    "@media (max-width: 500px)": {
+      width: "100%", // override for small screens
+    },
   },
+
   textarea: {
     extend: "input",
     minHeight: 120,

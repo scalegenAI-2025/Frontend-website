@@ -179,12 +179,6 @@ export default function AssessmentThirdComponent() {
               </div>
             </div>
           </div>
-
-          <div className={classes.downloadSection}>
-            <button className={classes.downloadButton}>
-              Download Full Report
-            </button>
-          </div>
         </div>
 
         {/* Right Column: Rocket Image */}

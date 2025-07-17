@@ -146,24 +146,24 @@
 //     </div>
 //   );
 // }
-
 import { createUseStyles } from "react-jss";
 import { useNavigate } from "react-router-dom";
-// import { createUseStyles } from "react-jss";
-import CourseImage1 from "../../../assets/CourseImage1.png";
-import CourseImage2 from "../../../assets/CourseImage2.png";
-import CourseImage3 from "../../../assets/CourseImage3.png";
+import CourseImage1 from "../../../assets/Book cover_final_DSF.jpg";
+import CourseImage2 from "../../../assets/Echo_Final.jpg";
+import CourseImage3 from "../../../assets/Scaling GenAI_Cover.jpg";
 
 const useStyles = createUseStyles({
   gridContainer: {
     display: "grid",
-    gridTemplateColumns: "1fr",
+    gridTemplateColumns: "repeat(3, 1fr)", // 3 columns
+    gap: "20px",
     backgroundColor: "#e5d8cf",
     padding: "40px",
     fontFamily: 'Georgia, "Times New Roman", serif',
     alignItems: "stretch",
-    "@media (min-width: 768px)": {
-      gridTemplateColumns: "repeat(3, 1fr)",
+
+    "@media (max-width: 768px)": {
+      gridTemplateColumns: "1fr", // Stack on smaller screens
     },
   },
   card: {
@@ -171,16 +171,24 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     backgroundColor: "#e5d8cf",
     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-    marginBottom: "20px",
+    borderRadius: "8px",
+    overflow: "hidden",
+    width: "100%",
   },
   imageWrapper: {
-    height: "12rem",
+    height: "20rem",
+    display: "flex",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#000000",
     overflow: "hidden",
   },
   image: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
+    maxHeight: "100%",
+    width: "auto",
+    objectFit: "contain",
   },
   content: {
     flex: 1,
@@ -213,9 +221,10 @@ const useStyles = createUseStyles({
 });
 
 const courseImages = [
-  CourseImage1,
   CourseImage2,
+
   CourseImage3,
+  CourseImage1,
   CourseImage3,
   CourseImage2,
   CourseImage1,
@@ -239,15 +248,14 @@ const courses = [
   {
     title: "AI/GenAI Transformation Strategy",
     audience: "For executives and middle managers",
-    hours: "12  hours",
+    hours: "12 hours",
     mode: "Instructor-led",
     delivery: "Online or in-person",
   },
-
   {
     title: "Cultivating AI/GenAI Mindset",
     audience: "For executives and middle managers",
-    hours: "12  hours",
+    hours: "12 hours",
     mode: "Instructor-led",
     delivery: "Online or in-person",
   },
@@ -275,7 +283,7 @@ export default function CourseCards() {
           <div className={classes.imageWrapper}>
             <img
               src={courseImages[index % courseImages.length]}
-              alt="Course Visual"
+              alt={`Image for ${course.title}`}
               className={classes.image}
             />
           </div>

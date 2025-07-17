@@ -50,7 +50,7 @@ function App() {
         <Route path="/courses/course1" element={<AIGenAILeadersBook />} />
         <Route path="/courses/course2" element={<GenerativeAI />} />
         <Route path="/courses/course3" element={<GenAITransformation />} />
-        <Route path="/courses/course6" element={<GenAIOperational />} />
+        <Route path="/courses/course5" element={<GenAIOperational />} />
         <Route path="/courses/course4" element={<GenAIMindset />} />
         <Route path="/assessments" element={<Assessment />} />
         <Route path="/ecosystem" element={<Ecosystem />} />

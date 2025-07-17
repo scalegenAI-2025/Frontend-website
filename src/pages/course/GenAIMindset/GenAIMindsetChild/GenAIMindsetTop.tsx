@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import book from "../../../../assets/digital.webp";
+import book from "../../../../assets//Scaling GenAI_Cover.jpg";
 import speaker from "../../../../assets/amitsirfirstpic.png";
 import qr from "../../../../assets/QR.png";
 const useStyles = createUseStyles({
