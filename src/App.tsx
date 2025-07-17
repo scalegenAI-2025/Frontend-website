@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home/home";
 import Assets from "./pages/assets/assets";
-import Image from "./assets/Logo (1).jpg";
+
 import useGlobalStyles from "./styles/useGlobalStyles";
 import Course from "./pages/course/course";
 import Assessment from "./pages/assessment/assessment";
@@ -35,52 +35,10 @@ import PrivacyPolicy from "./components/footer/PrivacyPolicy";
 import AboutUs from "./pages/aboutUs.tsx/AboutUs";
 import GeneralTerms from "./components/footer/TermsAndCondition";
 import { AdminRoute } from "./pages/adminLogin/AdminRoute";
-import { useState, useEffect } from "react";
-import { createUseStyles } from "react-jss";
-const useStyles = createUseStyles({
-  loaderContainer: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    backgroundColor: "#000000",
-  },
-  logo: {
-    width: 800,
-    height: 400,
-    marginBottom: 20,
-    animation: "$bounce 2s infinite",
-  },
-  text: {
-    fontSize: 20,
-    color: "#ffffff",
-    fontWeight: 500,
-  },
-  "@keyframes bounce": {
-    "0%, 100%": { transform: "translateY(0)" },
-    "50%": { transform: "translateY(-15px)" },
-  },
-});
 
 function App() {
   useGlobalStyles();
-  const classes = useStyles();
-  const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 6000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className={classes.loaderContainer}>
-        <img src={Image} alt="Loading" className={classes.logo} />
-        <p className={classes.text}>🚀 Loading Scaling GenAI...</p>
-      </div>
-    );
-  }
   return (
     <>
       {/* <Navbar /> */}
