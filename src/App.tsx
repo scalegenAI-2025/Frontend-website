@@ -47,7 +47,7 @@ const useStyles = createUseStyles({
     backgroundColor: "#000000",
   },
   logo: {
-    width: 400,
+    width: 600,
     height: 200,
     marginBottom: 20,
     animation: "$bounce 2s infinite",
