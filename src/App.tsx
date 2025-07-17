@@ -47,8 +47,8 @@ const useStyles = createUseStyles({
     backgroundColor: "#000000",
   },
   logo: {
-    width: 600,
-    height: 200,
+    width: 800,
+    height: 400,
     marginBottom: 20,
     animation: "$bounce 2s infinite",
   },
@@ -69,7 +69,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 4000);
+    const timer = setTimeout(() => setLoading(false), 6000);
     return () => clearTimeout(timer);
   }, []);
 
