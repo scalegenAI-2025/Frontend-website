@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home/home";
 import Assets from "./pages/assets/assets";
-
+import Image from "./assets/Logo (1).jpg";
 import useGlobalStyles from "./styles/useGlobalStyles";
 import Course from "./pages/course/course";
 import Assessment from "./pages/assessment/assessment";
@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#000000",
   },
   logo: {
     width: 100,
@@ -69,14 +69,14 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
       <div className={classes.loaderContainer}>
-        <img src="/logo.png" alt="Loading" className={classes.logo} />
+        <img src={Image} alt="Loading" className={classes.logo} />
         <p className={classes.text}>🚀 Loading Scaling GenAI...</p>
       </div>
     );
