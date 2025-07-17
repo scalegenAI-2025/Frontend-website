@@ -45,10 +45,11 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   image: {
-    width: "100%",
-    margin: "1rem 0",
+    // width: "100%",
+
+    height: "500px",
     borderRadius: "6px",
-    objectFit: "contain",
+    //objectFit: "contain",
   },
 });
 

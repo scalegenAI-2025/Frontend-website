@@ -161,7 +161,7 @@ const useStyles = createUseStyles({
     fontSize: 16,
     color: "#000",
     outline: "none",
-    width: "95%", // existing default
+    //width: "95%", // existing default
     "&:focus": {
       backgroundColor: "rgba(0, 0, 0, 0.05)",
     },

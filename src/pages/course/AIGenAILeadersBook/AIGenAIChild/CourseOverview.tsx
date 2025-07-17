@@ -203,8 +203,9 @@ const useStyles = createUseStyles({
     color: "#8000ff",
   },
   image: {
-    width: "100%",
-    margin: "1rem 0",
+    width: "80%",
+    //  margin: "1rem 0",
+    margin: "auto",
     borderRadius: "6px",
     objectFit: "contain",
   },

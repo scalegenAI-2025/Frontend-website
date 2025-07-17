@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
   },
   mainContent: {
     display: "flex",
-    alignItems: "flex-start",
+    //  alignItems: "flex-start",
     gap: 120,
     maxWidth: 1400,
     "@media (max-width: 700px)": {
@@ -122,7 +122,7 @@ const useStyles = createUseStyles({
     fontSize: 16,
     color: "#000",
     outline: "none",
-    width: "95%",
+    //  width: "95%",
     "&:focus": {
       backgroundColor: "rgba(0, 0, 0, 0.05)",
     },
