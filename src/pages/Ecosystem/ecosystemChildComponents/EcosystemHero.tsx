@@ -1,6 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import AssetBckground from "../../../assets/super ecosystem image.jpg";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = createUseStyles({
   container: {
@@ -33,11 +34,12 @@ const useStyles = createUseStyles({
     },
   },
   button: {
-    backgroundColor: "#fbbf24",
-    color: "#1f2937",
+    padding: "18px 36px",
+    backgroundColor: "#002c3e",
+    color: "#fff",
     fontSize: "16px",
     fontWeight: "600",
-    padding: "12px 32px",
+    // padding: "12px 32px",
     border: "none",
     borderRadius: "8px",
     cursor: "pointer",
@@ -58,9 +60,9 @@ const useStyles = createUseStyles({
 const EcosystemHero: React.FC = () => {
   const classes = useStyles();
 
-  const handleCollaborateClick = () => {
-    // Handle collaborate button click
-    console.log("Collaborate button clicked");
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/member");
   };
 
   return (
@@ -71,8 +73,8 @@ const EcosystemHero: React.FC = () => {
           best practices related to a certain AI topic with each other.
         </p>
 
-        <button className={classes.button} onClick={handleCollaborateClick}>
-          Collaborate
+        <button className={classes.button} onClick={handleClick}>
+          Become a member →
         </button>
       </div>
       <div>

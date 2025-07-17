@@ -383,7 +383,7 @@ const useStyles = createUseStyles({
     width: "30px",
     height: "30px",
     position: "absolute",
-    right: "2rem",
+    right: "1rem",
     top: "1rem",
     "@media (max-width: 900px)": {
       display: "none", // 👈 hide lock icon on smaller screens
