@@ -136,10 +136,10 @@ const ReadinessRocketSection: React.FC = () => {
                   "https://www.amazon.com/Scaling-Generative-Operational-Readiness-Enterprises/dp/1637427980")
               }
             >
-              Order
+              Order →
             </button>
 
-            <div className={classes.arrow}>↗</div>
+            {/* <div className={classes.arrow}>↗</div> */}
           </div>
         </div>
       </div>
