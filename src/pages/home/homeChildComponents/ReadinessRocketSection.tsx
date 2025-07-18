@@ -138,8 +138,6 @@ const ReadinessRocketSection: React.FC = () => {
             >
               Order →
             </button>
-
-            {/* <div className={classes.arrow}>↗</div> */}
           </div>
         </div>
       </div>
