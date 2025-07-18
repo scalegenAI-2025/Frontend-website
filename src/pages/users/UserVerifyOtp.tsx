@@ -150,7 +150,7 @@ export default function OtpVerification() {
     }
     try {
       const res = await verifyOtp({ email, otp });
-      console.log("Verify response:", res.data); // DEBUG
+      // console.log("Verify response:", res.data); // DEBUG
       toast.success(res.data.message || "OTP Verified!");
       navigate("/user-dashboard");
     } catch (err: any) {

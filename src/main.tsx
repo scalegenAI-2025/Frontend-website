@@ -9,7 +9,7 @@ import ScrollToTop from "./ScrollToTop";
 //const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID as string;
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID as string;
 
-console.log("GOOGLE CLIENT ID:", clientId);
+// console.log("GOOGLE CLIENT ID:", clientId);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
