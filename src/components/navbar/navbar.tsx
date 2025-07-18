@@ -434,8 +434,8 @@ const useStyles = createUseStyles({
   },
 
   authButton: {
-    backgroundColor: "transparent",
-    color: "#fff",
+    backgroundColor: "#002c3e",
+    color: "#ffffff",
     border: "1px solid #fff",
     padding: "0.5rem 1rem",
     borderRadius: "5px",
