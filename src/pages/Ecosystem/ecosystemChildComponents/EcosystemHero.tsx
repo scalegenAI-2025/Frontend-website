@@ -82,12 +82,12 @@ const EcosystemHero: React.FC = () => {
           src={AssetBckground}
           alt="Ecosystem visual representation"
           style={{
-            width: "90%",
-            height: "auto",
-            marginTop: "20px",
+            width: "100%",
+            //height: "auto",
+            // marginTop: "20px",
             display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
+            //marginLeft: "auto",
+            //marginRight: "auto",
           }}
         />
       </div>
