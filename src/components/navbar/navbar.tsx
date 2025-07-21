@@ -389,6 +389,14 @@ const useStyles = createUseStyles({
       display: "none", // 👈 hide lock icon on smaller screens
     },
   },
+  navLinkLock: {
+    fontSize: "1.8rem",
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+      color: "#FF00FF",
+    },
+  },
 
   mainLinks: {
     display: "flex",
@@ -554,21 +562,27 @@ const Navbar = () => {
         </div>
 
         <div className={classes.meetUsLinkWrapper}>
-          <Link
+          {/* <Link
             to="/user-login"
             className={`${classes.navLink} ${
               location.pathname === "/meet-us" ? classes.activeNavLink : ""
             }`}
           >
             Login
+          </Link> */}
+          <Link to="/user-login">
+            <IoIosLock
+              className={classes.navLinkLock}
+              style={{ cursor: "pointer" }}
+            />
           </Link>
         </div>
       </div>
 
       {/* Lock icon for user login */}
-      <Link to="/user-login">
+      {/* <Link to="/user-login">
         <IoIosLock className={classes.lockIcon} style={{ cursor: "pointer" }} />
-      </Link>
+      </Link> */}
 
       {/* MOBILE FULL SCREEN MENU OVERLAY */}
       {isMobileOpen && (

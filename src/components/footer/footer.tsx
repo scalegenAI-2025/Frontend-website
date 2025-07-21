@@ -101,15 +101,17 @@ const Footer = () => {
             Terms and Conditions
           </a>
           <a href="/admin-login" className={classes.link}>
-            admin login
+            Admin login
           </a>
         </div>
       </div>
-      <img
-        src={logo}
-        alt="Scaling Generative AI"
-        className={classes.logoImage}
-      />
+      <a href="/">
+        <img
+          src={logo}
+          alt="Scaling Generative AI"
+          className={` ${classes.logoImage}`}
+        />
+      </a>
     </footer>
   );
 };

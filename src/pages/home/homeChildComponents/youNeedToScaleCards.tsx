@@ -2,7 +2,7 @@ import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
 import Assessments from "../../../assets/assessment.jpg";
 import Assets from "../../../assets/assets_pic.jpg";
-import Ecosystem from "../../../assets/eco_pic.jpg";
+import Ecosystem from "../../../assets/assetsBackground.jpg";
 import Course from "../../../assets/Courses.jpg";
 
 const useStyles = createUseStyles({

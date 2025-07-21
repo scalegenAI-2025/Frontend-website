@@ -10,8 +10,8 @@ interface Step {
 const useStyles = createUseStyles({
   container: {
     display: "flex",
-    maxWidth: "1200px",
-    margin: "0 auto",
+    maxWidth: "2000px",
+    // margin: "0 auto",
     padding: "60px 20px",
     gap: "60px",
     backgroundColor: "lightgrey",
