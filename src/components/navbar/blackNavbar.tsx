@@ -304,7 +304,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyContent: "space-between",
     flexWrap: "wrap",
-    backgroundColor: "rgba(0, 0, 0, 0.1)",
+    backgroundColor: "black",
     color: "#fff",
     height: "100px",
     width: "100%",
@@ -501,7 +501,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const Navbar = () => {
+const BlackNavbar = () => {
   const classes = useStyles();
   const location = useLocation();
   const navigate = useNavigate();
@@ -640,4 +640,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BlackNavbar;

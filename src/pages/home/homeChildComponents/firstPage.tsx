@@ -109,7 +109,7 @@ const useStyles = createUseStyles({
       margin: 0,
       padding: 0,
       overflowX: "hidden",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      // fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       backgroundColor: "#000",
     },
   },
@@ -178,7 +178,7 @@ const FirstPage = () => {
   return (
     <div className={classes.container}>
       <div className={classes.homeHeader}>
-        <h1 className={classes.homeHeaderLine}>Help Enterprises</h1>
+        <h1 className={classes.homeHeaderLine}>We Help Enterprises</h1>
         <h1 className={classes.homeHeaderLine}>Scale Generative AI</h1>
       </div>
       <h3 className={classes.homeHeader3}>

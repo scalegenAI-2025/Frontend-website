@@ -280,14 +280,14 @@ const useStyles = createUseStyles({
     },
   },
   arrowLabelLeft: {
-    fontSize: 14,
+    fontSize: 20,
     color: "#ccc",
     "@media (max-width: 500px)": {
       fontSize: 12,
     },
   },
   arrowLabelRight: {
-    fontSize: 14,
+    fontSize: 20,
     color: "#ccc",
     "@media (max-width: 500px)": {
       fontSize: 12,
@@ -437,7 +437,7 @@ const ScalingStepsEmail: React.FC = () => {
 
   const handleEmailClick = () => {
     const mailtoLink =
-      "mailto:aishwayagorakhshinde@gmail.com?subject=Scaling GenAI consultation request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname";
+      "mailto:info@scalinggenai.com?subject=Scaling GenAI consultation request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname";
     window.location.href = mailtoLink;
   };
 
@@ -463,12 +463,12 @@ const ScalingStepsEmail: React.FC = () => {
 
       <div className={classes.arrowLineWrapper}>
         <span className={classes.arrowLabelLeft}>
-          Lagging Enterprises (10%)
+          Lagging Enterprises (90%)
         </span>
         <div className={classes.arrowLine}></div>
         <span className={classes.arrowIcon}>→</span>
         <span className={classes.arrowLabelRight}>
-          Scaling Enterprises (90%)
+          Scaling Enterprises (10%)
         </span>
       </div>
 
