@@ -8,6 +8,8 @@ import GenAILaunchpad from "./assetsChildComponents/assetsThird";
 import Footer from "../../components/footer/footer";
 
 import ConsultationCardAssets from "./assetsChildComponents/ConsultationCardAssets";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -63,7 +65,15 @@ const useStyles = createUseStyles({
 function Assets() {
   useGlobalStyles();
   const classes = useStyles();
-
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div className={classes.backgroundWrapper}>
@@ -74,7 +84,12 @@ function Assets() {
         </div>
       </div>
       <AssetsSecond />
-      <GenAILaunchpad />
+      <div>
+        <div id="middle-section">
+          <GenAILaunchpad />
+        </div>
+      </div>
+
       <ConsultationCardAssets />
       <Footer />
     </>

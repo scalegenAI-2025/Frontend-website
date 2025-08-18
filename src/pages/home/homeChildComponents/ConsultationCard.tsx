@@ -82,7 +82,7 @@ const useStyles = createUseStyles({
 const ConsultationCardAssets: React.FC<ConsultationCardProps> = () => {
   const classes = useStyles();
 
-  const mailtoLink = `mailto:aishwayagorakhshinde@gmail.com?subject=Scaling%20GenAI%20consultation%20request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname`;
+  const mailtoLink = `mailto:info@scalinggenai.com?subject=Scaling%20GenAI%20consultation%20request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname`;
 
   return (
     <div className={classes.container}>

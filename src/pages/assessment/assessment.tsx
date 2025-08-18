@@ -8,6 +8,8 @@ import AssessmentThirdComponent from "./assessmentChildComponents/assessmentThir
 import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
 import ConsultationCardAssessment from "./assessmentChildComponents/ConsultationCardAssessment";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // JSS styles
 const useStyles = createUseStyles({
@@ -63,7 +65,15 @@ const useStyles = createUseStyles({
 function Assessment() {
   useGlobalStyles();
   const classes = useStyles();
-
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div className={classes.backgroundWrapper}>
@@ -75,7 +85,12 @@ function Assessment() {
       </div>
       <AssetsSecond />
       <ConsultationCardAssessment />
-      <AssessmentThirdComponent />
+      <div>
+        <div id="middle-section">
+          {/* This is the middle */}
+          <AssessmentThirdComponent />
+        </div>
+      </div>
 
       <ContactUs />
       <Footer />

@@ -444,11 +444,11 @@ const ScalingStepsEmail: React.FC = () => {
   const handleRouteClick = (stepIndex: number) => {
     const routes = [
       "/member",
-      "/assessments",
-      "/assets",
+      "/assessments#middle-section",
+      "/assets#middle-section",
       "/ecosystem",
       "", // Step 5: opens email
-      "/courses",
+      "/courses#middle-section",
       "", // Step 7: opens email
     ];
     const route = routes[stepIndex];

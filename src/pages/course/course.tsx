@@ -10,6 +10,8 @@ import QuestionOnAI from "./courseChildComponents/questionOnAI";
 //import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
 import ContactUsCourse from "./courseChildComponents/contactUs";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 //import EssentialCompetencies from "./courseChildComponents/AI/GenAILeaderBook";
 
 const useStyles = createUseStyles({
@@ -67,7 +69,15 @@ const useStyles = createUseStyles({
 function Course() {
   useGlobalStyles();
   const classes = useStyles();
-
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div className={classes.backgroundWrapper}>
@@ -79,7 +89,12 @@ function Course() {
         </div>
       </div>
       <QuestionOnAI />
-      <CourseCards />
+      <div>
+        <div id="middle-section">
+          <CourseCards />
+        </div>
+      </div>
+
       {/* <ContactUs /> */}
       <ContactUsCourse />
       <Footer />

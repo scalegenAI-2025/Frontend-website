@@ -138,56 +138,58 @@ export default function AssessmentThirdComponent() {
   ];
 
   return (
-    <div className={classes.container}>
-      <div className={classes.contentRow}>
-        {/* Left Column: Heading + Boxes + Download */}
-        <div className={classes.leftColumn}>
-          <div className={classes.heading}>Assessment Catalog</div>
+    <>
+      <div className={classes.container}>
+        <div className={classes.contentRow}>
+          {/* Left Column: Heading + Boxes + Download */}
+          <div className={classes.leftColumn}>
+            <div className={classes.heading}>Assessment Catalog</div>
 
-          <div className={classes.boxGrid}>
-            {boxes.map(({ title, description }, index) => (
-              <div key={index} className={classes.box}>
-                <div className={classes.boxTitle}>{title}</div>
-                <div className={classes.boxDescription}>{description}</div>
+            <div className={classes.boxGrid}>
+              {boxes.map(({ title, description }, index) => (
+                <div key={index} className={classes.box}>
+                  <div className={classes.boxTitle}>{title}</div>
+                  <div className={classes.boxDescription}>{description}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className={classes.heading}>Individual Assessments</div>
+
+            <div className={classes.boxGrid}>
+              <div className={classes.box}>
+                <div className={classes.boxTitle}>AI Reskilling</div>
+                <div className={classes.boxDescription}>
+                  Find out your AI journey map based on what you do, what you
+                  want to do, and how to do it
+                </div>
               </div>
-            ))}
+
+              <div className={classes.box}>
+                <div className={classes.boxTitle}>AI/GenAI Mindset</div>
+                <div className={classes.boxDescription}>
+                  Know your mindset toward AI
+                </div>
+              </div>
+
+              <div className={classes.box}>
+                <div className={classes.boxTitle}>Leadership</div>
+                <div className={classes.boxDescription}>
+                  Find out if you have the four essential competencies of a
+                  digital leader
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className={classes.heading}>Individual Assessments</div>
-
-          <div className={classes.boxGrid}>
-            <div className={classes.box}>
-              <div className={classes.boxTitle}>AI Reskilling</div>
-              <div className={classes.boxDescription}>
-                Find out your AI journey map based on what you do, what you want
-                to do, and how to do it
-              </div>
+          {/* Right Column: Rocket Image */}
+          <div className={classes.rightColumn}>
+            <div className={classes.rocketWrapper}>
+              <img src={Rocket} className={classes.rocketImage} alt="Rocket" />
             </div>
-
-            <div className={classes.box}>
-              <div className={classes.boxTitle}>AI/GenAI Mindset</div>
-              <div className={classes.boxDescription}>
-                Know your mindset toward AI
-              </div>
-            </div>
-
-            <div className={classes.box}>
-              <div className={classes.boxTitle}>Leadership</div>
-              <div className={classes.boxDescription}>
-                Find out if you have the four essential competencies of a
-                digital leader
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Rocket Image */}
-        <div className={classes.rightColumn}>
-          <div className={classes.rocketWrapper}>
-            <img src={Rocket} className={classes.rocketImage} alt="Rocket" />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
