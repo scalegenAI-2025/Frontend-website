@@ -18,12 +18,17 @@ const useStyles = createUseStyles({
     alignItems: "center",
   },
   title: {
-    fontSize: "35px",
-    fontWeight: "normal",
+    // fontSize: "35px",
+    // fontWeight: "normal",
     padding: "25px 25px",
 
-    color: "#333",
+    // color: "#333",
     margin: 0,
+    fontSize: 46,
+    fontWeight: "bold",
+    // marginBottom: 20,
+    marginTop: "0px",
+    color: "#222",
   },
   hireButton: {
     backgroundColor: "#fff",
@@ -37,9 +42,9 @@ const useStyles = createUseStyles({
     },
   },
   divider: {
-    height: 1,
+    // height: 1,
     backgroundColor: "#333",
-    marginBottom: 30,
+    // marginBottom: 30,
   },
   // grid: {
   //   display: "grid",
@@ -51,6 +56,7 @@ const useStyles = createUseStyles({
   grid: {
     display: "grid",
     padding: "25px",
+    paddingTop: "0px",
     gridTemplateColumns: "repeat(4, 1fr)",
     gap: 0,
     // borderTop: "1px solid #333",

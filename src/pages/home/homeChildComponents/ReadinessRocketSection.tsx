@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
   container: {
     padding: "40px 20px",
     backgroundColor: "#f8f9fa",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     display: "flex",
   },
   header: {
@@ -28,7 +28,7 @@ const useStyles = createUseStyles({
     },
   },
   bookImage: {
-    width: "300px",
+    width: "350px",
     height: "auto",
     borderRadius: "8px",
     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
@@ -46,7 +46,7 @@ const useStyles = createUseStyles({
     justifyContent: "center",
   },
   description: {
-    fontSize: "16px",
+    fontSize: "20px",
     color: "#666",
     lineHeight: "1.5",
     marginBottom: "10px",

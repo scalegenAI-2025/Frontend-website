@@ -13,10 +13,16 @@ const useStyles = createUseStyles({
   },
   header: {
     color: "white",
-    fontSize: 24,
-    fontWeight: 400,
+    // fontSize: 24,
+    // fontWeight: 400,
     marginBottom: 40,
     paddingLeft: 4,
+    margin: 0,
+    fontSize: 46,
+    fontWeight: "bold",
+    // marginBottom: 20,
+    marginTop: "0px",
+    // color: "#222",
   },
   hireButton: {
     position: "absolute",
@@ -40,15 +46,22 @@ const useStyles = createUseStyles({
     justifyContent: "center",
   },
   card: {
-    width: "calc(50% - 12px)", // Two cards per row
+    //  width: "calc(50% - 12px)", // Two cards per row
+    flex: "1 1 calc(50% - 12px)",
     minWidth: 300,
     maxWidth: 600,
     borderRadius: 12,
     overflow: "hidden",
     border: "1px solid rgba(255, 255, 255, 0.1)",
     boxSizing: "border-box",
+    // "@media (max-width: 768px)": {
+    //   width: "100%", // Stack on smaller screens
+    // },
+    "@media (max-width: 1024px)": {
+      flex: "1 1 calc(50% - 12px)", // still two cards on medium screens
+    },
     "@media (max-width: 768px)": {
-      width: "100%", // Stack on smaller screens
+      flex: "1 1 100%", // stack on smaller screens
     },
   },
   cardContent: {

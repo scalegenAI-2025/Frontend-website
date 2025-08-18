@@ -53,7 +53,7 @@ const useStyles = createUseStyles({
     opacity: 1,
   },
   blinking: {
-    animation: "$blinkOnce 2s ease-in-out",
+    // animation: "$blinkOnce 2s ease-in-out",
   },
 });
 

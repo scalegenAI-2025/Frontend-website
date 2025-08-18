@@ -32,10 +32,18 @@ const useStyles = createUseStyles({
     },
   },
   title: {
-    fontSize: "35px",
-    fontWeight: 400,
+    //  fontSize: "35px",
+    //  fontWeight: 400,
     color: "#000",
     marginBottom: 20,
+    //  marginBottom: 40,
+    paddingLeft: 4,
+    margin: 0,
+    fontSize: 46,
+    fontWeight: "bold",
+    // marginBottom: 20,
+    marginTop: "0px",
+    // color: "#222",
     letterSpacing: "-0.5px",
     "@media (max-width: 700px)": {
       fontSize: 28,
@@ -72,6 +80,7 @@ const useStyles = createUseStyles({
     color: "#000",
     lineHeight: 1.1,
     letterSpacing: "-1px",
+
     "@media (max-width: 700px)": {
       fontSize: 36,
       textAlign: "center",
@@ -186,18 +195,18 @@ const useStyles = createUseStyles({
   submitButton: {
     alignSelf: "flex-end",
     padding: "12px 32px",
-    border: "2px solid #000",
+    //border: "2px solid #000",
     borderRadius: 25,
-    backgroundColor: "transparent",
+    backgroundColor: "#002c3e",
     fontSize: 16,
-    color: "#000",
+    color: "#fff",
     cursor: "pointer",
     fontWeight: 500,
     marginTop: 20,
     transition: "all 0.3s ease",
     "&:hover": {
-      backgroundColor: "#000",
-      color: "#FF4500",
+      backgroundColor: "#1e4a66",
+      color: "#Ffffff",
     },
     "@media (max-width: 700px)": {
       alignSelf: "center",
@@ -328,7 +337,7 @@ const ContactUs = () => {
 
             <textarea
               name="moreDetails"
-              placeholder="More Details"
+              placeholder="What would you like to know"
               value={formData.moreDetails}
               onChange={handleInputChange}
               className={classes.textarea}
