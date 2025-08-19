@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
     borderRadius: 8,
     boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
     backgroundColor: "#fff",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    //fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     textAlign: "center",
   },
   logo: {

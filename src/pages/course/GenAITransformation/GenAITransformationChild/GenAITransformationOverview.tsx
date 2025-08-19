@@ -15,6 +15,8 @@ const useStyles = createUseStyles({
     fontSize: "40px",
     fontWeight: "bold",
     margin: "0px",
+    display: "flex",
+    justifyContent: "center",
     fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     paddingTop: "1rem",
@@ -86,7 +88,7 @@ const CourseOverview: React.FC = () => {
         </ul>
 
         {/* DIGITAL LEADERSHIP FRAMEWORK */}
-        <h3 className={classes.sectionTitle}>DIGITAL LEADERSHIP FRAMEWORK</h3>
+        <h3 className={classes.sectionTitle}>Digital Strategy Framework</h3>
         <img
           src={Framework}
           alt="Digital Leadership Framework"

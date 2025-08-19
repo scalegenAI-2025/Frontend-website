@@ -1,5 +1,5 @@
 import React from "react";
-import coach from "../../../../assets/amitsirsecondpic.png";
+import coach from "../../../../assets/At the office-rafiki.png";
 
 const CoachingPage: React.FC = () => {
   const styles = {

@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     maxWidth: 900,
     margin: "0 auto",
     padding: 24,
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    //fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     backgroundColor: "#f9f9f9",
     borderRadius: 12,
     marginTop: "100px",

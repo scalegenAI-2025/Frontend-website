@@ -324,7 +324,7 @@ const useStyles = createUseStyles({
     "& $navLink": {
       color: "#ffffff",
       "&:hover": {
-        color: "purple",
+        color: "#FF00FF",
       },
     },
 
@@ -496,7 +496,7 @@ const useStyles = createUseStyles({
     margin: "1.2rem 0",
     textDecoration: "none",
     "&:hover": {
-      color: "purple",
+      color: "#FF00FF",
     },
   },
 });

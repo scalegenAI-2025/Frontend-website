@@ -91,9 +91,14 @@ const useStyles = createUseStyles({
     minWidth: "280px",
   },
   heading: {
-    fontSize: "70px",
+    // fontSize: "70px",
     marginTop: "6.5rem",
     lineHeight: 1.4,
+    fontSize: 46,
+    fontWeight: "bold",
+    marginBottom: 2,
+    // marginTop: "0px",
+    color: "#222",
   },
   heading2: {
     fontSize: "50px",

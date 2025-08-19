@@ -70,7 +70,7 @@ const GenAIOperationalContent: React.FC = () => {
     <div style={styles.container}>
       <h1 style={styles.title}>Content</h1>
       <p style={styles.subtitle}>
-        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (2 hours
+        Instructor-led, in-person/virtual, 6 hours, 1-2-1 coaching (2 hours
         free)
       </p>
 

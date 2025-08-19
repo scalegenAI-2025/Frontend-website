@@ -5,7 +5,8 @@ const useStyles = createUseStyles({
     textAlign: "center",
     justifyContent: "center",
     //marginTop: "150px",
-    paddingTop: "250px",
+    alignItems: "center",
+    paddingTop: "300px",
   },
   homeHeader: {
     backgroundColor: "none",

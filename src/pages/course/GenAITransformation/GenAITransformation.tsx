@@ -7,6 +7,8 @@ import GenAITransformationContain from "./GenAITransformationChild/GenAITransfor
 import GenAITransformationCoach from "./GenAITransformationChild/GenAITransformationCoach";
 import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 import { useNavigate } from "react-router-dom";
+import OrderFirstBook from "./GenAITransformationChild/orderBookFour";
+//import OrderFirstBook from "../AIGenAILeadersBook/AIGenAIChild/orderBook";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -25,18 +27,18 @@ const useStyles = createUseStyles({
     width: "100%",
   },
   button: {
-    padding: "18px 36px",
     backgroundColor: "#002c3e",
-    color: "#fff",
+    color: "white",
     border: "none",
-    borderRadius: 6,
-    fontSize: 20,
-    fontWeight: 600,
-    marginBottom: "20px",
+    padding: "15px 30px",
+    fontSize: "18px",
+    fontWeight: "bold",
+    borderRadius: "8px",
     cursor: "pointer",
     transition: "all 0.3s ease",
     "&:hover": {
-      backgroundColor: "#021123",
+      backgroundColor: "#1e4a66",
+      transform: "translateY(-2px)",
     },
   },
 });
@@ -62,7 +64,7 @@ function GenAITransformation() {
           Become a member →
         </button>
       </div>
-
+      <OrderFirstBook />
       <Footer />
     </>
   );

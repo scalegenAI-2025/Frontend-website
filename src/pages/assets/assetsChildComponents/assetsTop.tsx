@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
       margin: 0,
       padding: 0,
       overflowX: "hidden",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      // fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       backgroundColor: "#000",
     },
   },

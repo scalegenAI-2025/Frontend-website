@@ -9,9 +9,12 @@ import CourseTopPage from "./courseChildComponents/courseTop";
 import QuestionOnAI from "./courseChildComponents/questionOnAI";
 //import ContactUs from "../home/homeChildComponents/contactUs";
 import Footer from "../../components/footer/footer";
-import ContactUsCourse from "./courseChildComponents/contactUs";
+//import ContactUsCourse from "./courseChildComponents/contactUs";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ContactUs from "../home/homeChildComponents/contactUs";
+import AIReskilling from "./courseChildComponents/AIReskilling";
+
 //import EssentialCompetencies from "./courseChildComponents/AI/GenAILeaderBook";
 
 const useStyles = createUseStyles({
@@ -94,9 +97,9 @@ function Course() {
           <CourseCards />
         </div>
       </div>
+      <AIReskilling />
+      <ContactUs />
 
-      {/* <ContactUs /> */}
-      <ContactUsCourse />
       <Footer />
     </>
   );

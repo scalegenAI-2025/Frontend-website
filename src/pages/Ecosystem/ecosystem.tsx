@@ -79,8 +79,9 @@ function Ecosystem() {
         </div>
       </div>
       <EcosystemHero />
-      <CollaborationHero />
       <HowItWorks />
+      <CollaborationHero />
+
       <AIEcosystems />
       <Benefits />
       <ContactUs />

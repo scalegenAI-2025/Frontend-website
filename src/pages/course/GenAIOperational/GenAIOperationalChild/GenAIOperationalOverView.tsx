@@ -15,6 +15,8 @@ const useStyles = createUseStyles({
     fontSize: "40px",
     fontWeight: "bold",
     margin: "0px",
+    display: "flex",
+    justifyContent: "center",
     fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     paddingTop: "1rem",
@@ -101,7 +103,7 @@ const GenAIOperationalOverView: React.FC = () => {
         <h3 className={classes.sectionTitle}>FORMAT</h3>
         <ul className={classes.list}>
           <li>Instructor-driven online or classroom-based</li>
-          <li>Duration: 12 hours spanning over 2 days</li>
+          <li>Duration: 6 hours spanning over 2 days</li>
           <li>
             <span className={classes.purpleText}>Target Audience:</span> All
             Leaders/Managers at levels L1, L2, L3 and L4

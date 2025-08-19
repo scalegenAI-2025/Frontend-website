@@ -1,7 +1,8 @@
 import { createUseStyles } from "react-jss";
-import book from "../../../../assets/digital.webp";
+import book from "../../../../assets/leadership_pic.jpg";
 import speaker from "../../../../assets/amitsirfirstpic.png";
 import qr from "../../../../assets/QR.png";
+
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "#000",
@@ -11,12 +12,10 @@ const useStyles = createUseStyles({
     fontFamily: `'Helvetica Neue', Arial, sans-serif`,
     display: "flex",
     flexDirection: "column",
-    /// alignItems: "center",
   },
   heading: {
     fontSize: "48px",
     fontWeight: 600,
-    // textAlign: "center",
     lineHeight: 1.2,
     marginBottom: "70px",
     marginTop: "110px",
@@ -25,11 +24,9 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-    // alignItems: "flex-start",
   },
   left: {
     flex: 1,
-    // maxWidth: "30%",
   },
   center: {
     flex: 1,
@@ -66,10 +63,30 @@ const useStyles = createUseStyles({
     fontStyle: "italic",
   },
   book: {
-    width: "220px",
+    width: "420px",
   },
   speaker: {
     width: "320px",
+  },
+
+  /* NEW STYLES FOR IMAGE + TEXT OVERLAY */
+  imageWrapper: {
+    position: "relative",
+    display: "inline-block",
+  },
+  overlayText: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)", // centers vertically & horizontally
+    color: "#fff",
+    fontSize: "30px",
+    fontWeight: "bold",
+    backgroundColor: "rgba(0, 0, 0, 0.2)", // optional for readability
+    padding: "6px 12px",
+    borderRadius: "8px",
+    textAlign: "center",
+    whiteSpace: "nowrap", // prevents breaking into 2 lines
   },
 });
 
@@ -78,13 +95,13 @@ export default function LandingSlide() {
 
   return (
     <div className={classes.container}>
-      {/* Heading Centered at Top */}
+      {/* Heading */}
       <h1 className={classes.heading}>
         Essential Competencies for <br />
         AI/GenAI Leaders
       </h1>
 
-      {/* Main Content Row */}
+      {/* Main Content */}
       <div className={classes.contentRow}>
         {/* LEFT SECTION */}
         <div className={classes.left}>
@@ -103,14 +120,22 @@ export default function LandingSlide() {
           </div>
         </div>
 
-        {/* CENTER SECTION */}
+        {/* CENTER SECTION (Book Image + Text) */}
         <div className={classes.center}>
-          <img src={book} alt="Book" className={classes.book} />
+          <div className={classes.imageWrapper}>
+            <img src={book} alt="Book" className={classes.book} />
+            <div className={classes.overlayText}>
+              Essential Competencies <br></br>for AI/GenAI Leaders
+            </div>
+          </div>
         </div>
 
-        {/* RIGHT SECTION */}
+        {/* RIGHT SECTION (Speaker Image + Text) */}
         <div className={classes.right}>
-          <img src={speaker} alt="Amit Prabhu" className={classes.speaker} />
+          <div className={classes.imageWrapper}>
+            <img src={speaker} alt="Amit Prabhu" className={classes.speaker} />
+            {/* <div className={classes.overlayText}>Amit Prabhu</div> */}
+          </div>
         </div>
       </div>
     </div>

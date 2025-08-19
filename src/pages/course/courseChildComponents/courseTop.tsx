@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
       margin: 0,
       padding: 0,
       overflowX: "hidden",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      // fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       backgroundColor: "#000",
     },
   },
@@ -80,7 +80,7 @@ const CourseTopPage = () => {
     <div className={classes.container}>
       <div className={classes.homeHeader}>
         <h1 className={classes.homeHeaderLine}>
-          AI Reskilling for all the levels of enterprise hierarchy
+          AI Reskilling at all levels of Enterprise Hierarchy
         </h1>
       </div>
       <h3 className={classes.homeHeader3}>

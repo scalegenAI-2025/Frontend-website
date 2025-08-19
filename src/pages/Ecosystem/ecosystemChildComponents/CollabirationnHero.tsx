@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     padding: "0 80px",
 
     backgroundColor: "#1a1a1a",
-    fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+    // fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
     position: "relative",
     overflow: "hidden",
     "@media (max-width: 1024px)": {

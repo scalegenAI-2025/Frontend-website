@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import Framework from "../../../../assets/transformer.png";
+//import Framework from "../../../../assets/transformer.png";
 
 // Section Headings
 const HEADINGS = {
@@ -28,6 +28,8 @@ const useStyles = createUseStyles({
     margin: "0",
     paddingLeft: "2rem",
     paddingTop: "1rem",
+    display: "flex",
+    justifyContent: "center",
     fontFamily: "Arial, sans-serif",
   },
   sectionTitle: {
@@ -112,11 +114,11 @@ const CourseOverview: React.FC = () => {
         {/* DIGITAL LEADERSHIP FRAMEWORK */}
         <section>
           <h3 className={classes.sectionTitle}>{HEADINGS.framework}</h3>
-          <img
+          {/* <img
             src={Framework}
             alt="Digital Leadership Framework"
             className={classes.image}
-          />
+          /> */}
         </section>
 
         {/* FORMAT */}
@@ -124,7 +126,7 @@ const CourseOverview: React.FC = () => {
           <h3 className={classes.sectionTitle}>{HEADINGS.format}</h3>
           <ul className={classes.list}>
             <li>Instructor-led: online or in-class options</li>
-            <li>Duration: 30 hours</li>
+            <li>Duration: 18 hours</li>
             <li>
               <span className={classes.purpleText}>Target Audience:</span>{" "}
               Solution architects, developers, project managers, consultants,

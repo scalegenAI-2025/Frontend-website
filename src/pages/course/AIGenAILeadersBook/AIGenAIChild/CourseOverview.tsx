@@ -184,6 +184,8 @@ const useStyles = createUseStyles({
     margin: "0px",
     fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
+    display: "flex",
+    justifyContent: "center",
     paddingTop: "1rem",
   },
   sectionTitle: {

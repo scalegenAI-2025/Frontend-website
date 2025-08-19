@@ -117,7 +117,7 @@ const AIEcosystems: React.FC = () => {
   const ecosystemItems = [
     { icon: <BarChart3 className={classes.icon} />, title: "Scaling GenAI" },
     { icon: <Mic className={classes.icon} />, title: "LLM Fine Tuning" },
-    { icon: <Hand className={classes.icon} />, title: "Prompt Engineering" },
+    { icon: <Hand className={classes.icon} />, title: "AI Agents" },
     { icon: <Heart className={classes.icon} />, title: "Responsible AI (RAI)" },
     {
       icon: <Shield className={classes.icon} />,
@@ -149,12 +149,12 @@ const AIEcosystems: React.FC = () => {
       icon: <AlertCircle className={classes.icon} />,
       title: "Hallucinations and Guardrails",
     },
-    { icon: <Cloud className={classes.icon} />, title: "Cloud" },
+    { icon: <Cloud className={classes.icon} />, title: "Prompt Engineering" },
     { icon: <Bot className={classes.icon} />, title: "Machine Learning (ML)" },
     { icon: <BadgeHelp className={classes.icon} />, title: "Metaverse·XR" },
     { icon: <Table className={classes.icon} />, title: "Data Science" },
     { icon: <Share2 className={classes.icon} />, title: "Internet of Things" },
-    { icon: <Blocks className={classes.icon} />, title: "Blockchain" },
+    { icon: <Blocks className={classes.icon} />, title: "cloud" },
     { icon: <Settings className={classes.icon} />, title: "Automation" },
     { icon: <Lock className={classes.icon} />, title: "Security" },
     { icon: <Spline className={classes.icon} />, title: "UI/UX" },

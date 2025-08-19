@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
     gap: "60px",
     backgroundColor: "lightgrey",
     alignItems: "center",
-    fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+    //  fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
     "@media (max-width: 768px)": {
       flexDirection: "column",
       gap: "40px",
