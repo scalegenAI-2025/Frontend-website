@@ -195,7 +195,7 @@
 // }
 
 import { createUseStyles } from "react-jss";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Assessments from "../../../assets/assessment.jpg";
 import Assets from "../../../assets/assets_pic.jpg";
 import Ecosystem from "../../../assets/assetsBackground.jpg";
@@ -323,6 +323,7 @@ const cardData = [
     description: "Gauge your organization’s maturity level: 1 to 5, for GenAI",
     image: Assets,
     link: "/assets",
+    pdf: "/pdf/AssessmentPdf/GenAI Maturity.pdf",
   },
   {
     title: "AI Maturity",
@@ -330,6 +331,7 @@ const cardData = [
       "Gauge your organization’s maturity level: 1 to 5, for traditional AI",
     image: Assessments,
     link: "/assessments",
+    pdf: "/pdf/AssessmentPdf/AI Maturity.pdf",
   },
   {
     title: "VITA",
@@ -337,12 +339,14 @@ const cardData = [
       "Find out the impact of GenAI on your organization through VITA score",
     image: Course,
     link: "/courses",
+    pdf: "/pdf/AssessmentPdf/VITA.pdf",
   },
   {
-    title: "Value chain",
+    title: "Value Chain",
     description: "Know the strength of your position in GenAI value chain",
     image: Ecosystem,
     link: "/ecosystem",
+    pdf: "/pdf/AssessmentPdf/Value Chain.pdf",
   },
   {
     title: "Infrastructure",
@@ -350,32 +354,37 @@ const cardData = [
       "Find out how ready your organization’s infrastructure is to scale GenAI",
     image: Assets,
     link: "/assets",
+    pdf: "/pdf/AssessmentPdf/GenAI Maturity.pdf",
   },
   {
     title: "Agents",
     description: "Find out if your organization is ready to deploy agents",
     image: Assessments,
     link: "/assessments",
+    pdf: "/pdf/AssessmentPdf/Agents.pdf",
   },
   {
-    title: "Customer Readiness",
+    title: "Reskilling",
     description: "Find out how ready your customers are for GenAI",
     image: Course,
     link: "/courses",
+    pdf: "/pdf/AssessmentPdf/Reskilling.pdf",
   },
   {
-    title: "Technology Readiness",
+    title: "Mindset",
     description:
       "Find out if your organization has the adjacent technologies to scale GenAI",
     image: Ecosystem,
     link: "/ecosystem",
+    pdf: "/pdf/AssessmentPdf/Mindset.pdf",
   },
   {
-    title: "People Readiness",
+    title: "Leadership",
     description:
       "Find out if your organization has the right skills and competencies to scale GenAI",
     image: Assets,
     link: "/assets",
+    pdf: "/pdf/AssessmentPdf/Leadership.pdf",
   },
   {
     title: "Operational Readiness",
@@ -383,6 +392,7 @@ const cardData = [
       "Find out if your organization is operationally ready to scale GenAI",
     image: Assessments,
     link: "/assessments",
+    pdf: "/pdf/AssessmentPdf/Operational Readiness.pdf",
   },
 ];
 
@@ -401,9 +411,9 @@ const AssessmentThirdComponent = () => {
             <div className={classes.cardContent}>
               <h2 className={classes.cardTitle}>{card.title}</h2>
               <p className={classes.cardDescription}>{card.description}</p>
-              <Link to={card.link}>
+              <a href={card.pdf} download>
                 <button className={classes.darkButton}>Download</button>
-              </Link>
+              </a>
             </div>
           </div>
         ))}

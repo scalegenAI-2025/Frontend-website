@@ -151,6 +151,7 @@ type CategoryKey = "Customer" | "Technology" | "Data" | "People" | "Industry";
 interface CardItem {
   title: string;
   description: string;
+  pdf: string;
 }
 
 type Categories = Record<CategoryKey, CardItem[]>;
@@ -247,97 +248,118 @@ const categories: Categories = {
       title: "Selecting Right Customer for GenAI",
       description:
         "Criteria to identify ideal early adopters for maximum impact.",
+      pdf: "/pdf/AssetsPdf/C-Selecting the right customer for GenAI.pdf",
     },
     {
       title: "Selling Generative AI",
       description: "Strategies to position and close enterprise GenAI deals.",
+      pdf: "/pdf/AssetsPdf/C-Selling GenAI.pdf",
     },
     {
       title: "3 Piloting Mistakes",
       description:
         "Common errors that derail GenAI pilots and how to avoid them.",
+      pdf: "/pdf/AssetsPdf/C-Avoid these 3 piloting mistakes.pdf",
     },
   ],
   Technology: [
     {
       title: "Building the Right Infrastructure",
       description: "Key tech and cloud components for scalable GenAI.",
+      pdf: "/pdf/AssetsPdf/T-Building the right technology infra.pdf",
     },
     {
       title: "Conducting AI Audit",
       description:
         "Assessing AI systems for compliance, performance, and risk.",
+      pdf: "/pdf/AssetsPdf/T-Conducting AI Audit.pdf",
     },
     {
       title: "Top AI Tools, Frameworks, and Platforms",
       description: "Curated list of leading AI/GenAI solutions.",
+      pdf: "/pdf/AssetsPdf/T-Tools n frameworks.pdf",
     },
     {
       title: "Agentic AI Architecture",
       description: "Guidelines for autonomous, goal-driven AI systems.",
+      pdf: "/pdf/AssetsPdf/T-Agentic AI Architecture.pdf",
     },
   ],
   Data: [
     {
       title: "Fixing the Organization Data",
       description: "Steps to clean, structure, and govern enterprise data.",
+      pdf: "/pdf/AssetsPdf/D-Fixing the organization data.pdf",
     },
     {
       title: "Data Monetization",
       description: "Turning organizational data into new revenue streams.",
+      pdf: "/pdf/AssetsPdf/D-Data Monetization.pdf",
     },
   ],
   People: [
     {
       title: "12 New AI/GenAI Roles",
       description: "Emerging job titles shaping the AI-powered workforce.",
+      pdf: "/pdf/AssetsPdf/P-12 New Roles.pdf",
     },
     {
       title: "Responsible AI Framework",
       description: "Ethical and compliant AI deployment guidelines.",
+      pdf: "/pdf/AssetsPdf/P-RAI Framework.pdf",
     },
   ],
   Industry: [
     {
       title: "Top 5 Industry-Agnostic Use Cases",
       description: "Universal GenAI applications across sectors.",
+      pdf: "/pdf/AssetsPdf/I-Top 5 GenAI Use cases.pdf",
     },
     {
       title: "Generative AI Competitive Landscape",
       description: "Market players, trends, and positioning.",
+      pdf: "/pdf/AssetsPdf/I-GenAI Comp Landscape.pdf",
     },
     {
       title: "GenAI Impact on Media & Entertainment",
       description: "Content creation and audience engagement transformation.",
+      pdf: "/pdf/AssetsPdf/I-GenAI Impact-Media n Entertainment.pdf",
     },
     {
       title: "GenAI Impact on Education",
       description: "Personalized, scalable, and adaptive learning models.",
+      pdf: "/pdf/AssetsPdf/I-GenAI impact-Education.pdf",
     },
     {
       title: "GenAI Impact on Automotive",
       description: "AI-driven design, manufacturing, and mobility solutions.",
+      pdf: "/pdf/AssetsPdf/I-GenAI Impact Automotive.pdf",
     },
     {
       title: "GenAI Impact on Financial Services",
       description:
         "Enhanced decision-making, automation, and fraud prevention.",
+      pdf: "/pdf/AssetsPdf/I-GenAI Impact finance.pdf",
     },
     {
       title: "GenAI Impact on CMT",
       description: "Transformation in communications, media, and technology.",
+      pdf: "/pdf/AssetsPdf/I-GenAI impact-communications.pdf",
     },
     {
       title: "GenAI Impact on Retail",
       description: "Hyper-personalized shopping and intelligent supply chains.",
+      pdf: "/pdf/AssetsPdf/I-GenAI impact-retail.pdf",
     },
     {
       title: "GenAI Impact on Life Sciences",
       description: "Accelerated drug discovery and patient care innovation.",
+      pdf: "/pdf/AssetsPdf/I-GenAI impact-lifesciences.pdf",
     },
     {
       title: "GenAI Impact on Energy",
       description: "AI-enabled grid optimization and sustainable operations.",
+      pdf: "/pdf/AssetsPdf/I-GenAI impact-energy.pdf",
     },
   ],
 };
@@ -367,12 +389,14 @@ function Card({ item, icon, category }: CardProps) {
       <div className={classes.cardContent}>
         <h3 className={classes.cardTitle}>{item.title}</h3>
         <p className={classes.cardDescription}>{item.description}</p>
-        <button
-          className={classes.button}
-          aria-label={`Download ${item.title}`}
-        >
-          Download
-        </button>
+        <a href={item.pdf} download>
+          <button
+            className={classes.button}
+            aria-label={`Download ${item.title}`}
+          >
+            Download
+          </button>
+        </a>
       </div>
     </div>
   );
