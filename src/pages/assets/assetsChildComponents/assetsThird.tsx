@@ -138,23 +138,30 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
-// Replace imports with your actual SVG icon files
+// Replace imports with your actual assets
 import CustomerIcon from "../../../assets/CourseImage1.png";
 import TechnologyIcon from "../../../assets/CourseImage2.png";
 import DataIcon from "../../../assets/CourseImage3.png";
 import PeopleIcon from "../../../assets/CourseImage3.png";
 import IndustryIcon from "../../../assets/CourseImage1.png";
 
+// ---------- TYPES ----------
+type CategoryKey = "Customer" | "Technology" | "Data" | "People" | "Industry";
+
+interface CardItem {
+  title: string;
+  description: string;
+}
+
+type Categories = Record<CategoryKey, CardItem[]>;
+
+// ---------- STYLES ----------
 const useStyles = createUseStyles({
   container: {
     backgroundColor: "white",
     padding: 40,
   },
   categoryHeader: {
-    ///color: "white",
-    // margin: "60px 0 20px",
-    // fontSize: 32,
-    //fontWeight: "bold",
     fontSize: 46,
     fontWeight: "bold",
     marginBottom: 20,
@@ -174,7 +181,7 @@ const useStyles = createUseStyles({
     },
   },
   card: {
-    backgroundColor: "#444444",
+    backgroundColor: "#444",
     color: "#fff",
     borderRadius: 12,
     border: "1px solid rgba(255,255,255,0.1)",
@@ -184,7 +191,7 @@ const useStyles = createUseStyles({
     transition: "transform 0.3s, box-shadow 0.3s",
     "&:hover": {
       transform: "translateY(-5px)",
-      boxShadow: "0 10px 20px rgba(255,255,255,0.1)",
+      boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
     },
   },
   iconWrapper: {
@@ -195,7 +202,6 @@ const useStyles = createUseStyles({
     "& img": {
       width: "100%",
       height: "100%",
-      // objectFit: "contain",
     },
   },
   cardContent: {
@@ -234,7 +240,8 @@ const useStyles = createUseStyles({
   },
 });
 
-const categories = {
+// ---------- DATA ----------
+const categories: Categories = {
   Customer: [
     {
       title: "Selecting Right Customer for GenAI",
@@ -335,7 +342,7 @@ const categories = {
   ],
 };
 
-const categoryIcons = {
+const categoryIcons: Record<CategoryKey, string> = {
   Customer: CustomerIcon,
   Technology: TechnologyIcon,
   Data: DataIcon,
@@ -343,30 +350,69 @@ const categoryIcons = {
   Industry: IndustryIcon,
 };
 
+// ---------- COMPONENTS ----------
+interface CardProps {
+  item: CardItem;
+  icon: string;
+  category: CategoryKey;
+}
+
+function Card({ item, icon, category }: CardProps) {
+  const classes = useStyles();
+  return (
+    <div className={classes.card}>
+      <div className={classes.iconWrapper}>
+        <img src={icon} alt={`${category} icon`} />
+      </div>
+      <div className={classes.cardContent}>
+        <h3 className={classes.cardTitle}>{item.title}</h3>
+        <p className={classes.cardDescription}>{item.description}</p>
+        <button
+          className={classes.button}
+          aria-label={`Download ${item.title}`}
+        >
+          Download
+        </button>
+      </div>
+    </div>
+  );
+}
+
+interface CategorySectionProps {
+  category: CategoryKey;
+  items: CardItem[];
+  icon: string;
+}
+
+function CategorySection({ category, items, icon }: CategorySectionProps) {
+  const classes = useStyles();
+  return (
+    <div>
+      <h2 className={classes.categoryHeader}>{category}</h2>
+      <div className={classes.cardsContainer}>
+        {items.map((item, idx) => (
+          <Card key={idx} item={item} icon={icon} category={category} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ---------- MAIN ----------
 export default function KnowledgeCardsWithIcons() {
   const classes = useStyles();
-
   return (
     <div className={classes.container}>
-      {Object.entries(categories).map(([category, items]) => (
-        <div key={category}>
-          <h2 className={classes.categoryHeader}>{category}</h2>
-          <div className={classes.cardsContainer}>
-            {items.map((item, idx) => (
-              <div key={idx} className={classes.card}>
-                <div className={classes.iconWrapper}>
-                  <img src={categoryIcons[category]} alt={`${category} icon`} />
-                </div>
-                <div className={classes.cardContent}>
-                  <h3 className={classes.cardTitle}>{item.title}</h3>
-                  <p className={classes.cardDescription}>{item.description}</p>
-                  <button className={classes.button}>Download</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+      {(Object.entries(categories) as [CategoryKey, CardItem[]][]).map(
+        ([category, items]) => (
+          <CategorySection
+            key={category}
+            category={category}
+            items={items}
+            icon={categoryIcons[category]}
+          />
+        )
+      )}
     </div>
   );
 }
