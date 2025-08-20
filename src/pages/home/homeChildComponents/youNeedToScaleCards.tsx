@@ -129,21 +129,21 @@ const cardData = [
     description:
       "Accelerate AI Adoption with curated, enterprise-grade, and downloadable assets",
     image: Assets,
-    link: "/assets",
+    link: "/assets#middle-section",
   },
   {
     title: "Assessments",
     description:
       "Assess your capabilities, identify the gaps, and speed up your AI Journey",
     image: Assessments,
-    link: "/assessments",
+    link: "/assessments#middle-section",
   },
   {
     title: "Courses",
     description:
       "We do not offer just courses. We offer personalized continuous AI Reskilling Journey",
     image: Course,
-    link: "/courses",
+    link: "/courses#middle-section",
   },
   {
     title: "Ecosystems",
