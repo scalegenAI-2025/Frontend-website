@@ -148,7 +148,14 @@ const useStyles = createUseStyles({
     lineHeight: 1.1,
     textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)",
   },
-
+  homeHeaderLineTop: {
+    margin: 0,
+    fontSize: "clamp(1.5rem, 4.5vw, 5rem)",
+    //fontSize: "55px",
+    fontWeight: 700,
+    lineHeight: 1.1,
+    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.7)",
+  },
   homeHeader3: {
     marginTop: "1.5rem",
     fontWeight: 400,
@@ -178,7 +185,7 @@ const FirstPage = () => {
   return (
     <div className={classes.container}>
       <div className={classes.homeHeader}>
-        <h1 className={classes.homeHeaderLine}>We Help Enterprises</h1>
+        <h1 className={classes.homeHeaderLineTop}>We Help Enterprises</h1>
         <h1 className={classes.homeHeaderLine}>Scale Generative AI</h1>
       </div>
       <h3 className={classes.homeHeader3}>

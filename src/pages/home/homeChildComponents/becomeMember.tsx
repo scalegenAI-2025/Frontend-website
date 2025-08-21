@@ -376,7 +376,7 @@ const PartnerForm = () => {
                 checked={formData.agreeComms}
                 onChange={handleChange}
               />{" "}
-              I agree to receive communication regarding my interest
+              I wish to subscribe to the mailing list
             </label>
             <label htmlFor="newsletter">
               <input
@@ -386,7 +386,7 @@ const PartnerForm = () => {
                 checked={formData.newsletter}
                 onChange={handleChange}
               />{" "}
-              I would like to sign up for AI Sweden’s newsletter
+              I would like to sign up for Scaling GenAI newsletter
             </label>
           </div>
 

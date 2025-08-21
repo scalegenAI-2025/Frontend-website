@@ -392,10 +392,10 @@ const useStyles = createUseStyles({
   navLinkLock: {
     fontSize: "1.8rem",
     textDecoration: "none",
-    color: "#FF00FF",
+    color: "#FFffFF",
     "&:hover": {
       textDecoration: "underline",
-      color: "#FFffFF",
+      color: "#FF00FF",
     },
   },
 
