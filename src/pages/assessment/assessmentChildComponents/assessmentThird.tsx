@@ -195,11 +195,6 @@
 // }
 
 import { createUseStyles } from "react-jss";
-//import { Link } from "react-router-dom";
-import Assessments from "../../../assets/assessment.jpg";
-import Assets from "../../../assets/assets_pic.jpg";
-import Ecosystem from "../../../assets/assetsBackground.jpg";
-import Course from "../../../assets/Courses.jpg";
 
 const useStyles = createUseStyles({
   container: {
@@ -209,16 +204,12 @@ const useStyles = createUseStyles({
   },
   header: {
     color: "white",
-    // fontSize: 24,
-    // fontWeight: 400,
     marginBottom: 40,
     paddingLeft: 4,
     margin: 0,
     fontSize: 46,
     fontWeight: "bold",
-    // marginBottom: 20,
     marginTop: "0px",
-    // color: "#222",
   },
   hireButton: {
     position: "absolute",
@@ -242,22 +233,21 @@ const useStyles = createUseStyles({
     justifyContent: "center",
   },
   card: {
-    flex: "1 1 calc(33.33% - 16px)", // three cards per row
+    flex: "1 1 calc(33.33% - 16px)",
     minWidth: 300,
-    maxWidth: 400, // keep them balanced
+    maxWidth: 400,
     borderRadius: 12,
     overflow: "hidden",
     border: "1px solid rgba(255, 255, 255, 0.1)",
     boxSizing: "border-box",
 
     "@media (max-width: 1024px)": {
-      flex: "1 1 calc(50% - 12px)", // two cards per row on tablets
+      flex: "1 1 calc(50% - 12px)",
     },
     "@media (max-width: 768px)": {
-      flex: "1 1 100%", // stack on smaller screens
+      flex: "1 1 100%",
     },
   },
-
   cardContent: {
     padding: 32,
   },
@@ -292,20 +282,6 @@ const useStyles = createUseStyles({
       boxShadow: "0 10px 20px rgba(255,255,255,0.1)",
     },
   },
-  darkCardImage: {
-    width: "100%",
-    height: 300,
-    overflow: "hidden",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#222",
-    "& img": {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-    },
-  },
   darkButton: {
     composes: "$cardButton",
     borderColor: "white",
@@ -321,77 +297,57 @@ const cardData = [
   {
     title: "GenAI Maturity",
     description: "Gauge your organization’s maturity level: 1 to 5, for GenAI",
-    image: Assets,
-    link: "/assets",
     pdf: "/pdf/AssessmentPdf/GenAI Maturity.pdf",
   },
   {
     title: "AI Maturity",
     description:
       "Gauge your organization’s maturity level: 1 to 5, for traditional AI",
-    image: Assessments,
-    link: "/assessments",
     pdf: "/pdf/AssessmentPdf/AI Maturity.pdf",
   },
   {
     title: "VITA",
     description:
       "Find out the impact of GenAI on your organization through VITA score",
-    image: Course,
-    link: "/courses",
     pdf: "/pdf/AssessmentPdf/VITA.pdf",
   },
   {
     title: "Value Chain",
     description: "Know the strength of your position in GenAI value chain",
-    image: Ecosystem,
-    link: "/ecosystem",
     pdf: "/pdf/AssessmentPdf/Value Chain.pdf",
   },
   {
     title: "Infrastructure",
     description:
       "Find out how ready your organization’s infrastructure is to scale GenAI",
-    image: Assets,
-    link: "/assets",
     pdf: "/pdf/AssessmentPdf/GenAI Maturity.pdf",
   },
   {
     title: "Agents",
     description: "Find out if your organization is ready to deploy agents",
-    image: Assessments,
-    link: "/assessments",
     pdf: "/pdf/AssessmentPdf/Agents.pdf",
   },
   {
     title: "Reskilling",
     description: "Find out how ready your customers are for GenAI",
-    image: Course,
-    link: "/courses",
     pdf: "/pdf/AssessmentPdf/Reskilling.pdf",
   },
   {
     title: "Mindset",
     description:
       "Find out if your organization has the adjacent technologies to scale GenAI",
-    image: Ecosystem,
-    link: "/ecosystem",
     pdf: "/pdf/AssessmentPdf/Mindset.pdf",
   },
   {
     title: "Leadership",
     description:
       "Find out if your organization has the right skills and competencies to scale GenAI",
-    image: Assets,
-    link: "/assets",
     pdf: "/pdf/AssessmentPdf/Leadership.pdf",
   },
   {
     title: "Operational Readiness",
     description:
       "Find out if your organization is operationally ready to scale GenAI",
-    image: Assessments,
-    link: "/assessments",
     pdf: "/pdf/AssessmentPdf/Operational Readiness.pdf",
   },
 ];
@@ -405,9 +361,6 @@ const AssessmentThirdComponent = () => {
       <div className={classes.cardsContainer}>
         {cardData.map((card, index) => (
           <div key={index} className={classes.darkCard}>
-            <div className={classes.darkCardImage}>
-              <img src={card.image} alt={card.title} />
-            </div>
             <div className={classes.cardContent}>
               <h2 className={classes.cardTitle}>{card.title}</h2>
               <p className={classes.cardDescription}>{card.description}</p>

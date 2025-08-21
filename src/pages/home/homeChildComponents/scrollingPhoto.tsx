@@ -12,13 +12,14 @@ const useStyles = createUseStyles({
     position: "relative",
     width: "100%",
     maxWidth: "2000px",
-    margin: "0px auto",
+    margin: "0 auto",
     overflow: "hidden",
     borderRadius: "8px",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   },
   scrollContainer: {
     display: "flex",
+    justifyContent: "center", // ✅ centers images if fewer than container width
     overflowX: "auto",
     scrollbarWidth: "none",
     msOverflowStyle: "none",
@@ -72,30 +73,20 @@ const PhotoScroller = () => {
   const [maxScroll, setMaxScroll] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const photos = [
-    ai1,
-    ai2,
-    ai3,
-    ai4,
-    ai5,
-    // "https://picsum.photos/300/320?random=6",
-    // "https://picsum.photos/300/320?random=7",
-    // "https://picsum.photos/300/320?random=8",
-    // "https://picsum.photos/300/320?random=9",
-    // "https://picsum.photos/300/320?random=10",
-  ];
+  const photos = [ai1, ai2, ai3, ai4, ai5];
 
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
     const updateMaxScroll = () => {
-      setMaxScroll(container.scrollWidth - container.clientWidth);
+      // prevent negative values (on big screens with fewer images)
+      const max = Math.max(0, container.scrollWidth - container.clientWidth);
+      setMaxScroll(max);
     };
 
     const handleScroll = () => {
       setScrollPosition(container.scrollLeft);
-      updateMaxScroll();
     };
 
     updateMaxScroll();
@@ -112,7 +103,7 @@ const PhotoScroller = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const imageWidth = 300;
+    const imageWidth = container.querySelector("img")?.clientWidth || 300; // ✅ dynamic width
     const currentScroll = container.scrollLeft;
     let targetScroll = currentScroll;
 

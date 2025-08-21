@@ -89,7 +89,7 @@ function App() {
         hideProgressBar={false}
         newestOnTop
         pauseOnHover
-        //theme="dark"
+        theme="dark"
       />
     </>
   );
