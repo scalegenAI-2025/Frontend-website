@@ -6,7 +6,7 @@ const TechnicalAIContentPage: React.FC = () => {
       padding: "50px",
     },
     container: {
-      fontFamily: "Arial, sans-serif",
+      // fontFamily: "Arial, sans-serif",
       padding: "10px",
       backgroundColor: "#ffffff",
       maxWidth: "1400px",

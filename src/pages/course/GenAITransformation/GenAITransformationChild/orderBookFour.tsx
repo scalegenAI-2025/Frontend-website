@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     color: "#000",
     // minHeight: "100vh",
     padding: "40px 20px",
-    fontFamily: `'Helvetica Neue', Arial, sans-serif`,
+    // fontFamily: `'Helvetica Neue', Arial, sans-serif`,
     display: "flex",
     marginTop: "100px",
     flexDirection: "column",

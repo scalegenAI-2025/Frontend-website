@@ -136,14 +136,8 @@
 //   );
 // }
 //import React from "react";
-import { createUseStyles } from "react-jss";
 
-// Replace imports with your actual assets
-import CustomerIcon from "../../../assets/CourseImage1.png";
-import TechnologyIcon from "../../../assets/CourseImage2.png";
-import DataIcon from "../../../assets/CourseImage3.png";
-import PeopleIcon from "../../../assets/CourseImage3.png";
-import IndustryIcon from "../../../assets/CourseImage1.png";
+import { createUseStyles } from "react-jss";
 
 // ---------- TYPES ----------
 type CategoryKey = "Customer" | "Technology" | "Data" | "People" | "Industry";
@@ -161,18 +155,19 @@ const useStyles = createUseStyles({
   container: {
     backgroundColor: "white",
     padding: 40,
+    paddingTop: 20,
   },
   categoryHeader: {
     fontSize: 46,
     fontWeight: "bold",
     marginBottom: 20,
-    marginTop: "0px",
     color: "#222",
   },
   cardsContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: 24,
+    marginBottom: "80px",
     backgroundColor: "white",
     "@media (max-width: 1024px)": {
       gridTemplateColumns: "repeat(2, 1fr)",
@@ -182,8 +177,8 @@ const useStyles = createUseStyles({
     },
   },
   card: {
-    backgroundColor: "#444",
-    color: "#fff",
+    backgroundColor: "#dfdddd",
+    color: "#000",
     borderRadius: 12,
     border: "1px solid rgba(255,255,255,0.1)",
     overflow: "hidden",
@@ -192,17 +187,7 @@ const useStyles = createUseStyles({
     transition: "transform 0.3s, box-shadow 0.3s",
     "&:hover": {
       transform: "translateY(-5px)",
-      boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
-    },
-  },
-  iconWrapper: {
-    padding: 24,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    "& img": {
-      width: "100%",
-      height: "100%",
+      boxShadow: "0 5px 0px rgba(126, 122, 122, 0.4)",
     },
   },
   cardContent: {
@@ -213,10 +198,10 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     marginBottom: 12,
-    borderBottom: "1px solid #fff",
+    borderBottom: "1px solid #000",
     paddingBottom: 6,
   },
   cardDescription: {
@@ -227,16 +212,27 @@ const useStyles = createUseStyles({
   button: {
     alignSelf: "flex-start",
     background: "transparent",
-    color: "#fff",
-    border: "1px solid #fff",
+    //backgroundColor: "#1e3a5f",
+    color: "#000",
+
+    border: "1px solid #000",
     borderRadius: 24,
     padding: "8px 16px",
     fontSize: 14,
     cursor: "pointer",
     transition: "all 0.3s",
     "&:hover": {
-      background: "#fff",
-      color: "#111",
+      backgroundColor: "#2c4a6b",
+      transform: "translateY(-2px)",
+      boxShadow: "0 4px 12px rgba(30, 58, 95, 0.3)",
+      color: "white",
+    },
+    // "&:active": {
+    //   transform: "translateY(0)",
+    // },
+    "&:active": {
+      background: "white",
+      color: "black",
     },
   },
 });
@@ -364,38 +360,21 @@ const categories: Categories = {
   ],
 };
 
-const categoryIcons: Record<CategoryKey, string> = {
-  Customer: CustomerIcon,
-  Technology: TechnologyIcon,
-  Data: DataIcon,
-  People: PeopleIcon,
-  Industry: IndustryIcon,
-};
-
 // ---------- COMPONENTS ----------
 interface CardProps {
   item: CardItem;
-  icon: string;
-  category: CategoryKey;
 }
 
-function Card({ item, icon, category }: CardProps) {
+function Card({ item }: CardProps) {
   const classes = useStyles();
+  //  const [clicked, setClicked] = useState(false);
   return (
     <div className={classes.card}>
-      <div className={classes.iconWrapper}>
-        <img src={icon} alt={`${category} icon`} />
-      </div>
       <div className={classes.cardContent}>
         <h3 className={classes.cardTitle}>{item.title}</h3>
         <p className={classes.cardDescription}>{item.description}</p>
-        <a href={item.pdf} download>
-          <button
-            className={classes.button}
-            aria-label={`Download ${item.title}`}
-          >
-            Download
-          </button>
+        <a href={item.pdf} download className={classes.button}>
+          Download
         </a>
       </div>
     </div>
@@ -405,36 +384,32 @@ function Card({ item, icon, category }: CardProps) {
 interface CategorySectionProps {
   category: CategoryKey;
   items: CardItem[];
-  icon: string;
 }
 
-function CategorySection({ category, items, icon }: CategorySectionProps) {
+function CategorySection({ category, items }: CategorySectionProps) {
   const classes = useStyles();
   return (
-    <div>
-      <h2 className={classes.categoryHeader}>{category}</h2>
+    <section aria-labelledby={`${category}-header`}>
+      <h2 id={`${category}-header`} className={classes.categoryHeader}>
+        {category}
+      </h2>
       <div className={classes.cardsContainer}>
-        {items.map((item, idx) => (
-          <Card key={idx} item={item} icon={icon} category={category} />
+        {items.map((item) => (
+          <Card key={item.title} item={item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
 // ---------- MAIN ----------
-export default function KnowledgeCardsWithIcons() {
+export default function KnowledgeCards() {
   const classes = useStyles();
   return (
     <div className={classes.container}>
       {(Object.entries(categories) as [CategoryKey, CardItem[]][]).map(
         ([category, items]) => (
-          <CategorySection
-            key={category}
-            category={category}
-            items={items}
-            icon={categoryIcons[category]}
-          />
+          <CategorySection key={category} category={category} items={items} />
         )
       )}
     </div>

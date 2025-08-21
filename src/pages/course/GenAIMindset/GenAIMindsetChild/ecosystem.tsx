@@ -4,7 +4,7 @@ import ecosystem from "../../../../assets/super ecosystem image.jpg";
 const EcosystemPage: React.FC = () => {
   const styles: { [key: string]: React.CSSProperties } = {
     container: {
-      fontFamily: "Arial, sans-serif",
+      //  fontFamily: "Arial, sans-serif",
       padding: "40px",
       backgroundColor: "#ffffff",
       maxWidth: "1400px",
@@ -46,7 +46,7 @@ const EcosystemPage: React.FC = () => {
       fontWeight: "bold",
     },
     blueText: {
-      color: "#2F4F4F",
+      //  color: "#2F4F4F",
       fontWeight: "bold",
     },
     rocketImage: {

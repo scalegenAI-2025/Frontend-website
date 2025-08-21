@@ -5,7 +5,7 @@ import Framework from "../../../../assets/rocketFrame.png";
 const useStyles = createUseStyles({
   container: {
     padding: "2rem",
-    fontFamily: "Arial, sans-serif",
+    //fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff",
     color: "#000",
     maxWidth: "1000px",
@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
     margin: "0px",
     display: "flex",
     justifyContent: "center",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     paddingTop: "1rem",
   },

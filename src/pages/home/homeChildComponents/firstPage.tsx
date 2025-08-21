@@ -150,7 +150,7 @@ const useStyles = createUseStyles({
   },
   homeHeaderLineTop: {
     margin: 0,
-    fontSize: "clamp(1.5rem, 4.5vw, 5rem)",
+    fontSize: "clamp(1.5rem, 4.5vw, 3rem)",
     //fontSize: "55px",
     fontWeight: 700,
     lineHeight: 1.1,

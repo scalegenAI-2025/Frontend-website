@@ -84,7 +84,7 @@ const useStyles = createUseStyles({
     background: "linear-gradient(135deg, #6a11cb, #2575fc, #ff5cac)",
     backgroundSize: "400% 400%",
     animation: "$gradientBG 15s ease infinite",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     padding: 20,
   },
   "@keyframes gradientBG": {

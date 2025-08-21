@@ -28,7 +28,7 @@ const useStyles = createUseStyles({
     },
   },
   bookImage: {
-    width: "350px",
+    width: "450px",
     height: "auto",
     borderRadius: "8px",
     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
@@ -46,14 +46,22 @@ const useStyles = createUseStyles({
     justifyContent: "center",
   },
   description: {
-    fontSize: "20px",
-    color: "#666",
-    lineHeight: "1.5",
+    fontSize: "34px",
+    // fontWeight: "bold",
+    color: "#222",
+    // lineHeight: "1.5",
+    marginBottom: "10px",
+  },
+  descriptionBig: {
+    fontSize: "40px",
+    fontWeight: "bold",
+    color: "#222",
+    // lineHeight: "1.5",
     marginBottom: "10px",
   },
   availableText: {
-    fontSize: "25px",
-    fontWeight: "bold",
+    fontSize: "16px",
+    // fontWeight: "bold",
     color: "#333",
     lineHeight: "1.2",
     marginBottom: "20px",
@@ -119,14 +127,13 @@ const ReadinessRocketSection: React.FC = () => {
 
         <div className={classes.rightSection}>
           <p className={classes.description}>
-            Find out more about Readiness Rocket Framework
+            Find out more about <br></br>
+            <span className={classes.descriptionBig}>
+              Readiness Rocket Framework
+            </span>
           </p>
 
-          <div className={classes.availableText}>
-            Available on
-            <br />
-            Amazon
-          </div>
+          <div className={classes.availableText}>Available on Amazon</div>
 
           <div className={classes.buttonContainer}>
             <button

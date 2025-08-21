@@ -104,7 +104,7 @@ const QuestionOnAI = () => {
       >
         <p className={classes.textTop}>The question should not be –</p>
         <span className={classes.textToBeCrossed}>
-          Will AI take away my jobs?
+          Will AI take away my job?
         </span>
       </div>
       <div
@@ -112,7 +112,7 @@ const QuestionOnAI = () => {
         className={`${classes.text} ${shouldBlink ? classes.blinking : ""}`}
       >
         <p className={classes.textTop}>It should be –</p>
-        Will you allow AI to take away your jobs?
+        Will you allow AI to take away your job?
       </div>
     </div>
   );

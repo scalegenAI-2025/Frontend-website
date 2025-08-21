@@ -16,7 +16,7 @@ const HEADINGS = {
 const useStyles = createUseStyles({
   container: {
     padding: "2rem",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff",
     color: "#000",
     maxWidth: "1000px",
@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     paddingTop: "1rem",
     display: "flex",
     justifyContent: "center",
-    fontFamily: "Arial, sans-serif",
+    //fontFamily: "Arial, sans-serif",
   },
   sectionTitle: {
     fontSize: "1.5rem",

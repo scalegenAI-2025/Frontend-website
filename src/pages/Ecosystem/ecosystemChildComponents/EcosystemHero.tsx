@@ -131,9 +131,9 @@ const useStyles = createUseStyles({
     color: "#555",
   },
   heading2: {
-    fontSize: 46,
+    fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 2,
+    marginBottom: 30,
     marginTop: "0px",
     color: "#222",
   },
@@ -197,8 +197,8 @@ const EcosystemHero = () => {
     <>
       <div className={classes.wrapper}>
         <div className={classes.container}>
-          <h1 className={classes.heading2}>Need help with ecosystem?</h1>
-          <h1 className={classes.heading}>
+          {/* <h1 className={classes.heading2}>Need help with ecosystem?</h1> */}
+          <h1 className={classes.heading2}>
             An ecosystem is a cohort where people share AI knowledge, skills,
             and best practices related to a certain AI topic with each other.
           </h1>

@@ -203,7 +203,7 @@ const ConsultationCardAssets = () => {
         <h1 className={classes.heading}>Not sure where to start?</h1>
 
         <button className={classes.button} onClick={handleClick}>
-          Book a Consultation
+          Book a Consultation →
         </button>
       </div>
     </div>

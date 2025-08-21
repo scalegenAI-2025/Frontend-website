@@ -229,7 +229,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
   },
   title: {
     fontSize: 36,

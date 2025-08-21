@@ -352,6 +352,7 @@ const useStyles = createUseStyles({
     border: "1px solid rgba(255, 255, 255, 0.1)",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     display: "flex",
+    boxShadow: "0 10px 20px rgba(255, 255, 255, 0.2)",
     flexDirection: "column",
     justifyContent: "space-between",
     "&:hover": {
@@ -443,8 +444,7 @@ const courses = [
   },
   {
     title: "Cultivating AI/GenAI Mindset",
-    audience:
-      "to For executives, middle managers and early career professionals",
+    audience: "For executives, middle managers and early career professionals",
     hours: "4 hours",
     mode: "Instructor-led",
     delivery: "Online or in-person",

@@ -80,11 +80,13 @@ const EcosystemTop = () => {
     <div className={classes.container}>
       <div className={classes.homeHeader}>
         <h1 className={classes.homeHeaderLine}>
-          How fast a firm scales GenAI shall largely depend on a firm’s ability
-          to work in Ecosystems
+          How fast a firm scales GenAI largely depends on it’s ability to work
+          in Ecosystems
         </h1>
       </div>
-      <h3 className={classes.homeHeader3}>Scale 3X through ecosystems</h3>
+      <h3 className={classes.homeHeader3}>
+        Scale 3X faster through ecosystems
+      </h3>
     </div>
     // </div>
   );

@@ -4,7 +4,7 @@ import coach from "../../../../assets/At the office-rafiki.png";
 const CoachingPage: React.FC = () => {
   const styles = {
     container: {
-      fontFamily: "Arial, sans-serif",
+      //  fontFamily: "Arial, sans-serif",
       backgroundColor: "#ffffff",
       minHeight: "100vh",
       padding: "0",
@@ -44,7 +44,7 @@ const CoachingPage: React.FC = () => {
       lineHeight: "1.5",
     },
     purpleText: {
-      color: "#8B4F9F",
+      //color: "#8B4F9F",
       fontWeight: "bold",
     },
     coachingText: {

@@ -172,7 +172,7 @@ import Framework from "../../../../assets/framework.png";
 const useStyles = createUseStyles({
   container: {
     padding: "2rem",
-    fontFamily: "Arial, sans-serif",
+    //  fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff",
     color: "#000",
     maxWidth: "1000px",
@@ -182,7 +182,7 @@ const useStyles = createUseStyles({
     fontSize: "40px",
     fontWeight: "bold",
     margin: "0px",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     display: "flex",
     justifyContent: "center",
@@ -192,7 +192,7 @@ const useStyles = createUseStyles({
     fontSize: "1.5rem",
     fontWeight: "bold",
     margin: "2rem 0 1rem",
-    color: "#002c3e",
+    // color: "#002c3e",
   },
   list: {
     paddingLeft: "1.5rem",
@@ -202,10 +202,10 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   purpleText: {
-    color: "#8000ff",
+    // color: "#8000ff",
   },
   image: {
-    width: "80%",
+    width: "50%",
     //  margin: "1rem 0",
     margin: "auto",
     borderRadius: "6px",

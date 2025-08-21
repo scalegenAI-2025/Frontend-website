@@ -48,11 +48,11 @@ const useStyles = createUseStyles({
     },
   },
   ecosystems: {
-    color: "#e879f9",
+    color: "#FF00FF",
     fontWeight: "600",
   },
   learningText: {
-    fontSize: "48px",
+    fontSize: "40px",
     fontWeight: "400",
     color: "#ffffff",
     lineHeight: "1.1",

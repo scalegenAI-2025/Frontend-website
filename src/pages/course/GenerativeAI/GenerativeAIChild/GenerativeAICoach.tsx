@@ -4,7 +4,7 @@ import coach from "../../../../assets/amitsirsecondpic.png";
 const CoachingPage: React.FC = () => {
   const styles = {
     container: {
-      fontFamily: "Arial, sans-serif",
+      // fontFamily: "Arial, sans-serif",
       backgroundColor: "#ffffff",
       minHeight: "100vh",
       padding: "0",

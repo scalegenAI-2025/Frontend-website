@@ -34,6 +34,17 @@ const useStyles = createUseStyles({
     marginTop: "0px",
     color: "#222",
   },
+
+  heading1: {
+    fontSize: "1.4rem",
+    color: "#5a6c7d",
+    marginBottom: "40px",
+    fontWeight: "400",
+    "@media (max-width: 768px)": {
+      fontSize: "1.1rem",
+      marginBottom: "30px",
+    },
+  },
   description: {
     fontSize: 18,
     marginBottom: 40,
@@ -80,7 +91,8 @@ const AIReskilling = () => {
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <h1 className={classes.heading}>
-          AI Reskilling Journey for Individuals
+          AI Reskilling Journey <br></br>
+          <span className={classes.heading1}>for Individuals</span>
         </h1>
         {/* <h1 className={classes.heading2}>Ecosystem</h1> */}
         <p className={classes.description}>
@@ -88,7 +100,7 @@ const AIReskilling = () => {
           consultation. */}
         </p>
         <button className={classes.button} onClick={handleClick}>
-          Become a member →
+          Explore →
         </button>
       </div>
     </div>

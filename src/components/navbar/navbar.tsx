@@ -403,7 +403,7 @@ const useStyles = createUseStyles({
     display: "flex",
     gap: "1rem",
     alignItems: "center",
-    paddingTop: "25px",
+    //paddingTop: "25px",
     paddingLeft: "200px",
     "@media (max-width: 1200px)": {
       display: "none",
@@ -412,6 +412,7 @@ const useStyles = createUseStyles({
 
   navLink: {
     color: "#fff",
+    fontSize: "20px",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
@@ -456,7 +457,7 @@ const useStyles = createUseStyles({
       backgroundColor: "#fff",
       color: "#000",
     },
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       background: "black",
       color: "white",
       border: "1px solid #ffffff",
@@ -627,13 +628,13 @@ const Navbar = () => {
             </button>
           )}
 
-          <Link
+          {/* <Link
             to="/meet-us"
             className={classes.mobileMenuLink}
             onClick={() => setIsMobileOpen(false)}
           >
             Meet Us
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>

@@ -3,7 +3,7 @@ import React from "react";
 const CourseContentPage: React.FC = () => {
   const styles = {
     container: {
-      fontFamily: "Arial, sans-serif",
+      // fontFamily: "Arial, sans-serif",
       padding: "2rem",
       backgroundColor: "#ffffff",
       maxWidth: "1200px",
@@ -19,7 +19,7 @@ const CourseContentPage: React.FC = () => {
     },
     subtitle: {
       fontSize: "18px",
-      color: "#8000ff",
+      //color: "#8000ff",
       fontStyle: "italic",
       marginBottom: "40px",
       fontWeight: "normal",
@@ -35,14 +35,14 @@ const CourseContentPage: React.FC = () => {
     dayTitle: {
       fontSize: "24px",
       fontWeight: "bold",
-      color: "#00405a",
+      //  color: "#00405a",
       marginBottom: "20px",
       marginTop: "0",
     },
     sectionTitle: {
       fontSize: "16px",
       fontWeight: "bold",
-      color: "#00405a",
+      // color: "#00405a",
       marginBottom: "8px",
       marginTop: "25px",
     },
@@ -60,7 +60,7 @@ const CourseContentPage: React.FC = () => {
     competencyTitle: {
       fontSize: "16px",
       fontWeight: "bold",
-      color: "#00405a",
+      //  color: "#00405a",
       marginBottom: "8px",
       marginTop: "25px",
     },
@@ -70,7 +70,7 @@ const CourseContentPage: React.FC = () => {
     <div style={styles.container}>
       <h1 style={styles.title}>Content</h1>
       <p style={styles.subtitle}>
-        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (2 hours
+        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (1 hours
         free)
       </p>
 

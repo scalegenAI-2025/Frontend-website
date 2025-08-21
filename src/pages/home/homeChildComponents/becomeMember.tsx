@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
     marginTop: "100px",
     padding: 20,
     paddingTop: "50px",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
   },
 
   header: {
@@ -356,7 +356,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="expertise" className={classes.label}>
-              Offer/expertise
+              Describe your Products/Services
             </label>
             <textarea
               id="expertise"

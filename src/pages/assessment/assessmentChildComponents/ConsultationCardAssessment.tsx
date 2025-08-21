@@ -201,7 +201,7 @@ const ConsultationCardAssets = () => {
         <h1 className={classes.heading}>Not sure where to start?</h1>
 
         <a href={mailtoLink} className={classes.button}>
-          Book a Consultation
+          Book a Consultation →
         </a>
       </div>
     </div>

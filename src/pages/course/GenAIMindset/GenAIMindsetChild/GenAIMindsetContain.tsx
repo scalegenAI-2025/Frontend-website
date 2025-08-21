@@ -3,7 +3,7 @@ import React from "react";
 const GenAIMindsetContain: React.FC = () => {
   const styles = {
     container: {
-      fontFamily: "Arial, sans-serif",
+      // fontFamily: "Arial, sans-serif",
       padding: "2rem",
       backgroundColor: "#ffffff",
       maxWidth: "1200px",

@@ -101,12 +101,12 @@ const useStyles = createUseStyles({
     color: "#222",
   },
   heading2: {
-    fontSize: "50px",
+    fontSize: "40px",
     marginTop: "3.5rem",
     lineHeight: 1.4,
   },
   purpleText: {
-    color: "#d633ff",
+    color: "#FF00FF",
     fontWeight: "bold",
   },
   highlight: {

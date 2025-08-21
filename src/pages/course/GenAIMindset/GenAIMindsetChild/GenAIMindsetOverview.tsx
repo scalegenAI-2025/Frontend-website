@@ -5,7 +5,7 @@ import Framework from "../../../../assets/mindset.png";
 const useStyles = createUseStyles({
   container: {
     padding: "2rem",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     backgroundColor: "#fff",
     color: "#000",
     maxWidth: "1000px",
@@ -15,7 +15,7 @@ const useStyles = createUseStyles({
     fontSize: "40px",
     fontWeight: "bold",
     margin: "0px",
-    fontFamily: "Arial, sans-serif",
+    // fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     paddingTop: "1rem",
   },

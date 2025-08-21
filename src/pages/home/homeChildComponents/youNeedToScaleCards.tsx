@@ -52,7 +52,8 @@ const useStyles = createUseStyles({
     maxWidth: 600,
     borderRadius: 12,
     overflow: "hidden",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
+    border: "1px solid rgba(18, 11, 11, 0.3)",
+    boxShadow: "0px 4px 2px rgba(255, 255, 255, 0.5)",
     boxSizing: "border-box",
     // "@media (max-width: 768px)": {
     //   width: "100%", // Stack on smaller screens
