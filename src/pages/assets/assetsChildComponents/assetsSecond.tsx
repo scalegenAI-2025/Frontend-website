@@ -29,6 +29,10 @@ const useStyles = createUseStyles({
     padding: "10px 2rem",
     cursor: "default",
     overflow: "hidden", // Prevent content overflow
+    "@media (max-width: 500px)": {
+      height: "400px",
+      padding: "10px 10px",
+    },
   },
   spacer: {
     height: "600px", // Fixed height instead of viewport units
@@ -52,6 +56,10 @@ const useStyles = createUseStyles({
     padding: "2rem",
     paddingTop: "8rem",
     opacity: 1,
+    "@media (max-width: 500px)": {
+      height: "400px",
+      paddingTop: "8.5rem",
+    },
   },
   blinking: {
     //animation: "$blinkOnce 2s ease-in-out",

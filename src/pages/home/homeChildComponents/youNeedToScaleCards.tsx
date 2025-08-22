@@ -23,6 +23,9 @@ const useStyles = createUseStyles({
     // marginBottom: 20,
     marginTop: "0px",
     // color: "#222",
+    "@media (max-width: 500px)": {
+      fontSize: 33,
+    },
   },
   hireButton: {
     position: "absolute",

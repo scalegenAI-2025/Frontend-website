@@ -29,6 +29,9 @@ const useStyles = createUseStyles({
     // marginBottom: 20,
     marginTop: "0px",
     color: "#222",
+    "@media (max-width: 500px)": {
+      fontSize: 33,
+    },
   },
   hireButton: {
     backgroundColor: "#fff",
@@ -125,6 +128,9 @@ const useStyles = createUseStyles({
     marginBottom: 10,
     marginTop: 10,
     lineHeight: 1.2,
+    "@media (max-width: 500px)": {
+      fontSize: 28,
+    },
   },
   cardSeparator: {
     height: 1,

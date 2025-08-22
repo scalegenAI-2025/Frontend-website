@@ -140,6 +140,9 @@ const useStyles = createUseStyles({
     marginBottom: 2,
     marginTop: "0px",
     color: "#222",
+    "@media (max-width: 500px)": {
+      fontSize: 33,
+    },
   },
   description: {
     fontSize: 18,

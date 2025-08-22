@@ -6,6 +6,8 @@ import ai2 from "../../../assets/ai2.jpg";
 import ai3 from "../../../assets/ai3.jpg";
 import ai4 from "../../../assets/ai4.jpg";
 import ai5 from "../../../assets/ai5.jpg";
+import ai6 from "../../../assets/bank.jpg";
+import ai7 from "../../../assets/auto.jpg";
 
 const useStyles = createUseStyles({
   container: {
@@ -73,7 +75,7 @@ const PhotoScroller = () => {
   const [maxScroll, setMaxScroll] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const photos = [ai1, ai2, ai3, ai4, ai5];
+  const photos = [ai1, ai2, ai3, ai4, ai5, ai7, ai6];
 
   useEffect(() => {
     const container = scrollContainerRef.current;

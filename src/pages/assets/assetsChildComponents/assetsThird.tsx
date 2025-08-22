@@ -162,6 +162,11 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
     marginBottom: 20,
     color: "#222",
+    "@media (max-width: 500px)": {
+      fontSize: 36,
+      display: "flex",
+      justifyContent: "center",
+    },
   },
   cardsContainer: {
     display: "grid",
@@ -181,13 +186,14 @@ const useStyles = createUseStyles({
     color: "#000",
     borderRadius: 12,
     border: "1px solid rgba(255,255,255,0.1)",
+    boxShadow: "0 5px 0px rgba(126, 122, 122, 0.4)",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     transition: "transform 0.3s, box-shadow 0.3s",
     "&:hover": {
       transform: "translateY(-5px)",
-      boxShadow: "0 5px 0px rgba(126, 122, 122, 0.4)",
+      boxShadow: "0 4px 10px rgba(225, 225, 225, 0.86)",
     },
   },
   cardContent: {
@@ -196,13 +202,17 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    // boxShadow: "0 5px 0px rgba(126, 122, 122, 0.4)",
   },
   cardTitle: {
-    fontSize: 20,
+    fontSize: 28,
     fontWeight: "bold",
     marginBottom: 12,
-    borderBottom: "1px solid #000",
+    // borderBottom: "1px solid #000",
     paddingBottom: 6,
+    "@media (max-width: 500px)": {
+      fontSize: 24,
+    },
   },
   cardDescription: {
     fontSize: 14,

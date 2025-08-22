@@ -341,7 +341,7 @@
 // export default ReadinessRocketPage;
 
 import { createUseStyles } from "react-jss";
-import Rocket from "../../../assets/rocketFrame.png";
+import Rocket from "../../../assets/color-readiness rocket.png";
 import earth from "../../../assets/photorealistic-earth-planet.jpg";
 
 const useStyles = createUseStyles({
@@ -420,6 +420,7 @@ const useStyles = createUseStyles({
   rocketImage: {
     width: "100%",
     height: "auto",
+    borderRadius: "20px",
     "@media (max-width: 700px)": {
       width: "80%",
     },

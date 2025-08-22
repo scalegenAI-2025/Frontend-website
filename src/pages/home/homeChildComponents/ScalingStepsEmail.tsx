@@ -216,7 +216,7 @@
 
 // export default ScalingStepsEmail;
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createUseStyles } from "react-jss";
 import rocket from "../../../assets/Rocket_pic.jpg";
 import scalingImage from "../../../assets/scale.png";
@@ -247,8 +247,10 @@ const useStyles = createUseStyles({
     position: "relative",
     "@media (max-width: 500px)": {
       flexDirection: "row",
-      gap: 10,
-      marginBottom: 30,
+      gap: 40,
+      //  marginBottom: 30,
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
   arrowLine: {
@@ -273,7 +275,7 @@ const useStyles = createUseStyles({
   arrowIcon: {
     display: "none",
     color: "#ccc",
-    fontSize: 24,
+    fontSize: 60,
     fontWeight: "bold",
     "@media (max-width: 500px)": {
       display: "inline-block",
@@ -283,14 +285,15 @@ const useStyles = createUseStyles({
     fontSize: 20,
     color: "#ccc",
     "@media (max-width: 500px)": {
-      fontSize: 12,
+      fontSize: 20,
+      // marginLeft: "20px",
     },
   },
   arrowLabelRight: {
     fontSize: 20,
     color: "#ccc",
     "@media (max-width: 500px)": {
-      fontSize: 12,
+      fontSize: 20,
     },
   },
   stairsWrapper: {
@@ -301,7 +304,17 @@ const useStyles = createUseStyles({
     "@media (max-width: 800px)": {
       height: "auto",
     },
+    "@media (max-width: 500px)": {
+      // display: "flex",
+      // flexDirection: "column",
+      // alignItems: "center",
+      position: "relative",
+      width: "100%",
+      maxWidth: 800,
+      height: 440,
+    },
   },
+
   step: {
     position: "absolute",
     backgroundColor: "#fff",
@@ -330,6 +343,11 @@ const useStyles = createUseStyles({
       fontSize: 14,
       padding: "10px 16px",
     },
+    "@media (max-width: 500px)": {
+      width: "60%",
+      position: "absolute !important",
+      margin: "8px 0px",
+    },
   },
   rocket: {
     position: "absolute",
@@ -351,7 +369,7 @@ const useStyles = createUseStyles({
       textAlign: "left",
     },
     "@media (max-width: 500px)": {
-      marginBottom: 30,
+      marginTop: 460,
     },
   },
   scalingText: {
@@ -361,12 +379,13 @@ const useStyles = createUseStyles({
     color: "#fff",
     fontSize: 24,
     "@media (max-width: 800px)": {
-      position: "static",
-      marginTop: 20,
+      // position: "static",
+      //marginTop: 20,
       textAlign: "right",
     },
     "@media (max-width: 500px)": {
-      marginBottom: 30,
+      // marginTop: 300,
+      fontSize: 18,
     },
   },
   scalingLabelContainer: {
@@ -382,6 +401,11 @@ const useStyles = createUseStyles({
     fontSize: 14,
     "@media (max-width: 800px)": {
       display: "none",
+    },
+    "@media (max-width: 500px)": {
+      // position: "absolute",
+      // bottom: `${6 * 60 + 60}px`,
+      // left: `${6 * 80 + 60}px`,
     },
   },
   scalingLabel: {
@@ -400,6 +424,14 @@ const useStyles = createUseStyles({
     "@media (max-width: 800px)": {
       display: "flex",
     },
+    "@media (max-width: 500px)": {
+      display: "flex",
+      flexDirection: "column",
+      gap: 10,
+      maxWidth: 380,
+      marginBottom: 0,
+      alignItems: "flex-end",
+    },
   },
   mobileScalingLabel: {
     marginTop: 6,
@@ -410,7 +442,7 @@ const useStyles = createUseStyles({
     height: "auto",
   },
   scalingImageMobile: {
-    maxWidth: 120,
+    maxWidth: 80,
     width: "100%",
     height: "auto",
   },
@@ -434,7 +466,12 @@ const steps = [
 
 const ScalingStepsEmail: React.FC = () => {
   const classes = useStyles();
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const handleEmailClick = () => {
     const mailtoLink =
       "mailto:info@scalinggenai.com?subject=Scaling GenAI consultation request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname";
@@ -473,15 +510,15 @@ const ScalingStepsEmail: React.FC = () => {
       </div>
 
       <div className={classes.mobileScalingContainer}>
-        <div className={classes.mobileScalingLabel}>
-          I am now a <span className={classes.highlight}>Scaling</span>{" "}
-          Enterprise
-        </div>
         <img
           src={scalingImage}
           alt="Scaling"
           className={classes.scalingImageMobile}
         />
+        <div className={classes.mobileScalingLabel}>
+          I am now a <span className={classes.highlight}>Scaling</span>{" "}
+          Enterprise
+        </div>
       </div>
 
       <div className={classes.stairsWrapper}>
@@ -504,7 +541,7 @@ const ScalingStepsEmail: React.FC = () => {
             }
             style={{
               bottom: `${i * 60}px`,
-              left: `${i * 80}px`,
+              left: windowWidth > 768 ? `${i * 80}px` : `${i * 20}px`,
             }}
           >
             {step}
@@ -534,3 +571,5 @@ const ScalingStepsEmail: React.FC = () => {
 };
 
 export default ScalingStepsEmail;
+
+//export default ScalingStepsEmail;

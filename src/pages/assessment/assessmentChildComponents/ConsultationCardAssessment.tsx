@@ -114,6 +114,9 @@ const useStyles = createUseStyles({
     backgroundColor: "#F9F7F2",
     //fontFamily: "Arial, sans-serif",
     padding: 80,
+    "@media (max-width: 500px)": {
+      padding: 30,
+    },
   },
   container: {
     backgroundColor: "#fff",
@@ -141,6 +144,9 @@ const useStyles = createUseStyles({
     marginBottom: 2,
     marginTop: "0px",
     color: "#222",
+    "@media (max-width: 500px)": {
+      fontSize: 33,
+    },
   },
   description: {
     fontSize: 18,

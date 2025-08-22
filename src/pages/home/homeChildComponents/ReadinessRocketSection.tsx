@@ -42,31 +42,52 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     gap: "20px",
-
+    alignItems: "center",
     justifyContent: "center",
   },
   description: {
-    fontSize: "34px",
+    fontSize: "23px",
     // fontWeight: "bold",
     color: "#222",
     // lineHeight: "1.5",
     marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  descriptionBig: {
-    fontSize: "40px",
+  descriptionB: {
+    fontSize: "33px",
     fontWeight: "bold",
     color: "#222",
     // lineHeight: "1.5",
     marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  descriptionBig: {
+    fontSize: "33px",
+    fontWeight: "bold",
+    color: "#222",
+    // lineHeight: "1.5",
+    marginBottom: "10px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    //paddingLeft: "30px",
+    marginLeft: "auto",
+    justifyContent: "center",
   },
   availableText: {
-    fontSize: "16px",
+    fontSize: "18px",
     // fontWeight: "bold",
     color: "#333",
     lineHeight: "1.2",
     marginBottom: "20px",
     "@media (max-width: 768px)": {
-      fontSize: "36px",
+      fontSize: "18px",
     },
   },
   buttonContainer: {
@@ -111,6 +132,11 @@ const useStyles = createUseStyles({
       marginTop: "20px",
     },
   },
+  descriptionSpan: {
+    "@media (max-width: 500px)": {
+      paddingLeft: "20px",
+    },
+  },
 });
 
 const ReadinessRocketSection: React.FC = () => {
@@ -128,9 +154,10 @@ const ReadinessRocketSection: React.FC = () => {
         <div className={classes.rightSection}>
           <p className={classes.description}>
             Find out more about <br></br>
-            <span className={classes.descriptionBig}>
-              Readiness Rocket Framework
-            </span>
+            <p className={classes.descriptionB}>
+              Readiness Rocket{" "}
+              <span className={classes.descriptionSpan}>Framework</span>
+            </p>
           </p>
 
           <div className={classes.availableText}>Available on Amazon</div>
@@ -139,8 +166,10 @@ const ReadinessRocketSection: React.FC = () => {
             <button
               className={classes.orderButton}
               onClick={() =>
-                (window.location.href =
-                  "https://www.amazon.com/Scaling-Generative-Operational-Readiness-Enterprises/dp/1637427980")
+                window.open(
+                  "https://www.amazon.com/Scaling-Generative-Operational-Readiness-Enterprises/dp/1637427980",
+                  "_blank"
+                )
               }
             >
               Order →

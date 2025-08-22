@@ -201,6 +201,9 @@ const useStyles = createUseStyles({
     backgroundColor: "#000",
     padding: 20,
     position: "relative",
+    "@media (max-width: 500px)": {
+      paddingBottom: "20px",
+    },
   },
   header: {
     color: "white",
@@ -210,6 +213,9 @@ const useStyles = createUseStyles({
     fontSize: 46,
     fontWeight: "bold",
     marginTop: "0px",
+    "@media (max-width: 500px)": {
+      fontSize: 33,
+    },
   },
   hireButton: {
     position: "absolute",
@@ -230,7 +236,7 @@ const useStyles = createUseStyles({
     display: "flex",
     flexWrap: "wrap",
     gap: 24,
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   card: {
     flex: "1 1 calc(33.33% - 16px)",
@@ -239,6 +245,7 @@ const useStyles = createUseStyles({
     borderRadius: 12,
     overflow: "hidden",
     border: "1px solid rgba(255, 255, 255, 0.1)",
+    boxShadow: "0 2px 0px rgba(225, 225, 225, 0.54)",
     boxSizing: "border-box",
 
     "@media (max-width: 1024px)": {
@@ -250,12 +257,17 @@ const useStyles = createUseStyles({
   },
   cardContent: {
     padding: 32,
+    backgroundColor: " rgba(79, 75, 75, 0.49)",
+    boxShadow: "0 4px 10px rgba(225, 225, 225, 0.86)",
   },
   cardTitle: {
     fontSize: 32,
     fontWeight: 400,
     marginBottom: 16,
     lineHeight: 1.2,
+    "@media (max-width: 500px)": {
+      fontSize: 26,
+    },
   },
   cardDescription: {
     fontSize: 16,

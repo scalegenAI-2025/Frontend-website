@@ -172,6 +172,10 @@ const useStyles = createUseStyles({
     },
     homeHeaderLine: {
       fontSize: "clamp(1.8rem, 8vw, 2.5rem)",
+      "@media (max-width: 500px)": {
+        fontSize: "50px",
+        marginTop: "20px",
+      },
     },
     homeHeader3: {
       fontSize: "clamp(1rem, 5vw, 1.2rem)",

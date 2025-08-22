@@ -23,6 +23,9 @@ const useStyles = createUseStyles({
     position: "relative",
     height: "100vh",
     margin: 0,
+    "@media (max-width: 500px)": {
+      height: "80vh",
+    },
     //overflow: "hidden",
   },
   // backgroundOverlay: {

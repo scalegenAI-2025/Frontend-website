@@ -134,7 +134,7 @@ const useStyles = createUseStyles({
     color: "#555",
   },
   heading2: {
-    fontSize: 46,
+    fontSize: 33,
     fontWeight: "bold",
     marginBottom: 2,
     marginTop: "0px",

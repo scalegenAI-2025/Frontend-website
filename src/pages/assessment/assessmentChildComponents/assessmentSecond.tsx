@@ -29,6 +29,9 @@ const useStyles = createUseStyles({
     padding: "10px 1rem",
     cursor: "default",
     overflow: "hidden", // Prevent content overflow
+    "@media (max-width: 500px)": {
+      height: "500px",
+    },
   },
   spacer: {
     height: "600px", // Fixed height instead of viewport units
