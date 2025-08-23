@@ -44,7 +44,7 @@ const GenAIMindsetCoach: React.FC = () => {
       lineHeight: "1.5",
     },
     purpleText: {
-      color: "#8B4F9F",
+      //  color: "#8B4F9F",
       fontWeight: "bold",
     },
     coachingText: {

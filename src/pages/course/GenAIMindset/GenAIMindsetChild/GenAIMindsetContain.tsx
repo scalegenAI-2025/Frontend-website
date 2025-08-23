@@ -19,10 +19,10 @@ const GenAIMindsetContain: React.FC = () => {
     },
     subtitle: {
       fontSize: "18px",
-      color: "#8000ff",
+      color: "#000",
       fontStyle: "italic",
       marginBottom: "40px",
-      fontWeight: "normal",
+      fontWeight: "bold",
     },
     contentWrapper: {
       display: "grid",
@@ -35,14 +35,14 @@ const GenAIMindsetContain: React.FC = () => {
     dayTitle: {
       fontSize: "24px",
       fontWeight: "bold",
-      color: "#00405a",
+      color: "#000",
       marginBottom: "20px",
       marginTop: "0",
     },
     sectionTitle: {
       fontSize: "16px",
       fontWeight: "bold",
-      color: "#00405a",
+      color: "#000",
       marginBottom: "8px",
       marginTop: "25px",
     },
@@ -60,7 +60,7 @@ const GenAIMindsetContain: React.FC = () => {
     competencyTitle: {
       fontSize: "16px",
       fontWeight: "bold",
-      color: "#00405a",
+      color: "#000",
       marginBottom: "8px",
       marginTop: "25px",
     },

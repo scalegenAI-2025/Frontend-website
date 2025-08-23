@@ -36,14 +36,14 @@ const useStyles = createUseStyles({
     fontSize: "1.5rem",
     fontWeight: "bold",
     margin: "2rem 0 1rem",
-    color: "#002c3e",
+    color: "#000",
   },
   list: {
     paddingLeft: "1.5rem",
     lineHeight: 1.6,
   },
   purpleText: {
-    color: "#8000ff",
+    color: "#000",
     fontWeight: "bold",
   },
   image: {

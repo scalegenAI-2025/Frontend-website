@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import Navbar from "../../../components/navbar/navbar";
+//import Navbar from "../../../components/navbar/navbar";
 import Footer from "../../../components/footer/footer";
 import GenAITransformationTop from "./GenAITransformationChild/GenAITransformationTop";
 import CourseOverview from "./GenAITransformationChild/GenAITransformationOverview";
@@ -8,6 +8,7 @@ import GenAITransformationCoach from "./GenAITransformationChild/GenAITransforma
 import EcosystemPage from "../GenAIMindset/GenAIMindsetChild/ecosystem";
 import { useNavigate } from "react-router-dom";
 import OrderFirstBook from "./GenAITransformationChild/orderBookFour";
+import BlackNavbar from "../../../components/navbar/blackNavbar";
 //import OrderFirstBook from "../AIGenAILeadersBook/AIGenAIChild/orderBook";
 
 const useStyles = createUseStyles({
@@ -53,7 +54,7 @@ function GenAITransformation() {
     <>
       <div className={classes.heroSection}>
         <div className={classes.contentWrapper}>
-          <Navbar />
+          <BlackNavbar />
           <GenAITransformationTop />
           <CourseOverview />
           <GenAITransformationContain />

@@ -49,7 +49,7 @@ const CoachingPage: React.FC = () => {
       marginTop: "8px",
     },
     purpleText: {
-      color: "#8B4F9F",
+      color: "#000",
       fontWeight: "bold",
     },
     coachingText: {

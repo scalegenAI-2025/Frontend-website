@@ -23,7 +23,7 @@ const TechnicalAIContentPage: React.FC = () => {
     },
     subtitle: {
       fontSize: "18px",
-      color: "#8000ff",
+      color: "#000",
       fontStyle: "italic",
       marginBottom: "40px",
       fontWeight: "normal",
@@ -40,7 +40,7 @@ const TechnicalAIContentPage: React.FC = () => {
     topicTitle: {
       fontSize: "16px",
       fontWeight: "bold",
-      color: "#00405a",
+      color: "#000",
       marginBottom: "8px",
       marginTop: "0",
       lineHeight: "1.3",

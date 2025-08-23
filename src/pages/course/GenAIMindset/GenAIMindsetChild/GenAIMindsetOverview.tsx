@@ -18,12 +18,14 @@ const useStyles = createUseStyles({
     // fontFamily: "Arial, sans-serif",
     paddingLeft: "2rem",
     paddingTop: "1rem",
+    display: "flex",
+    justifyContent: "center",
   },
   sectionTitle: {
     fontSize: "1.5rem",
     fontWeight: "bold",
     margin: "2rem 0 1rem",
-    color: "#002c3e",
+    color: "#000",
   },
   list: {
     paddingLeft: "1.5rem",
@@ -33,7 +35,8 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   purpleText: {
-    color: "#8000ff",
+    color: "#000",
+    fontWeight: "bold",
   },
   image: {
     // width: "100%",

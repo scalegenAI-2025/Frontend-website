@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import Framework from "../../../../assets/rocketFrame.png";
+import Framework from "../../../../assets/color-readiness rocket.png";
 
 const useStyles = createUseStyles({
   container: {
@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
     fontSize: "1.5rem",
     fontWeight: "bold",
     margin: "2rem 0 1rem",
-    color: "#002c3e",
+    color: "#000",
   },
   list: {
     paddingLeft: "1.5rem",
@@ -35,7 +35,8 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   purpleText: {
-    color: "#8000ff",
+    color: "#000",
+    fontWeight: "bold",
   },
   image: {
     // width: "100%",

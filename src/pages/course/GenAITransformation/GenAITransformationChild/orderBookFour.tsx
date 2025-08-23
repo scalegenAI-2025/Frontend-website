@@ -5,7 +5,7 @@ import qr from "../../../../assets/QR.png";
 
 const useStyles = createUseStyles({
   container: {
-    backgroundColor: "#fff", // changed to white
+    backgroundColor: "#Fff", // changed to white
     color: "#000",
     // minHeight: "100vh",
     padding: "40px 20px",
@@ -47,7 +47,7 @@ const useStyles = createUseStyles({
   right: {
     flex: "1 1 300px",
     display: "flex",
-    //justifyContent: "flex-end",
+    //  justifyContent: "flex-end",
     alignItems: "center",
     minWidth: "250px",
   },
@@ -70,8 +70,9 @@ const useStyles = createUseStyles({
     margin: "10px 0",
   },
   linkedin: {
-    color: "#d4a0f0",
+    // color: "#d4a0f0",
     fontStyle: "italic",
+    fontWeight: "bold",
   },
   book: {
     width: "100%",
@@ -101,10 +102,11 @@ const useStyles = createUseStyles({
     backgroundColor: "#002c3e",
     color: "white",
     border: "none",
-    padding: "15px 30px",
-    fontSize: "18px",
+    padding: "10px 20px",
+    fontSize: "15px",
     fontWeight: "bold",
     borderRadius: "8px",
+    marginTop: "10px",
     cursor: "pointer",
     transition: "all 0.3s ease",
     "&:hover": {
@@ -135,7 +137,10 @@ export default function OrderFirstBook() {
           </div>
           <div className={classes.contact}>
             amit@amitprabhu.net <br />
-            <a href="https://www.amitprabhu.net" style={{ color: "#70b7ff" }}>
+            <a
+              href="https://www.amitprabhu.net"
+              style={{ color: "rgb(22 105 189)" }}
+            >
               www.amitprabhu.net
             </a>
             <br />
@@ -150,7 +155,8 @@ export default function OrderFirstBook() {
           <div className={classes.contact}>Available on Amazon</div>
           <button
             className={classes.orderButton}
-            onClick={() => (window.location.href = "https://amzn.eu/d/6JhuXlz")}
+            //             onClick={() => (window.location.href = "https://a.co/d/e55uLUL")}
+            onClick={() => window.open("https://amzn.eu/d/6JhuXlz", "_blank")}
           >
             Order →
           </button>

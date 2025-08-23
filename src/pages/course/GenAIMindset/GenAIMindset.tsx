@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import Navbar from "../../../components/navbar/navbar";
+//import Navbar from "../../../components/navbar/navbar";
 import Footer from "../../../components/footer/footer";
 import GenAIMindsetTop from "./GenAIMindsetChild/GenAIMindsetTop";
 import GenAIMindsetOverview from "./GenAIMindsetChild/GenAIMindsetOverview";
@@ -8,6 +8,7 @@ import GenAIOperationalCoach from "../GenAIOperational/GenAIOperationalChild/Gen
 import EcosystemPage from "./GenAIMindsetChild/ecosystem";
 import { useNavigate } from "react-router-dom";
 import OrderFirstBook from "../AIGenAILeadersBook/AIGenAIChild/orderBook";
+import BlackNavbar from "../../../components/navbar/blackNavbar";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -52,7 +53,7 @@ function GenAIMindset() {
     <>
       <div className={classes.heroSection}>
         <div className={classes.contentWrapper}>
-          <Navbar />
+          <BlackNavbar />
           <GenAIMindsetTop />
           <GenAIMindsetOverview />
           <GenAIMindsetContain />

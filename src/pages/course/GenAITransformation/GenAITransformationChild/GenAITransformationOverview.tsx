@@ -35,7 +35,7 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   purpleText: {
-    color: "#8000ff",
+    color: "#000",
   },
   image: {
     width: "100%",
