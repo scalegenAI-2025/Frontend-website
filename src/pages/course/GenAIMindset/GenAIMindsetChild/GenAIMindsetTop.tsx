@@ -133,14 +133,15 @@ const useStyles = createUseStyles({
     textAlign: "center",
   },
   heading: {
-    fontSize: "90px", // large heading
+    fontSize: "clamp(50px, 6vw, 90px)", // scales between mobile and desktop
     fontWeight: 900,
     lineHeight: 1.2,
     textShadow: `
       4px 4px 15px rgba(0, 0, 0, 0.9),
       0px 0px 10px rgba(0, 0, 0, 0.6)
     `,
-    maxWidth: "80%",
+    maxWidth: "90%",
+    wordBreak: "break-word",
   },
 });
 
