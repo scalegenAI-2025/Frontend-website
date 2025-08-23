@@ -627,13 +627,13 @@ const BlackNavbar = () => {
             </button>
           )}
 
-          <Link
+          {/* <Link
             to="/meet-us"
             className={classes.mobileMenuLink}
             onClick={() => setIsMobileOpen(false)}
           >
             Meet Us
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>

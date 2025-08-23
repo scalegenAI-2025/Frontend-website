@@ -23,6 +23,9 @@ const useStyles = createUseStyles({
       padding: "40px 20px",
       gap: "30px",
     },
+    "@media (max-width: 500px)": {
+      minHeight: "70vh",
+    },
   },
   textSection: {
     flex: "1",
@@ -44,7 +47,7 @@ const useStyles = createUseStyles({
     },
     "@media (max-width: 768px)": {
       fontSize: "36px",
-      marginBottom: "20px",
+      marginBottom: "40px",
     },
   },
   ecosystems: {
@@ -60,7 +63,7 @@ const useStyles = createUseStyles({
       fontSize: "48px",
     },
     "@media (max-width: 768px)": {
-      fontSize: "36px",
+      fontSize: "32px",
     },
   },
   multiplier: {
@@ -94,6 +97,11 @@ const useStyles = createUseStyles({
       width: "350px",
       height: "186px",
       transform: "rotate(-5deg)",
+    },
+    "@media (max-width: 500px)": {
+      width: "350px",
+      height: "186px",
+      transform: "rotate(-20deg)",
     },
   },
   video: {

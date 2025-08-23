@@ -26,6 +26,10 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
     marginBottom: 2,
     color: "#222",
+    "@media (max-width: 768px)": {
+      fontSize: "33px",
+      marginBottom: "30px",
+    },
   },
   heading2: {
     fontSize: 46,

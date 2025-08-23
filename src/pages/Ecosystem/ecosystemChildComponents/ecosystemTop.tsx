@@ -27,6 +27,9 @@ const useStyles = createUseStyles({
     color: "#fff",
     overflowX: "hidden",
     maxWidth: "100vw",
+    "@media (max-width: 500px)": {
+      minHeight: "80vh",
+    },
   },
 
   homeHeader: {
@@ -39,6 +42,9 @@ const useStyles = createUseStyles({
     // backgroundColor: "rgba(0, 0, 0, 0.1)", // optional overlay behind text
     padding: "1rem 2rem",
     borderRadius: "12px",
+    "@media (max-width: 500px)": {
+      marginBottom: "30px",
+    },
   },
 
   homeHeaderLine: {

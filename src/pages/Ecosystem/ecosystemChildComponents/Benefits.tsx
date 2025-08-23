@@ -18,6 +18,11 @@ const useStyles = createUseStyles({
     fontSize: "36px",
     fontWeight: "700",
     marginBottom: "24px",
+    "@media (max-width: 500px)": {
+      fontSize: "32px",
+      display: "flex",
+      justifyContent: "center",
+    },
   },
   paragraph: {
     fontSize: "18px",

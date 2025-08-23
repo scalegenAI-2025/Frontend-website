@@ -332,6 +332,9 @@ const useStyles = createUseStyles({
     fontSize: 40,
     fontWeight: "bold",
     //textAlign: "center",
+    "@media (max-width: 500px)": {
+      fontSize: "33px", // stack on mobile
+    },
   },
   cardsContainer: {
     display: "grid",

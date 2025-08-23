@@ -30,6 +30,9 @@ const useStyles = createUseStyles({
     padding: "10px 2rem",
     cursor: "default",
     overflow: "hidden",
+    "@media (max-width: 600px)": {
+      height: "500px",
+    },
   },
   text: {
     fontSize: "clamp(2rem, 6vw, 6rem)",
@@ -48,12 +51,18 @@ const useStyles = createUseStyles({
     fontWeight: 300,
     fontSize: "35px",
     margin: "10px",
+    // fontSize: "clamp(2rem, 6vw, 6rem)",
+    "@media (max-width: 600px)": {
+      fontSize: "20px",
+    },
   },
   blinking: {
     // animation: "$blinkOnce 2s ease-in-out",
   },
   textToBeCrossed: {
     position: "relative",
+    fontSize: "clamp(1.5rem, 4vw, 4rem)",
+
     display: "inline-block",
     "&::after": {
       content: '""',
@@ -65,6 +74,12 @@ const useStyles = createUseStyles({
       width: "100%", // static full width
       transform: "translateY(-50%)",
     },
+  },
+  textToBeNoCrossed: {
+    position: "relative",
+    fontSize: "clamp(1.9rem, 4vw, 4rem)",
+
+    display: "inline-block",
   },
 });
 
@@ -112,7 +127,9 @@ const QuestionOnAI = () => {
         className={`${classes.text} ${shouldBlink ? classes.blinking : ""}`}
       >
         <p className={classes.textTop}>It should be –</p>
-        Will you allow AI to take away your job?
+        <span className={classes.textToBeNoCrossed}>
+          Will you allow AI to take away your job?
+        </span>
       </div>
     </div>
   );

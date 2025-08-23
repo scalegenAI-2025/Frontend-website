@@ -57,6 +57,11 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
     color: "#374151",
     marginBottom: "32px",
+    "@media (max-width: 500px)": {
+      fontSize: "32px",
+      display: "flex",
+      justifyContent: "center",
+    },
   },
   sectionDescription: {
     color: "#6b7280",

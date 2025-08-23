@@ -26,6 +26,9 @@ const useStyles = createUseStyles({
     height: "100vh",
     margin: 0,
     //overflow: "hidden",
+    "@media (max-width: 500px)": {
+      height: "80vh",
+    },
   },
   // backgroundOverlay: {
   //   backgroundImage: `url(${AssetBckground})`,
