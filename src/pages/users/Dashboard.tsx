@@ -82,6 +82,18 @@ const UserDashboard: React.FC = () => {
           >
             Access Courses
           </button>
+          <button
+            className={classes.button}
+            onClick={() => navigate("/assets#middle-section")}
+          >
+            Access Assets
+          </button>
+          <button
+            className={classes.button}
+            onClick={() => navigate("/assessments#middle-section")}
+          >
+            Access Assessment
+          </button>
         </div>
       </div>
     </div>
