@@ -45,7 +45,7 @@ const useStyles = createUseStyles({
   },
   purpleText: {
     fontWeight: "bold",
-    color: "#8B4F9F",
+    color: "#000",
   },
   coachingText: {
     fontStyle: "italic",

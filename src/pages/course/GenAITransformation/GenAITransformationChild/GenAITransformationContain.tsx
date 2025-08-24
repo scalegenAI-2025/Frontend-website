@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
     marginTop: 0,
 
     "@media (max-width: 768px)": {
-      fontSize: "28px",
+      fontSize: "40px",
     },
   },
   subtitle: {

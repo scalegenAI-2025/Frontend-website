@@ -18,6 +18,9 @@ const useStyles = createUseStyles({
     color: "#000000",
     marginBottom: "10px",
     marginTop: 0,
+    "@media (max-width: 600px)": {
+      fontSize: "40px",
+    },
   },
   subtitle: {
     fontSize: "18px",
