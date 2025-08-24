@@ -138,6 +138,7 @@
 //import React from "react";
 
 import { createUseStyles } from "react-jss";
+import { useNavigate } from "react-router-dom";
 
 // ---------- TYPES ----------
 type CategoryKey = "Customer" | "Technology" | "Data" | "People" | "Industry";
@@ -378,14 +379,30 @@ interface CardProps {
 function Card({ item }: CardProps) {
   const classes = useStyles();
   //  const [clicked, setClicked] = useState(false);
+  const navigate = useNavigate();
+
+  const handleDownload = (pdfUrl: string) => {
+    const username = localStorage.getItem("username");
+    if (!username) {
+      navigate("/user-login");
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = pdfUrl.split("/").pop() || "download.pdf";
+    link.click();
+  };
   return (
     <div className={classes.card}>
       <div className={classes.cardContent}>
         <h3 className={classes.cardTitle}>{item.title}</h3>
         <p className={classes.cardDescription}>{item.description}</p>
-        <a href={item.pdf} download className={classes.button}>
+        <button
+          className={classes.button}
+          onClick={() => handleDownload(item.pdf)}
+        >
           Download
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -398,6 +415,7 @@ interface CategorySectionProps {
 
 function CategorySection({ category, items }: CategorySectionProps) {
   const classes = useStyles();
+
   return (
     <section aria-labelledby={`${category}-header`}>
       <h2 id={`${category}-header`} className={classes.categoryHeader}>

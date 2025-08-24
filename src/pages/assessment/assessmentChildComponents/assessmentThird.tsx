@@ -195,6 +195,7 @@
 // }
 
 import { createUseStyles } from "react-jss";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = createUseStyles({
   container: {
@@ -366,7 +367,20 @@ const cardData = [
 
 const AssessmentThirdComponent = () => {
   const classes = useStyles();
-
+  const navigate = useNavigate();
+  const handleDownload = (pdfUrl: string) => {
+    const username = localStorage.getItem("username");
+    if (!username) {
+      // If not logged in, redirect to login
+      navigate("/user-login");
+      return;
+    }
+    // If logged in, trigger file download
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = pdfUrl.split("/").pop() || "download.pdf";
+    link.click();
+  };
   return (
     <div className={classes.container}>
       <h1 className={classes.header}>All you need to Scale</h1>
@@ -376,9 +390,12 @@ const AssessmentThirdComponent = () => {
             <div className={classes.cardContent}>
               <h2 className={classes.cardTitle}>{card.title}</h2>
               <p className={classes.cardDescription}>{card.description}</p>
-              <a href={card.pdf} download>
-                <button className={classes.darkButton}>Download</button>
-              </a>
+              <button
+                className={classes.darkButton}
+                onClick={() => handleDownload(card.pdf)}
+              >
+                Download
+              </button>
             </div>
           </div>
         ))}

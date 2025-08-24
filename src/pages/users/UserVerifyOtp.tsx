@@ -73,7 +73,6 @@ const useStyles = createUseStyles({
     background: "linear-gradient(135deg, #6a11cb, #2575fc, #ff5cac)",
     backgroundSize: "400% 400%",
     animation: "$gradientBG 15s ease infinite",
-    // fontFamily: "Arial, sans-serif",
     padding: 20,
   },
   "@keyframes gradientBG": {
@@ -134,27 +133,33 @@ export default function OtpVerification() {
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const email = location.state?.email || "";
+
   useEffect(() => {
     if (!email) {
       toast.error("Missing email from login. Redirecting to login page...");
-      navigate("/");
+      navigate("/login");
     }
   }, [email, navigate]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Verifying OTP", { email, otp }); // DEBUG
-    if (!email) {
-      toast.error("Missing email from login");
-      return;
-    }
+    if (!email) return;
+
     try {
       const res = await verifyOtp({ email, otp });
-      // console.log("Verify response:", res.data); // DEBUG
-      toast.success(res.data.message || "OTP Verified!");
-      navigate("/user-dashboard");
+      console.log("OTP verify response:", res.data);
+
+      if (res.data.success) {
+        // Mark user as logged in
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("username", email); // optional
+
+        toast.success(res.data.message || "OTP Verified!");
+        navigate("/user-dashboard");
+      } else {
+        toast.error("OTP verification failed");
+      }
     } catch (err: any) {
-      console.error("Verify error:", err);
       toast.error(err.response?.data?.error || "OTP Verification failed");
     }
   };
