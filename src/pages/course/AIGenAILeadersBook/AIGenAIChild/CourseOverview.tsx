@@ -306,7 +306,7 @@ const CourseOverview: React.FC = () => {
           </li>
           <li>Each competency uniquely maps to a behavior</li>
           <li>
-            Digital Leadership Framework providing step-by-step guidelines to
+            Digital Leadership Framework provides step-by-step guidelines to
             cultivate these competencies
           </li>
         </ul>
