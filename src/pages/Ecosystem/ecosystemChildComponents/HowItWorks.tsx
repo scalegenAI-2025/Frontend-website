@@ -44,7 +44,7 @@ const useStyles = createUseStyles({
     },
   },
   title: {
-    fontSize: "42px",
+    fontSize: "36px",
     fontWeight: "600",
     color: "#2d3748",
     marginBottom: "50px",

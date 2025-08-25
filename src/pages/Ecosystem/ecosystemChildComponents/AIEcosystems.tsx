@@ -53,7 +53,7 @@ const useStyles = createUseStyles({
     margin: "0 auto",
   },
   sectionTitle: {
-    fontSize: "48px",
+    fontSize: "36px",
     fontWeight: "bold",
     color: "#374151",
     marginBottom: "32px",
