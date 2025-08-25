@@ -100,7 +100,7 @@
 
 // export default ConsultationCardAssets;
 
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
@@ -194,11 +194,12 @@ const useStyles = createUseStyles({
 
 const ConsultationCardAssets = () => {
   const classes = useStyles();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/member");
-  };
+  // const handleClick = () => {
+  //   navigate("/member");
+  // };
+  const mailtoLink = `mailto:info@scalinggenai.com?subject=Scaling%20GenAI%20consultation%20request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname`;
 
   return (
     <div className={classes.wrapper}>
@@ -206,9 +207,9 @@ const ConsultationCardAssets = () => {
         <h1 className={classes.heading2}>Need help with Assets?</h1>
         <h1 className={classes.heading}>Not sure where to start?</h1>
 
-        <button className={classes.button} onClick={handleClick}>
+        <a href={mailtoLink} className={classes.button}>
           Book a Consultation →
-        </button>
+        </a>
       </div>
     </div>
   );
