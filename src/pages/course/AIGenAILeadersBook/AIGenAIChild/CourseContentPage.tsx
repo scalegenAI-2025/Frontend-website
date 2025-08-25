@@ -142,7 +142,7 @@ const CourseContentPage: React.FC = () => {
               How a growth mindset drives learning
             </li>
             <li className={classes.bulletItem}>
-              Reskilling for 10 new AI/GenAI job roles
+              Reskilling for 12 new AI/GenAI job roles
             </li>
             <li className={classes.bulletItem}>Cultivating a growth mindset</li>
           </ul>
