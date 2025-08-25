@@ -447,7 +447,7 @@ const courses = [
   },
   {
     title: "Cultivating AI/GenAI Mindset",
-    audience: "For executives, middle managers and early career professionals",
+    audience: "For executives, middle managers, and early career professionals",
     hours: "4 hours",
     mode: "Instructor-led",
     delivery: "Online or in-person",
