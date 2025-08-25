@@ -185,10 +185,13 @@ const useStyles = createUseStyles({
     margin: "0px",
     marginTop: "60px",
     // fontFamily: "Arial, sans-serif",
-    paddingLeft: "2rem",
+    //  paddingLeft: "2rem",
     display: "flex",
     justifyContent: "center",
     paddingTop: "1rem",
+    "@media (max-width: 600px)": {
+      paddingLeft: "0rem",
+    },
   },
   sectionTitle: {
     fontSize: "1.5rem",

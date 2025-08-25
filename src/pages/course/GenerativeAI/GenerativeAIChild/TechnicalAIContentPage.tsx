@@ -4,6 +4,9 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles({
   outerContainer: {
     padding: "50px",
+    "@media (max-width: 600px)": {
+      padding: "2rem",
+    },
   },
   container: {
     padding: "10px",
@@ -20,6 +23,8 @@ const useStyles = createUseStyles({
     marginTop: 0,
     "@media (max-width: 600px)": {
       fontSize: "40px",
+      textAlign: "center", // centers text inside the element
+      margin: "0 auto 10px", // keeps block element centered if it has a set width
     },
   },
   subtitle: {

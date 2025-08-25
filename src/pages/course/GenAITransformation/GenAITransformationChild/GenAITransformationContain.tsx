@@ -9,8 +9,8 @@ const useStyles = createUseStyles({
     margin: "0 auto",
     lineHeight: 1.4,
 
-    "@media (max-width: 768px)": {
-      padding: "1.5rem 1rem",
+    "@media (max-width: 600px)": {
+      padding: "2rem",
     },
   },
   title: {
@@ -38,11 +38,14 @@ const useStyles = createUseStyles({
 
     "@media (max-width: 900px)": {
       gridTemplateColumns: "1fr",
-      gap: "40px",
+      gap: "0px",
     },
   },
   daySection: {
     marginBottom: "30px",
+    "@media (max-width: 900px)": {
+      marginBottom: "0px",
+    },
   },
   dayTitle: {
     fontSize: "24px",
@@ -75,6 +78,9 @@ const useStyles = createUseStyles({
     color: "#000",
     marginBottom: "8px",
     marginTop: "25px",
+    "@media (max-width: 900px)": {
+      marginTop: "0px",
+    },
   },
 });
 

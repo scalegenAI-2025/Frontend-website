@@ -16,11 +16,14 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
     margin: "0px",
     // fontFamily: "Arial, sans-serif",
-    paddingLeft: "2rem",
+    // paddingLeft: "2rem",
     paddingTop: "1rem",
     display: "flex",
     justifyContent: "center",
     marginTop: "60px",
+    "@media (max-width: 600px)": {
+      paddingLeft: "0rem",
+    },
   },
   sectionTitle: {
     fontSize: "1.5rem",
@@ -45,6 +48,9 @@ const useStyles = createUseStyles({
     height: "300px",
     borderRadius: "6px",
     //objectFit: "contain",
+    "@media (max-width: 600px)": {
+      height: "180px",
+    },
   },
   button: {
     backgroundColor: "#1e3a5f",

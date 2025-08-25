@@ -14,7 +14,10 @@ const useStyles = createUseStyles({
     maxWidth: "1400px",
     margin: "0 auto",
     "@media (max-width: 768px)": {
-      padding: "60px 40px",
+      //  padding: "60px 40px",
+      "@media (max-width: 600px)": {
+        padding: "2rem",
+      },
     },
   },
   title: {

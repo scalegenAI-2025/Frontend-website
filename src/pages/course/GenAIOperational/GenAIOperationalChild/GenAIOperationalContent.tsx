@@ -8,6 +8,9 @@ const useStyles = createUseStyles({
     maxWidth: "1200px",
     margin: "0 auto",
     lineHeight: 1.4,
+    "@media (max-width: 768px)": {
+      padding: "2rem",
+    },
   },
   title: {
     fontSize: "40px",
@@ -29,11 +32,14 @@ const useStyles = createUseStyles({
     gap: "60px",
     "@media (max-width: 768px)": {
       gridTemplateColumns: "1fr",
-      gap: "30px",
+      gap: "0px",
     },
   },
   daySection: {
     marginBottom: "30px",
+    "@media (max-width: 600px)": {
+      marginBottom: "0px",
+    },
   },
   dayTitle: {
     fontSize: "24px",

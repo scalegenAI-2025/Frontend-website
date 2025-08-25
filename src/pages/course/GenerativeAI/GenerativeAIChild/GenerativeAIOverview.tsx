@@ -26,12 +26,15 @@ const useStyles = createUseStyles({
     fontSize: "2.5rem", // consistent with rem
     fontWeight: "bold",
     margin: "0",
-    paddingLeft: "2rem",
+    // paddingLeft: "2rem",
     paddingTop: "1rem",
     display: "flex",
     justifyContent: "center",
     //fontFamily: "Arial, sans-serif",
     marginTop: "60px",
+    "@media (max-width: 600px)": {
+      paddingLeft: "0rem",
+    },
   },
   sectionTitle: {
     fontSize: "1.5rem",

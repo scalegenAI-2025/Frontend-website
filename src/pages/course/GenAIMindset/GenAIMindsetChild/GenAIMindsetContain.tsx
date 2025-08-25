@@ -8,6 +8,9 @@ const useStyles = createUseStyles({
     maxWidth: "1200px",
     margin: "0 auto",
     lineHeight: 1.4,
+    "@media (max-width: 600px)": {
+      padding: "2rem",
+    },
   },
   title: {
     fontSize: "40px",
@@ -30,11 +33,14 @@ const useStyles = createUseStyles({
 
     "@media (max-width: 768px)": {
       gridTemplateColumns: "1fr",
-      gap: "30px",
+      gap: "0px",
     },
   },
   daySection: {
     marginBottom: "30px",
+    "@media (max-width: 768px)": {
+      marginBottom: "0px",
+    },
   },
   dayTitle: {
     fontSize: "24px",
@@ -54,6 +60,9 @@ const useStyles = createUseStyles({
     margin: 0,
     paddingLeft: "20px",
     marginBottom: "15px",
+    "@media (max-width: 768px)": {
+      marginBottom: "0px",
+    },
   },
   bulletItem: {
     fontSize: "16px",
@@ -67,6 +76,9 @@ const useStyles = createUseStyles({
     color: "#000",
     marginBottom: "8px",
     marginTop: "25px",
+    "@media (max-width: 768px)": {
+      marginBottom: "0px",
+    },
   },
 });
 

@@ -8,11 +8,16 @@ const useStyles = createUseStyles({
     maxWidth: "1200px",
     margin: "0 auto",
     lineHeight: 1.4,
+    "@media (max-width: 600px)": {
+      padding: "2rem",
+    },
   },
   title: {
     fontSize: "40px",
     fontWeight: "bold",
     color: "#000000",
+    textAlign: "center", // centers text inside the element
+    margin: "0 auto 10px",
     marginBottom: "10px",
     marginTop: 0,
   },

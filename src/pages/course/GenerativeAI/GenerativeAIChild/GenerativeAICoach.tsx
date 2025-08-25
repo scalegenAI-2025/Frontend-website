@@ -15,7 +15,10 @@ const useStyles = createUseStyles({
     margin: "0 auto",
 
     "@media (max-width: 768px)": {
-      padding: "40px 20px",
+      // padding: "40px 20px",
+      "@media (max-width: 600px)": {
+        padding: "2rem",
+      },
     },
   },
   title: {

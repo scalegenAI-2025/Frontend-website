@@ -20,6 +20,9 @@ const useStyles = createUseStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 600px)": {
+      minHeight: "80vh",
+    },
   },
 
   contentWrapper: {

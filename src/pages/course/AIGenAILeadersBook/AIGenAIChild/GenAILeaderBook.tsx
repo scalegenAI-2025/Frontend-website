@@ -13,6 +13,10 @@ const useStyles = createUseStyles({
     alignItems: "center", // center horizontally
     padding: "40px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      gridTemplateColumns: "1fr",
+      minHeight: "80vh",
+    },
   },
   heading: {
     fontSize: "clamp(38px, 6vw, 90px)", // scales between mobile and desktop

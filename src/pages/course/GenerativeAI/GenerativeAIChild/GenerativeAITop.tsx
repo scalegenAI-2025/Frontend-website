@@ -124,7 +124,7 @@ const useStyles = createUseStyles({
   container: {
     backgroundImage: `url(${book})`,
     backgroundSize: "cover",
-    backgroundPosition: "center",
+    backgroundPosition: "right",
     color: "#fff",
     minHeight: "100vh",
     display: "flex",
@@ -132,6 +132,9 @@ const useStyles = createUseStyles({
     alignItems: "center", // center horizontally
     padding: "40px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      minHeight: "80vh",
+    },
   },
   heading: {
     fontSize: "clamp(45px, 6vw, 90px)", // scales between mobile and desktop
