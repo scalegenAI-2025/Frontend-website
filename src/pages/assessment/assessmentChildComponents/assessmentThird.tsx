@@ -347,7 +347,8 @@ const cardData = [
   },
   {
     title: "Mindset",
-    description: "Optimistic, skeptic or pragmatic mindset?",
+    description:
+      "Assess your AI/GenAI mindset - optimistic, skeptic, or pragmatic?",
     pdf: "/pdf/AssessmentPdf/Mindset.pdf",
   },
   {
