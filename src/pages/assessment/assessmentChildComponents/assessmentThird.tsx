@@ -347,14 +347,13 @@ const cardData = [
   },
   {
     title: "Mindset",
-    description:
-      "Find out if your organization has the adjacent technologies to scale GenAI",
+    description: "Optimistic, skeptic or pragmatic mindset?",
     pdf: "/pdf/AssessmentPdf/Mindset.pdf",
   },
   {
     title: "Leadership",
     description:
-      "Find out if your organization has the right skills and competencies to scale GenAI",
+      "Assess your digital competencies to drive AI/GenAI transformation",
     pdf: "/pdf/AssessmentPdf/Leadership.pdf",
   },
   {
