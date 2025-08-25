@@ -29,6 +29,11 @@ const useStyles = createUseStyles({
     marginBottom: 20,
     color: "#555",
   },
+  subHeaderI: {
+    fontSize: 16,
+    marginBottom: 20,
+    color: "#555",
+  },
   thankyouContainer: {
     display: "flex",
     flexDirection: "column",
@@ -50,7 +55,7 @@ const useStyles = createUseStyles({
   },
   subHeader2: {
     fontSize: 16,
-    marginBottom: 20,
+    marginBottom: 0,
     color: "#555",
   },
   inputGroup: {
@@ -230,7 +235,9 @@ const PartnerForm = () => {
             Interested in joining the Scaling GenAI ecosystem? Fill out the form
             below to join our network.
           </div>
-
+          <div className={classes.subHeaderI}>
+            <i>All fields are mandatory</i>
+          </div>
           {error && (
             <div role="alert" className={classes.errorMessage}>
               {error}
@@ -239,7 +246,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="organizationName" className={classes.label}>
-              Organization name*
+              Organization name
             </label>
             <input
               id="organizationName"
@@ -267,7 +274,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="firstName" className={classes.label}>
-              First Name*
+              First Name
             </label>
             <input
               id="firstName"
@@ -281,7 +288,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="lastName" className={classes.label}>
-              Last Name*
+              Last Name
             </label>
             <input
               id="lastName"
@@ -295,7 +302,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="email" className={classes.label}>
-              Email*
+              Email
             </label>
             <input
               id="email"
@@ -323,7 +330,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="partnerCategory" className={classes.label}>
-              Enterprises category*
+              Enterprises category
             </label>
             <select
               id="partnerCategory"

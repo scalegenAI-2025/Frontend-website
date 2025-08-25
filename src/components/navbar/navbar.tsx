@@ -354,8 +354,8 @@ const useStyles = createUseStyles({
     },
     "@media (max-width: 600px)": {
       // width: "100px",
-      width: "150px",
-      height: "80px",
+      width: "180px",
+      height: "90px",
       position: "static",
     },
   },
@@ -375,7 +375,7 @@ const useStyles = createUseStyles({
       display: "flex",
       justifyContent: "flex-end", // Aligns content (like the logo) to the right
       alignItems: "center",
-      marginRight: "50px",
+      marginRight: "65px",
     },
   },
 
