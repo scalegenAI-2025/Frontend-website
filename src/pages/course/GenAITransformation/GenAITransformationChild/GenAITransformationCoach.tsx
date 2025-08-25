@@ -104,28 +104,20 @@ const GenAITransformationCoach: React.FC = () => {
             <ul className={classes.bulletList}>
               <li className={classes.bulletItem}>
                 <span className={classes.purpleText}>
-                  Growth Mindset Cultivation Framework
+                  Digital Strategy Framework
                 </span>{" "}
-                to ensure readiness to Reskilling for 10 New AI/GenAI Job Roles
+                to set a guidline for end-to-end strategy creation and execution
               </li>
               <li className={classes.bulletItem}>
-                Reinforcing connections with Key AI Stakeholders through{" "}
-                <span className={classes.purpleText}>
-                  12-Week Empathy program
-                </span>
+                Assessments such as digital maturity, AI maturity and GenAI
+                maturity{" "}
               </li>
               <li className={classes.bulletItem}>
-                Identifying AI/GenAI{" "}
-                <span className={classes.purpleText}>investment areas</span>{" "}
-                based on Informed Decision-Making Framework
+                Situation analysis to create strategy using Porters 5 forces
+                analysis
               </li>
               <li className={classes.bulletItem}>
-                7 important{" "}
-                <span className={classes.purpleText}>scaling actions</span> to
-                be taken using the Fast Execution and{" "}
-                <span className={classes.purpleText}>
-                  Rocket Readiness Framework
-                </span>
+                Critical steps for AI/GenAI strategy execution
               </li>
             </ul>
           </div>
