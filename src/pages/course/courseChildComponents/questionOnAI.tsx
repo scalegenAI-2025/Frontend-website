@@ -74,6 +74,9 @@ const useStyles = createUseStyles({
       width: "100%", // static full width
       transform: "translateY(-50%)",
     },
+    "@media (max-width: 600px)": {
+      fontSize: "clamp(1.0rem, 4vw, 4rem)",
+    },
   },
   textToBeNoCrossed: {
     position: "relative",
