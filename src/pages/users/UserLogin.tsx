@@ -289,7 +289,7 @@ const useStyles = createUseStyles({
     borderRadius: 20,
     padding: 40,
     boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
-    maxWidth: 900,
+    maxWidth: 600,
     width: "100%",
     display: "flex",
     flexDirection: "column",
@@ -307,6 +307,7 @@ const useStyles = createUseStyles({
     width: "100%",
     justifyContent: "space-between",
     flexWrap: "wrap",
+    flexDirection: "column",
     gap: 30,
   },
   imageContainer: {
@@ -327,7 +328,7 @@ const useStyles = createUseStyles({
     color: "#6a11cb",
   },
   formContainer: {
-    flex: "2 1 400px",
+    // flex: "2 1 400px",
     display: "flex",
     flexDirection: "column",
     gap: 20,
@@ -339,8 +340,10 @@ const useStyles = createUseStyles({
     borderRadius: 30,
     background: "#f2f2f2",
     fontSize: 16,
-    width: "100%",
+    // width: "100%",
     boxSizing: "border-box",
+    margin: "auto",
+    width: "70%",
   },
   button: {
     border: "none",
@@ -351,9 +354,48 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
     cursor: "pointer",
     fontSize: 16,
+    margin: "auto",
+    width: "70%",
     transition: "background 0.3s ease",
     "&:hover": { background: "#218838" },
     "&:disabled": { background: "#a0a0a0", cursor: "not-allowed" },
+  },
+  para: {
+    marginTop: "0px",
+    paddingLeft: "10px",
+  },
+  button2: {
+    backgroundColor: "#1e3a5f",
+    color: "white",
+    border: "none",
+    borderRadius: "8px",
+    padding: "16px 32px",
+    fontSize: "1.1rem",
+    fontWeight: "500",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "10px",
+    textDecoration: "none",
+    "&:hover": {
+      backgroundColor: "#2c4a6b",
+      transform: "translateY(-2px)",
+      boxShadow: "0 4px 12px rgba(30, 58, 95, 0.3)",
+    },
+    "&:active": {
+      transform: "translateY(0)",
+    },
+    "@media (max-width: 768px)": {
+      padding: "14px 28px",
+      fontSize: "1rem",
+    },
+  },
+  paraContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
   },
 });
 
@@ -365,6 +407,7 @@ export default function UserLogin() {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", companyName: "" });
   const [loading, setLoading] = useState(false);
+  const mailtoLink = `mailto:info@scalinggenai.com?subject=Scaling%20GenAI%20consultation%20request&body=Hello,%0D%0A%0D%0AI would like to know more about Scaling GenAI.%0D%0A%0D%0AName:%0D%0ACompany:%0D%0AEmail:%0D%0APhone:%0D%0A%0D%0ARegards,%0D%0Aname`;
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -425,6 +468,12 @@ export default function UserLogin() {
               {loading ? "Sending OTP..." : "Login"}
             </button>
           </form>
+          <div className={classes.paraContainer}>
+            <p className={classes.para}>Not a member yet?</p>
+            <a href={mailtoLink} className={classes.button2}>
+              Book a Consultation →
+            </a>
+          </div>
         </div>
       </div>
     </div>

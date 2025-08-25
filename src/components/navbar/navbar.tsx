@@ -297,6 +297,7 @@ import { IoIosLock } from "react-icons/io";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { useUser } from "../../context/userContext";
+import { SlLockOpen } from "react-icons/sl";
 
 const useStyles = createUseStyles({
   navbar: {
@@ -398,7 +399,15 @@ const useStyles = createUseStyles({
       color: "#FF00FF",
     },
   },
-
+  navLinkLockOpen: {
+    fontSize: "1.2rem",
+    textDecoration: "none",
+    color: "#FFffFF",
+    "&:hover": {
+      textDecoration: "underline",
+      color: "#FF00FF",
+    },
+  },
   mainLinks: {
     display: "flex",
     gap: "1rem",
@@ -511,6 +520,32 @@ const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // const isUserLoggedIn = (): boolean => {
+  //   return Boolean(localStorage.getItem("username"));
+  // };
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Initial check
+    setIsLoggedIn(Boolean(localStorage.getItem("username")));
+
+    // Listen for storage changes (sync across tabs)
+    const handleStorage = () => {
+      setIsLoggedIn(Boolean(localStorage.getItem("username")));
+    };
+    window.addEventListener("storage", handleStorage);
+
+    return () => window.removeEventListener("storage", handleStorage);
+  }, []);
+
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
+      localStorage.removeItem("username"); // Clear user session
+      setIsLoggedIn(false);
+      navigate("/"); // Redirect to login
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -574,10 +609,29 @@ const Navbar = () => {
             Login
           </Link> */}
           <Link to="/user-login">
-            <IoIosLock
-              className={classes.navLinkLock}
-              style={{ cursor: "pointer" }}
-            />
+            {isLoggedIn ? (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  cursor: "pointer",
+                }}
+                onClick={handleLogout}
+              >
+                <SlLockOpen className={classes.navLinkLockOpen} />
+                <span
+                  style={{ fontSize: "12px", marginTop: "4px", color: "white" }}
+                >
+                  Logout
+                </span>
+              </div>
+            ) : (
+              <IoIosLock
+                className={classes.navLinkLock}
+                style={{ cursor: "pointer" }}
+              />
+            )}
           </Link>
         </div>
       </div>
