@@ -394,6 +394,10 @@ const useStyles = createUseStyles({
       // marginTop: 300,
       fontSize: 18,
     },
+    "@media (max-width: 450px)": {
+      // marginTop: 300,
+      fontSize: 12,
+    },
   },
   scalingLabelContainer: {
     position: "absolute",

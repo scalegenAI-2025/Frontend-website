@@ -350,7 +350,7 @@ const PartnerForm = () => {
 
           <div className={classes.inputGroup}>
             <label htmlFor="industry" className={classes.label}>
-              Industry (optional)
+              Industry
             </label>
             <input
               id="industry"
