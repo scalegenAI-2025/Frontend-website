@@ -10,6 +10,7 @@ import Footer from "../../components/footer/footer";
 const useStyles = createUseStyles({
   container: {
     maxWidth: 400,
+    marginTop: "140px",
     margin: "50px auto",
     padding: 30,
     borderRadius: 8,

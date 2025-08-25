@@ -272,14 +272,15 @@ import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   wrapper: {
-    minHeight: "100vh",
+    minHeight: "80vh",
     display: "flex",
+    marginTop: "100px",
     justifyContent: "center",
     alignItems: "center",
     background: "linear-gradient(135deg, #6a11cb, #2575fc, #ff5cac)",
     backgroundSize: "400% 400%",
     animation: "$gradientBG 15s ease infinite",
-    padding: 20,
+    /// padding: 20,
   },
   "@keyframes gradientBG": {
     "0%": { backgroundPosition: "0% 50%" },
@@ -289,13 +290,14 @@ const useStyles = createUseStyles({
   card: {
     background: "#fff",
     borderRadius: 20,
-    padding: 40,
+    padding: 10,
     boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
     maxWidth: 600,
-    width: "100%",
+    width: "80%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    height: "80%",
     gap: 30,
   },
   heading: {
