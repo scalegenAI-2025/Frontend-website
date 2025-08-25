@@ -28,6 +28,9 @@ const useStyles = createUseStyles({
     `,
     maxWidth: "90%",
     wordBreak: "break-word",
+    "@media (max-width: 500px)": {
+      fontSize: "clamp(30px, 6vw, 90px)",
+    },
   },
 });
 
