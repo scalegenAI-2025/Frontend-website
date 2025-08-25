@@ -63,6 +63,8 @@ import { createUseStyles } from "react-jss";
 import { verifyOtp } from "../../api/apis";
 import { toast } from "react-toastify";
 import { MdVerified } from "react-icons/md";
+import BlackNavbar from "../../components/navbar/blackNavbar";
+import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -165,24 +167,28 @@ export default function OtpVerification() {
   };
 
   return (
-    <div className={classes.wrapper}>
-      <form className={classes.card} onSubmit={onSubmit}>
-        <div className={classes.heading}>
-          <MdVerified size={28} color="#6a11cb" />
-          Verify OTP
-        </div>
-        <input
-          className={classes.input}
-          type="text"
-          placeholder="Enter OTP"
-          value={otp}
-          onChange={(e) => setOtp(e.target.value)}
-          required
-        />
-        <button className={classes.button} type="submit">
-          Verify
-        </button>
-      </form>
-    </div>
+    <>
+      <BlackNavbar />
+      <div className={classes.wrapper}>
+        <form className={classes.card} onSubmit={onSubmit}>
+          <div className={classes.heading}>
+            <MdVerified size={28} color="#6a11cb" />
+            Verify OTP
+          </div>
+          <input
+            className={classes.input}
+            type="text"
+            placeholder="Enter OTP"
+            value={otp}
+            onChange={(e) => setOtp(e.target.value)}
+            required
+          />
+          <button className={classes.button} type="submit">
+            Verify
+          </button>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 }

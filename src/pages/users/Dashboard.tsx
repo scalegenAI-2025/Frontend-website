@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { createUseStyles } from "react-jss";
+import BlackNavbar from "../../components/navbar/blackNavbar";
+import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -66,17 +68,19 @@ const UserDashboard: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.card}>
-        <h1 className={classes.heading}>Welcome to ScalingGen AI!</h1>
-        <p className={classes.subtext}>
-          You are successfully logged in and verified.
-        </p>
-        <div className={classes.buttonGroup}>
-          <button className={classes.button} onClick={() => navigate("/")}>
-            Go to Home
-          </button>
-          <button
+    <>
+      <BlackNavbar />
+      <div className={classes.wrapper}>
+        <div className={classes.card}>
+          <h1 className={classes.heading}>Welcome to Scaling GenAI!</h1>
+          <p className={classes.subtext}>
+            You are successfully logged in and verified.
+          </p>
+          <div className={classes.buttonGroup}>
+            <button className={classes.button} onClick={() => navigate("/")}>
+              Home
+            </button>
+            {/* <button
             className={classes.button}
             onClick={() => navigate("/courses")}
           >
@@ -87,16 +91,18 @@ const UserDashboard: React.FC = () => {
             onClick={() => navigate("/assets#middle-section")}
           >
             Access Assets
-          </button>
-          <button
+          </button> */}
+            {/* <button
             className={classes.button}
             onClick={() => navigate("/assessments#middle-section")}
           >
             Access Assessment
-          </button>
+          </button> */}
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

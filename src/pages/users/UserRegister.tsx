@@ -74,6 +74,8 @@ import { createUseStyles } from "react-jss";
 import { registerUser } from "../../api/apis";
 import toast from "react-hot-toast";
 import { FaUserCircle } from "react-icons/fa";
+import BlackNavbar from "../../components/navbar/blackNavbar";
+import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -86,6 +88,7 @@ const useStyles = createUseStyles({
     animation: "$gradientBG 15s ease infinite",
     // fontFamily: "Arial, sans-serif",
     padding: 20,
+    marginTop: "50px",
   },
   "@keyframes gradientBG": {
     "0%": { backgroundPosition: "0% 50%" },
@@ -203,53 +206,61 @@ const UserRegister: React.FC = () => {
   };
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.card}>
-        <h2 className={classes.heading}>Register Form</h2>
-        <div className={classes.contentRow}>
-          <div className={classes.imageContainer}>
-            <div className={classes.avatar}>
-              <FaUserCircle />
+    <>
+      <BlackNavbar />
+      <div className={classes.wrapper}>
+        <div className={classes.card}>
+          <h2 className={classes.heading}>Register Form</h2>
+          <div className={classes.contentRow}>
+            <div className={classes.imageContainer}>
+              <div className={classes.avatar}>
+                <FaUserCircle />
+              </div>
             </div>
+            <form className={classes.formContainer} onSubmit={handleSubmit}>
+              <input
+                className={classes.input}
+                placeholder="Username"
+                value={form.username}
+                onChange={(e) => setForm({ ...form, username: e.target.value })}
+              />
+              <input
+                className={classes.input}
+                type="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+              />
+              <input
+                className={classes.input}
+                type="text"
+                placeholder="Mobile Number"
+                value={form.mobileNumber}
+                onChange={(e) =>
+                  setForm({ ...form, mobileNumber: e.target.value })
+                }
+              />
+              <input
+                className={classes.input}
+                placeholder="Company Name"
+                value={form.companyName}
+                onChange={(e) =>
+                  setForm({ ...form, companyName: e.target.value })
+                }
+              />
+              <button
+                className={classes.button}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Registering..." : "Register"}
+              </button>
+            </form>
           </div>
-          <form className={classes.formContainer} onSubmit={handleSubmit}>
-            <input
-              className={classes.input}
-              placeholder="Username"
-              value={form.username}
-              onChange={(e) => setForm({ ...form, username: e.target.value })}
-            />
-            <input
-              className={classes.input}
-              type="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-            />
-            <input
-              className={classes.input}
-              type="text"
-              placeholder="Mobile Number"
-              value={form.mobileNumber}
-              onChange={(e) =>
-                setForm({ ...form, mobileNumber: e.target.value })
-              }
-            />
-            <input
-              className={classes.input}
-              placeholder="Company Name"
-              value={form.companyName}
-              onChange={(e) =>
-                setForm({ ...form, companyName: e.target.value })
-              }
-            />
-            <button className={classes.button} type="submit" disabled={loading}>
-              {loading ? "Registering..." : "Register"}
-            </button>
-          </form>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
