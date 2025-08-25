@@ -347,6 +347,13 @@ const useStyles = createUseStyles({
       width: "60%",
       position: "absolute !important",
       margin: "8px 0px",
+      fontSize: 14,
+    },
+    "@media (max-width: 450px)": {
+      width: "60%",
+      position: "absolute !important",
+      margin: "8px 0px",
+      fontSize: 10,
     },
   },
   rocket: {

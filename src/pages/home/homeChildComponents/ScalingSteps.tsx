@@ -190,7 +190,6 @@ const useStyles = createUseStyles({
     border: "none",
     borderRadius: 12,
     fontWeight: "bold",
-    fontSize: 14,
     cursor: "pointer",
     minWidth: 140,
   },
