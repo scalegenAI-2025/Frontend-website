@@ -139,6 +139,8 @@ export default function OrderFirstBook() {
             amit@amitprabhu.net <br />
             <a
               href="https://www.amitprabhu.net"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "rgb(22 105 189)" }}
             >
               www.amitprabhu.net

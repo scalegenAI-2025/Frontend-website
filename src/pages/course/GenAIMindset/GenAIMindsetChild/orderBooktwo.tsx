@@ -135,7 +135,12 @@ export default function OrderFirstBook() {
           </div>
           <div className={classes.contact}>
             amit@amitprabhu.net <br />
-            <a href="https://www.amitprabhu.net" style={{ color: "#70b7ff" }}>
+            <a
+              href="https://www.amitprabhu.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "rgb(22 105 189)" }}
+            >
               www.amitprabhu.net
             </a>
             <br />
