@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     margin: 0,
   },
   content: {
-    padding: "60px 80px",
+    padding: "60px 60px",
     maxWidth: "1400px",
     margin: "0 auto",
   },

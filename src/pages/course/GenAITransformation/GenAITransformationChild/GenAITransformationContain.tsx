@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   container: {
-    padding: "2rem",
+    padding: "60px",
     backgroundColor: "#ffffff",
     maxWidth: "1200px",
     margin: "0 auto",
@@ -85,14 +85,13 @@ const GenAITransformationContain: React.FC = () => {
     <div className={classes.container}>
       <h1 className={classes.title}>Content</h1>
       <p className={classes.subtitle}>
-        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (2 hours
-        free)
+        Instructor-led, in-person/virtual, 6 hours, 1-2-1 coaching (1 hour free)
       </p>
 
       <div className={classes.contentWrapper}>
         {/* DAY 1 */}
         <div className={classes.daySection}>
-          <h2 className={classes.dayTitle}>DAY 1</h2>
+          {/* <h2 className={classes.dayTitle}>DAY 1</h2> */}
 
           <div className={classes.sectionTitle}>
             Need for AI/GenAI Leadership
@@ -157,7 +156,7 @@ const GenAITransformationContain: React.FC = () => {
 
         {/* DAY 2 */}
         <div className={classes.daySection}>
-          <h2 className={classes.dayTitle}>DAY 2</h2>
+          {/* <h2 className={classes.dayTitle}>DAY 2</h2> */}
 
           <div className={classes.competencyTitle}>Competency 2# Empathy</div>
           <ul className={classes.bulletList}>

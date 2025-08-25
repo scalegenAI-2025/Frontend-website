@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   container: {
-    padding: "2rem",
+    padding: "60px",
     backgroundColor: "#ffffff",
     maxWidth: "1200px",
     margin: "0 auto",
@@ -73,7 +73,7 @@ const CourseContentPage: React.FC = () => {
     <div className={classes.container}>
       <h1 className={classes.title}>Content</h1>
       <p className={classes.subtitle}>
-        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (1 hours
+        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (1 hour
         free)
       </p>
 

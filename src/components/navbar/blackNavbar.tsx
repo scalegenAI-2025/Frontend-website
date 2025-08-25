@@ -412,6 +412,7 @@ const useStyles = createUseStyles({
 
   navLink: {
     color: "#fff",
+    fontSize: "16px",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",

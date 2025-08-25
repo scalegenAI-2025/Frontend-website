@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   container: {
-    padding: "2rem",
+    padding: "60PX",
     backgroundColor: "#ffffff",
     maxWidth: "1200px",
     margin: "0 auto",
@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
     color: "#000",
     fontStyle: "italic",
     marginBottom: "40px",
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
   contentWrapper: {
     display: "grid",
@@ -83,7 +83,7 @@ const GenAIMindsetContain: React.FC = () => {
       <div className={classes.contentWrapper}>
         {/* DAY 1 */}
         <div className={classes.daySection}>
-          <h2 className={classes.dayTitle}>DAY 1</h2>
+          {/* <h2 className={classes.dayTitle}>DAY 1</h2> */}
 
           <div className={classes.sectionTitle}>Need for Right Mindset</div>
           <ul className={classes.bulletList}>

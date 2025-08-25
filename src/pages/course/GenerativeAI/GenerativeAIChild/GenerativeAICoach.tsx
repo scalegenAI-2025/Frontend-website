@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import coach from "../../../../assets/amitsirsecondpic.png";
+import coach from "../../../../assets/At the office-rafiki.png";
 
 const useStyles = createUseStyles({
   container: {

@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     padding: 0,
   },
   content: {
-    padding: "60px 20px",
+    padding: "60px 60px",
     maxWidth: "1400px",
     margin: "0 auto",
   },
@@ -98,7 +98,7 @@ const CoachingPage: React.FC = () => {
                 <span className={classes.purpleText}>
                   Growth Mindset Cultivation Framework
                 </span>{" "}
-                to ensure readiness to Reskilling for 10 New AI/GenAI Job Roles
+                to ensure readiness to Reskilling for 12 New AI/GenAI Job Roles
               </li>
               <li className={classes.bulletItem}>
                 Reinforcing connections with Key AI Stakeholders through{" "}

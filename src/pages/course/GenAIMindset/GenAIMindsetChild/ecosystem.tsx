@@ -4,7 +4,7 @@ import ecosystem from "../../../../assets/super ecosystem image.jpg";
 
 const useStyles = createUseStyles({
   container: {
-    padding: "40px",
+    padding: "60px",
     backgroundColor: "#ffffff",
     maxWidth: "1400px",
     display: "flex",
