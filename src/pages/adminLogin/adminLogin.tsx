@@ -4,6 +4,8 @@ import { createUseStyles } from "react-jss";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axios";
 import { toast } from "react-toastify";
+import BlackNavbar from "../../components/navbar/blackNavbar";
+import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   container: {
@@ -168,36 +170,40 @@ const AdminLogin: React.FC = () => {
   };
 
   return (
-    <form className={classes.container} onSubmit={handleSubmit}>
-      <div className={classes.logo} aria-label="Logo">
-        A
-      </div>
-      <h2 className={classes.heading}>Admin Login</h2>
+    <>
+      <BlackNavbar />
+      <form className={classes.container} onSubmit={handleSubmit}>
+        <div className={classes.logo} aria-label="Logo">
+          A
+        </div>
+        <h2 className={classes.heading}>Admin Login</h2>
 
-      {error && <p className={classes.error}>{error}</p>}
+        {error && <p className={classes.error}>{error}</p>}
 
-      <input
-        name="email"
-        type="email"
-        value={form.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-        className={classes.input}
-      />
-      <input
-        name="password"
-        type="password"
-        value={form.password}
-        onChange={handleChange}
-        placeholder="Password"
-        required
-        className={classes.input}
-      />
-      <button type="submit" className={classes.button} disabled={loading}>
-        {loading ? "Logging in..." : "Login"}
-      </button>
-    </form>
+        <input
+          name="email"
+          type="email"
+          value={form.email}
+          onChange={handleChange}
+          placeholder="Email"
+          required
+          className={classes.input}
+        />
+        <input
+          name="password"
+          type="password"
+          value={form.password}
+          onChange={handleChange}
+          placeholder="Password"
+          required
+          className={classes.input}
+        />
+        <button type="submit" className={classes.button} disabled={loading}>
+          {loading ? "Logging in..." : "Login"}
+        </button>
+      </form>
+      <Footer />
+    </>
   );
 };
 

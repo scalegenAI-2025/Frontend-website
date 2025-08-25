@@ -267,6 +267,8 @@ import { loginUser } from "../../api/apis";
 import { toast } from "react-toastify";
 import { FaUserCircle } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
+import BlackNavbar from "../../components/navbar/blackNavbar";
+import Footer from "../../components/footer/footer";
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -434,48 +436,56 @@ export default function UserLogin() {
   };
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.card}>
-        <h2 className={classes.heading}>Login</h2>
-        <div className={classes.contentRow}>
-          <div className={classes.imageContainer}>
-            <div className={classes.avatar}>
-              <FaUserCircle />
+    <>
+      <BlackNavbar />
+      <div className={classes.wrapper}>
+        <div className={classes.card}>
+          <h2 className={classes.heading}>Login</h2>
+          <div className={classes.contentRow}>
+            <div className={classes.imageContainer}>
+              <div className={classes.avatar}>
+                <FaUserCircle />
+              </div>
             </div>
-          </div>
-          <form className={classes.formContainer} onSubmit={onSubmit}>
-            <input
-              className={classes.input}
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={onChange}
-              disabled={loading}
-              required
-            />
-            <input
-              className={classes.input}
-              type="text"
-              name="companyName"
-              placeholder="Company Name"
-              value={form.companyName}
-              onChange={onChange}
-              disabled={loading}
-              required
-            />
-            <button className={classes.button} type="submit" disabled={loading}>
-              {loading ? "Sending OTP..." : "Login"}
-            </button>
-          </form>
-          <div className={classes.paraContainer}>
-            <p className={classes.para}>Not a member yet?</p>
-            <a href={mailtoLink} className={classes.button2}>
-              Book a Consultation →
-            </a>
+            <form className={classes.formContainer} onSubmit={onSubmit}>
+              <input
+                className={classes.input}
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={onChange}
+                disabled={loading}
+                required
+              />
+              <input
+                className={classes.input}
+                type="text"
+                name="companyName"
+                placeholder="Company Name"
+                value={form.companyName}
+                onChange={onChange}
+                disabled={loading}
+                required
+              />
+              <button
+                className={classes.button}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Sending OTP..." : "Login"}
+              </button>
+            </form>
+            <div className={classes.paraContainer}>
+              <p className={classes.para}>Not a member yet?</p>
+              <a href={mailtoLink} className={classes.button2}>
+                Book a Consultation →
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

@@ -82,6 +82,9 @@ const useStyles = createUseStyles({
     lineHeight: 1.5,
     marginBottom: 32,
     opacity: 0.9,
+    "@media (max-width: 768px)": {
+      fontSize: 14,
+    },
   },
   cardButton: {
     backgroundColor: "transparent",
