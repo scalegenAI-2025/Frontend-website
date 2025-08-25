@@ -211,7 +211,7 @@ const useStyles = createUseStyles({
     fontWeight: "bold",
   },
   image: {
-    width: "50%",
+    width: "80%",
     //  margin: "1rem 0",
     margin: "auto",
     borderRadius: "6px",
