@@ -99,22 +99,17 @@ const GenAIMindsetCoach: React.FC = () => {
 
             <ul className={classes.bulletList}>
               <li className={classes.bulletItem}>
-                <span className={classes.purpleText}>
-                  Readiness Rocket Framework
-                </span>{" "}
-                an operational readiness framework for Scaling Generative AI
+                The importance of cultivating the growth mindset
               </li>
               <li className={classes.bulletItem}>
-                Assessments such as AI maturity, GenAI maturity, AI/GenAI
-                Mindsets, VITA scores
+                Understanding the key differences between the fixed and growth
+                mindset
               </li>
               <li className={classes.bulletItem}>
-                Implementation of readiness areas: customer, technology, data,
-                and people
+                Growth mindset cultivation framework
               </li>
               <li className={classes.bulletItem}>
-                Setting the foundations: boosters and launchpad, for readiness
-                rocket
+                Practical applications of growth mindset
               </li>
             </ul>
           </div>
@@ -151,7 +146,7 @@ const GenAIMindsetCoach: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>feedback</span> on
-              the operational readiness development
+              the growth mindset cultivation
             </li>
           </ul>
         </div>
