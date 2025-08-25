@@ -58,6 +58,9 @@ const useStyles = createUseStyles({
       textDecoration: "underline",
       cursor: "pointer",
     },
+    "@media (max-width: 450px)": {
+      fontSize: "0.9rem",
+    },
   },
   logoImage: {
     maxWidth: 700, // increased size, can adjust px or %
