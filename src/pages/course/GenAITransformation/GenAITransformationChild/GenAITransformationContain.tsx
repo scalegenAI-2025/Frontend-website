@@ -100,19 +100,28 @@ const GenAITransformationContain: React.FC = () => {
           {/* <h2 className={classes.dayTitle}>DAY 1</h2> */}
 
           <div className={classes.sectionTitle}>
-            Need for AI/GenAI Leadership
+            Digital Transformation Overview
           </div>
           <ul className={classes.bulletList}>
+            <li className={classes.bulletItem}>Busines areas and technology</li>
             <li className={classes.bulletItem}>
-              Why are business incumbents struggling to adopt genAI?
+              Digital landscape and disruptions
             </li>
             <li className={classes.bulletItem}>
-              <em>Predigital v Digital</em> style of leadership
+              Three types of transformations
+            </li>
+            <li className={classes.bulletItem}>Customers in Digital Economy</li>
+            <li className={classes.bulletItem}>Ecosystems and platforms</li>
+            <li className={classes.bulletItem}>
+              Role of AI/GenAI in digital transformation
+            </li>
+            <li className={classes.bulletItem}>
+              AI, Digital Transformation, and Corporate Strategy
             </li>
           </ul>
 
           <div className={classes.sectionTitle}>
-            6 facts about AI/GenAI every leader must know
+            6 facts about AI/GenAI every professional must know
           </div>
           <ul className={classes.bulletList}>
             <li className={classes.bulletItem}>
@@ -129,24 +138,26 @@ const GenAITransformationContain: React.FC = () => {
             <li className={classes.bulletItem}>How GPT works</li>
           </ul>
 
-          <div className={classes.sectionTitle}>
-            Developing a Leadership Brand
-          </div>
+          <div className={classes.sectionTitle}>Strategy Creation</div>
           <ul className={classes.bulletList}>
             <li className={classes.bulletItem}>
-              6 different styles of leadership
+              Evaluating the results of Digital Maturity, AI Maturity, and GenAI
+              Maturity Assessment
             </li>
-            <li className={classes.bulletItem}>24 AI-conducive behaviours</li>
+            <li className={classes.bulletItem}>Situation Analysis</li>
             <li className={classes.bulletItem}>
-              Assessing the AI needs of your organization
+              Learnings from best cases studies
             </li>
             <li className={classes.bulletItem}>
-              Crafting a leadership brand statement
+              Preparing a generic DT Strategic
+            </li>
+            <li className={classes.bulletItem}>
+              Preparing a specific AI/GenAI Strategy
             </li>
           </ul>
 
-          <div className={classes.competencyTitle}>
-            Competency 1# Growth Mindset
+          {/* <div className={classes.competencyTitle}>
+            Wanted Position and Strategic Priorities
           </div>
           <ul className={classes.bulletList}>
             <li className={classes.bulletItem}>Anatomy of growth mindset</li>
@@ -157,58 +168,58 @@ const GenAITransformationContain: React.FC = () => {
               Reskilling for 10 new AI/GenAI job roles
             </li>
             <li className={classes.bulletItem}>Cultivating a growth mindset</li>
-          </ul>
+          </ul> */}
         </div>
 
         {/* DAY 2 */}
         <div className={classes.daySection}>
           {/* <h2 className={classes.dayTitle}>DAY 2</h2> */}
 
-          <div className={classes.competencyTitle}>Competency 2# Empathy</div>
+          <div className={classes.competencyTitle}>
+            Wanted Position and Strategic Priorities
+          </div>
           <ul className={classes.bulletList}>
+            <li className={classes.bulletItem}>Defining a wanted position</li>
             <li className={classes.bulletItem}>
-              Empathy framework: Think-Feel-Will Analysis
+              Listing the key strategic priorities
             </li>
             <li className={classes.bulletItem}>
-              How empathy drives empowerment
+              Learnings from best case studies
             </li>
-            <li className={classes.bulletItem}>
-              Using empathy for team building, stakeholder management and
-              influencing, networking, mentoring, and reverse mentoring
-            </li>
-            <li className={classes.bulletItem}>
+            {/* <li className={classes.bulletItem}>
               Implementing a 12-week empathy program
+            </li> */}
+          </ul>
+
+          <div className={classes.competencyTitle}>Strategy Execution- 1</div>
+          <ul className={classes.bulletList}>
+            <li className={classes.bulletItem}>Choose transformation type</li>
+            <li className={classes.bulletItem}>
+              Selecting pilot or genAI solution (no-pilot) approach
+            </li>
+            <li className={classes.bulletItem}>
+              Greenfield v Brownfield strategy
+            </li>
+            <li className={classes.bulletItem}>
+              Positioning in the genAI value chain
             </li>
           </ul>
 
-          <div className={classes.competencyTitle}>
-            Competency 3# Informed Decision-Making
-          </div>
+          <div className={classes.competencyTitle}>Strategy Execution-2</div>
           <ul className={classes.bulletList}>
-            <li className={classes.bulletItem}>Avoiding bias traps</li>
             <li className={classes.bulletItem}>
-              Data driven Decision-making model
-            </li>
-            <li className={classes.bulletItem}>Assessing the right data</li>
-            <li className={classes.bulletItem}>
-              Tackling the most challenging decision: Should we invest in
-              AI/GenAI?
-            </li>
-          </ul>
-
-          <div className={classes.competencyTitle}>
-            Competency 4# Fast Execution
-          </div>
-          <ul className={classes.bulletList}>
-            <li className={classes.bulletItem}>The need for speed</li>
-            <li className={classes.bulletItem}>
-              Managing uncertainties using the Act-learn-Build model
+              Business models, business case, use case, and productivity gain
             </li>
             <li className={classes.bulletItem}>
-              7 key actions to be taken by AI/Gen Leaders
+              Identify the key change areas
             </li>
+            <li className={classes.bulletItem}>LLM and vendor selection</li>
             <li className={classes.bulletItem}>
-              Scaling genAI using the Readiness Rocket Framework
+              Mapping adjacent technologies
+            </li>
+            <li className={classes.bulletItem}>Defining key metrics</li>
+            <li className={classes.bulletItem}>
+              Continuous monitoring and improvement
             </li>
           </ul>
         </div>
