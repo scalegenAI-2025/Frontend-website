@@ -169,28 +169,20 @@ const useStyles = createUseStyles({
       justifyContent: "center",
     },
   },
-  // cardsContainer: {
-  //   display: "grid",
-  //   gridTemplateColumns: "repeat(3, 1fr)",
-  //   gap: 24,
-  //   marginBottom: "80px",
-  //   backgroundColor: "white",
-  //   "@media (max-width: 1024px)": {
-  //     gridTemplateColumns: "repeat(2, 1fr)",
-  //   },
-  //   "@media (max-width: 768px)": {
-  //     gridTemplateColumns: "1fr",
-  //   },
-  // },
 
   cardsContainer: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)", // default: 3 per row (desktop)
     gap: 24,
     marginBottom: "80px",
     backgroundColor: "white",
     gridAutoRows: "1fr",
-    alignItems: "stretch", // ⬅️ forces equal height
+    alignItems: "stretch",
+
+    // 📱 Mobile view → 1 card per row
+    "@media (max-width: 768px)": {
+      gridTemplateColumns: "1fr",
+    },
   },
 
   card: {
