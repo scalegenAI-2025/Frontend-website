@@ -146,7 +146,7 @@ const GenAITransformationCoach: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>check-ins</span>{" "}
-              on implementation of the four competencies
+              on strategy creation and execution
             </li>
             <li className={classes.bulletItem}>
               Problem-solving and{" "}
@@ -154,7 +154,7 @@ const GenAITransformationCoach: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>feedback</span> on
-              the personal development
+              the strategy development
             </li>
           </ul>
         </div>

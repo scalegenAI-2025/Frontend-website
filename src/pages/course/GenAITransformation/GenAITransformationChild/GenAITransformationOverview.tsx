@@ -40,6 +40,7 @@ const useStyles = createUseStyles({
   },
   purpleText: {
     color: "#000",
+    fontWeight: "bold",
   },
   image: {
     width: "75%",
@@ -141,7 +142,7 @@ const CourseOverview: React.FC = () => {
           <li>Instructor-driven online or classroom-based</li>
           <li>Duration: 6 hours</li>
           <li>
-            <span className={classes.purpleText}>Target Audience:</span>
+            <span className={classes.purpleText}>Target Audience: </span>
             All Leaders/Managers at levels L1,L2,L3 and L4. strategists,
             transformation drivers, change agents, program/project managers
           </li>

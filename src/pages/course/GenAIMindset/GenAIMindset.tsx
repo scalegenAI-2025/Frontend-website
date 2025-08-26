@@ -4,11 +4,12 @@ import Footer from "../../../components/footer/footer";
 import GenAIMindsetTop from "./GenAIMindsetChild/GenAIMindsetTop";
 import GenAIMindsetOverview from "./GenAIMindsetChild/GenAIMindsetOverview";
 import GenAIMindsetContain from "./GenAIMindsetChild/GenAIMindsetContain";
-import GenAIOperationalCoach from "../GenAIOperational/GenAIOperationalChild/GenAIOperationalCoach";
+//import GenAIOperationalCoach from "../GenAIOperational/GenAIOperationalChild/GenAIOperationalCoach";
 import EcosystemPage from "./GenAIMindsetChild/ecosystem";
 import { useNavigate } from "react-router-dom";
 import OrderFirstBook from "../AIGenAILeadersBook/AIGenAIChild/orderBook";
 import BlackNavbar from "../../../components/navbar/blackNavbar";
+import GenAIMindsetCoach from "./GenAIMindsetChild/GenAIMindsetCoach";
 
 const useStyles = createUseStyles({
   heroSection: {
@@ -60,7 +61,8 @@ function GenAIMindset() {
           <GenAIMindsetTop />
           <GenAIMindsetOverview />
           <GenAIMindsetContain />
-          <GenAIOperationalCoach />
+          {/* <GenAIOperationalCoach /> */}
+          <GenAIMindsetCoach />
           <EcosystemPage />
         </div>
         <button className={classes.button} onClick={handleClick}>

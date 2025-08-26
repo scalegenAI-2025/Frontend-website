@@ -103,15 +103,15 @@ const GenAIOperationalOverView: React.FC = () => {
           </li>
           <li>
             As per a study by BCG, only 10% of them have scaled genAI, whereas
-            90% of them are still lagging.
+            90% of them are still lagging
           </li>
           <li>
-            This has caused a huge gap between scaling and lagging companies.
+            This has caused a huge gap between scaling and lagging companies
           </li>
           <li>
             One of the key reasons for this huge gap is a lack of operational
             readiness, i.e most of the enterprises are not operationally ready
-            to scale genAI.
+            to scale genAI
           </li>
         </ul>
 
@@ -120,11 +120,11 @@ const GenAIOperationalOverView: React.FC = () => {
         <ul className={classes.list}>
           <li>
             Enterprises should implement the Operational Readiness, a.k.a
-            Readiness Rocket Framework.
+            Readiness Rocket Framework
           </li>
           <li>
-            It comprises the 4 readiness areas: Customers, Technology, Data,
-            People; boosters, launchpad, strategy and a maturity assessment.
+            It comprises the 4 readiness areas, boosters, launchpad, strategy,
+            and maturity assessment
           </li>
           <li>
             A convertible pilot or a genAI solution or MVP should be developed
@@ -144,10 +144,11 @@ const GenAIOperationalOverView: React.FC = () => {
         <h3 className={classes.sectionTitle}>FORMAT</h3>
         <ul className={classes.list}>
           <li>Instructor-driven online or classroom-based</li>
-          <li>Duration: 6 hours spanning over 2 days</li>
+          <li>Duration: 12 hours spanning over 2 days</li>
           <li>
             <span className={classes.purpleText}>Target Audience:</span> All
-            Leaders/Managers at levels L1, L2, L3 and L4
+            Leaders/Managers at levels L1,L2,L3 and L4, strategists,
+            transformation drivers, change agents, program/project managers
           </li>
         </ul>
 

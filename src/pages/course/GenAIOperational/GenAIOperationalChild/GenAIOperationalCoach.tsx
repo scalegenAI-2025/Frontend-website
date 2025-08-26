@@ -146,7 +146,7 @@ const GenAIOperationalCoach: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>check-ins</span>{" "}
-              on strategy creation and execution
+              on implementation of readiness rocket components
             </li>
             <li className={classes.bulletItem}>
               Problem-solving and{" "}

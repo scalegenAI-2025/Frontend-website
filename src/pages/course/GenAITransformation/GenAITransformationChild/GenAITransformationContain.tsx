@@ -149,7 +149,7 @@ const GenAITransformationContain: React.FC = () => {
               Learnings from best cases studies
             </li>
             <li className={classes.bulletItem}>
-              Preparing a generic DT Strategic
+              Preparing a generic DT Strategy
             </li>
             <li className={classes.bulletItem}>
               Preparing a specific AI/GenAI Strategy

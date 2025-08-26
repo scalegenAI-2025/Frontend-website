@@ -178,11 +178,6 @@ const GenAIMindsetOverview: React.FC = () => {
         </ul>
 
         {/* INTRODUCTORY TALK */}
-        <h3 className={classes.sectionTitle}>INTRODUCTORY TALK</h3>
-        <ul className={classes.list}>
-          <li>30-minute overview + 15 minutes of Q&A</li>
-          <li>Optional and free of charge</li>
-        </ul>
       </div>
     </>
   );

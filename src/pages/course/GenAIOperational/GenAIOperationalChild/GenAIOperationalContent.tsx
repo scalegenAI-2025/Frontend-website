@@ -88,7 +88,7 @@ const GenAIOperationalContent: React.FC = () => {
       <div className={classes.contentWrapper}>
         {/* DAY 1 */}
         <div className={classes.daySection}>
-          {/* <h2 className={classes.dayTitle}>DAY 1</h2> */}
+          <h2 className={classes.dayTitle}>DAY 1</h2>
 
           <div className={classes.sectionTitle}>Scaled Adoption of GenAI</div>
           <ul className={classes.bulletList}>
@@ -151,7 +151,7 @@ const GenAIOperationalContent: React.FC = () => {
 
         {/* DAY 2 */}
         <div className={classes.daySection}>
-          {/* <h2 className={classes.dayTitle}>DAY 2</h2> */}
+          <h2 className={classes.dayTitle}>DAY 2</h2>
 
           <div className={classes.competencyTitle}>
             Readiness Area 2: Technology
