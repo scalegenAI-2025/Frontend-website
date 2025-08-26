@@ -51,6 +51,12 @@ const useStyles = createUseStyles({
     "@media (max-width: 600px)": {
       height: "180px",
     },
+    "@media (max-width: 500px)": {
+      height: "140px",
+    },
+    "@media (max-width: 450px)": {
+      height: "120px",
+    },
   },
   button: {
     backgroundColor: "#1e3a5f",

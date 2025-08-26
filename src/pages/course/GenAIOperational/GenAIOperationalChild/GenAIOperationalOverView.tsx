@@ -45,6 +45,9 @@ const useStyles = createUseStyles({
     height: "600px",
     borderRadius: "6px",
     //objectFit: "contain",
+    "@media (max-width: 500px)": {
+      height: "500px",
+    },
   },
   button: {
     backgroundColor: "#1e3a5f",

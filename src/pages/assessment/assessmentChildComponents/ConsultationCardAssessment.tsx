@@ -193,6 +193,10 @@ const useStyles = createUseStyles({
       padding: "14px 28px",
       fontSize: "1rem",
     },
+    "@media (max-width: 450px)": {
+      padding: "14px 28px",
+      fontSize: "0.6rem",
+    },
   },
 });
 
