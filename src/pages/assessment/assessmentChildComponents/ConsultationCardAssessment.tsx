@@ -207,7 +207,7 @@ const ConsultationCardAssets = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <h1 className={classes.heading2}>Need help with Assessment?</h1>
+        <h1 className={classes.heading2}>Need help with Assessments?</h1>
         <h1 className={classes.heading}>Not sure where to start?</h1>
 
         <a href={mailtoLink} className={classes.button}>

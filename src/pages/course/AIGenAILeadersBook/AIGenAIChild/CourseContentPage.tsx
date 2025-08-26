@@ -16,10 +16,13 @@ const useStyles = createUseStyles({
     fontSize: "40px",
     fontWeight: "bold",
     color: "#000000",
-    textAlign: "center", // centers text inside the element
-    margin: "0 auto 10px",
+
     marginBottom: "10px",
     marginTop: 0,
+    "@media (max-width: 600px)": {
+      textAlign: "center", // centers text inside the element
+      margin: "0 auto 10px",
+    },
   },
   subtitle: {
     fontSize: "18px",

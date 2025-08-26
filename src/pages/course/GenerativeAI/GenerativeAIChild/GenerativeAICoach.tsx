@@ -102,14 +102,14 @@ const CoachingPage: React.FC = () => {
         {/* Upper content and image side-by-side */}
         <div className={classes.lowerSection}>
           <div className={classes.leftSection}>
-            <p className={classes.sectionIntro}>
+            {/* <p className={classes.sectionIntro}>
               In the <span className={classes.courseText}>course</span>, you
               will be introduced to:
-            </p>
+            </p> */}
 
             <ul className={classes.bulletList}>
               <li className={classes.bulletItem}>
-                Three types of technical professionals would enroll in the
+                Three types of technical professionls would enroll in the
                 course:
                 <ul className={classes.subList}>
                   <li>Type A: Same role, same job description, No AI/GenAI</li>
@@ -147,10 +147,7 @@ const CoachingPage: React.FC = () => {
 
         {/* Coaching section below */}
         <div>
-          <p className={classes.sectionIntro}>
-            In the <span className={classes.coachingText}>coaching</span>, there
-            will be:
-          </p>
+          <p className={classes.sectionIntro}>The coaching format comprises:</p>
 
           <ul className={classes.bulletList}>
             <li className={classes.bulletItem}>
@@ -159,7 +156,7 @@ const CoachingPage: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>check-ins</span>{" "}
-              on implementation of the four competencies
+              on implementation of the technical concepts
             </li>
             <li className={classes.bulletItem}>
               Problem-solving and{" "}
@@ -167,7 +164,7 @@ const CoachingPage: React.FC = () => {
             </li>
             <li className={classes.bulletItem}>
               Continuous <span className={classes.purpleText}>feedback</span> on
-              the personal development
+              the technical competence development
             </li>
           </ul>
         </div>

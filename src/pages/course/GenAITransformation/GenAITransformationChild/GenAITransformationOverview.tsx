@@ -110,19 +110,19 @@ const CourseOverview: React.FC = () => {
           <li>As a result, 90% pilots will not make it to production</li>
           <li>
             And those with a scaling strategy, normally don’t have a
-            comprehensive end-to- end framework
+            comprehensive end-to-end framework
           </li>
         </ul>
 
         {/* SOLUTION */}
         <h3 className={classes.sectionTitle}>SOLUTION</h3>
         <ul className={classes.list}>
-          <li>GenAI Pilots should be selected with a scaling strategy.</li>
+          <li>GenAI Pilots should be selected with a scaling strategy</li>
           <li>
-            Scaling strategy can be developed using Digital Strategy Framework.
+            Scaling strategy can be developed using Digital Strategy Framework
           </li>
           <li>
-            It is an end-to-end framework comprising startegy creation, strategy
+            It is an end-to-end framework comprising strategy creation, strategy
             execution, along with wanted position and strategic priorities
           </li>
         </ul>
@@ -138,11 +138,12 @@ const CourseOverview: React.FC = () => {
         {/* FORMAT */}
         <h3 className={classes.sectionTitle}>FORMAT</h3>
         <ul className={classes.list}>
-          <li>Instructor-driven online or classroom based</li>
-          <li>Duration: 12 hours spanning over 2 days</li>
+          <li>Instructor-driven online or classroom-based</li>
+          <li>Duration: 6 hours</li>
           <li>
-            <span className={classes.purpleText}>Target Audience:</span> All
-            Leaders/Managers at levels L1, L2, L3 and L4
+            <span className={classes.purpleText}>Target Audience:</span>
+            All Leaders/Managers at levels L1,L2,L3 and L4. strategists,
+            transformation drivers, change agents, program/project managers
           </li>
         </ul>
 

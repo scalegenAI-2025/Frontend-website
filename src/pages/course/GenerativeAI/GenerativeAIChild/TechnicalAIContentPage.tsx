@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
     lineHeight: 1.4,
   },
   title: {
-    fontSize: "48px",
+    fontSize: "40px",
     fontWeight: "bold",
     color: "#000000",
     marginBottom: "10px",
@@ -124,7 +124,7 @@ const TechnicalAIContentPage: React.FC = () => {
         "Key capabilities of agents and how they can add efficiencies in processes and workflows",
     },
     {
-      title: "Retrieval Augmentation Generation (RAG)",
+      title: "Retrieval-Augmented Generation (RAG)",
       description: "Need for RAGs, RAG architectures, different RAG techniques",
     },
     {

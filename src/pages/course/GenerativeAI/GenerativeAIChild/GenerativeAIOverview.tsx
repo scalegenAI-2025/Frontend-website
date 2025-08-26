@@ -113,23 +113,23 @@ const CourseOverview: React.FC = () => {
             <ul className={classes.list}>
               <li>
                 GenAI is a digital transformation technology that can enable
-                business transformation.
+                business transformation
               </li>
               <li>
                 Based on transformer architecture, an evolution of neural
-                networks — the foundation of deep learning.
+                networks — the foundation of deep learning
               </li>
               <li>
                 A wealth of GenAI content exists: research papers, articles,
-                blogs, videos, and social media.
+                blogs, videos, and social media
               </li>
               <li>
                 These materials are often filled with technical jargon and
-                complex visuals intended for researchers.
+                complex visuals intended for researchers
               </li>
               <li>
                 This makes it difficult for professionals and students to fully
-                grasp the concepts.
+                grasp the concepts
               </li>
             </ul>
           </section>
@@ -140,15 +140,15 @@ const CourseOverview: React.FC = () => {
             <ul className={classes.list}>
               <li>
                 Technical reskilling is critical to leading AI/GenAI
-                transformation.
+                transformation
               </li>
               <li>
                 This masterclass simplifies complex GenAI concepts, delivering
-                high-quality, applicable knowledge.
+                high-quality applicable knowledge
               </li>
               <li>
                 Covers GenAI 2.0: scaling, operational readiness, multimodal
-                capabilities, and advanced LLM features.
+                capabilities, and advanced LLM features
               </li>
             </ul>
           </section>
@@ -183,19 +183,19 @@ const CourseOverview: React.FC = () => {
             <ul className={classes.list}>
               <li>
                 <span className={classes.purpleText}>Coaching</span> ensures
-                workplace application of skills.
+                workplace application of skills
               </li>
               <li>
                 <span className={classes.purpleText}>Call-to-Action</span>{" "}
-                accelerates GenAI deployment in organizations.
+                accelerates GenAI deployment in organizations
               </li>
               <li>
                 <span className={classes.purpleText}>Content</span>{" "}
-                customization to stand out in your domain.
+                customization to stand out in your domain
               </li>
               <li>
                 <span className={classes.purpleText}>Collaboration</span>{" "}
-                through partnerships and ecosystems.
+                through partnerships and ecosystems
               </li>
             </ul>
           </section>

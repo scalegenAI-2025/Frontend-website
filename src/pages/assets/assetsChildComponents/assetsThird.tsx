@@ -169,19 +169,30 @@ const useStyles = createUseStyles({
       justifyContent: "center",
     },
   },
+  // cardsContainer: {
+  //   display: "grid",
+  //   gridTemplateColumns: "repeat(3, 1fr)",
+  //   gap: 24,
+  //   marginBottom: "80px",
+  //   backgroundColor: "white",
+  //   "@media (max-width: 1024px)": {
+  //     gridTemplateColumns: "repeat(2, 1fr)",
+  //   },
+  //   "@media (max-width: 768px)": {
+  //     gridTemplateColumns: "1fr",
+  //   },
+  // },
+
   cardsContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: 24,
     marginBottom: "80px",
     backgroundColor: "white",
-    "@media (max-width: 1024px)": {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-    "@media (max-width: 768px)": {
-      gridTemplateColumns: "1fr",
-    },
+    gridAutoRows: "1fr",
+    alignItems: "stretch", // ⬅️ forces equal height
   },
+
   card: {
     backgroundColor: "#dfdddd",
     color: "#000",
@@ -196,7 +207,9 @@ const useStyles = createUseStyles({
       transform: "translateY(-5px)",
       boxShadow: "0 4px 10px rgba(225, 225, 225, 0.86)",
     },
+    height: "100%", // ⬅️ ensures card fills available height
   },
+
   cardContent: {
     padding: 20,
     flex: 1,

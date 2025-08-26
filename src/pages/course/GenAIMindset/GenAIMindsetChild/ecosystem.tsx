@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
     minWidth: "280px",
   },
   title: {
-    fontSize: "48px",
+    fontSize: "40px",
     fontWeight: "bold",
     color: "#000000",
     marginBottom: "40px",

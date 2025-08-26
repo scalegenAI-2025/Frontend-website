@@ -153,13 +153,13 @@ const QualitiesPage = () => {
     {
       title: "Customer",
       description:
-        "The success of a business hinges on three key factors: delivering value to customers, generating profits, and managing customer relationships effectively. GenAI can enhance these factors by creating differentiated content to boost value and profits while fostering trust through responsible AI adoption. Understanding customer perspectives on GenAI is crucial, making customer the first readiness area of readiness rocket",
+        "The success of a business hinges on three key factors: delivering value to customers, generating profits, and managing customer relationships effectively. GenAI can enhance these factors by creating differentiated content to boost value and profits while fostering trust through responsible AI adoption. Understanding customer perspectives on GenAI is crucial, making customer the first readiness area of readiness rocket.",
       image: Customer,
     },
     {
       title: "Technology",
       description:
-        "GenAI systems demand a strong technological foundation to support complex computations, scalable resources, and smooth integration with existing IT systems. Efficient management of technical debt is crucial to maximize the value and performance of these solutions. This makes technology the second readiness area of readiness rocket",
+        "GenAI systems demand a strong technological foundation to support complex computations, scalable resources, and smooth integration with existing IT systems. Efficient management of technical debt is crucial to maximize the value and performance of these solutions. This makes technology the second readiness area of readiness rocket.",
       image: Technology,
     },
     {

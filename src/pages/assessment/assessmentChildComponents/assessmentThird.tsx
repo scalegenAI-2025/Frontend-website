@@ -342,19 +342,20 @@ const cardData = [
   },
   {
     title: "Reskilling",
-    description: "Find out how ready your customers are for GenAI",
+    description:
+      "For individuals to assess their AI/GenAI maturity and prepare a personalized roadmap",
     pdf: "/pdf/AssessmentPdf/Reskilling.pdf",
   },
   {
     title: "Mindset",
     description:
-      "Assess your AI/GenAI mindset - optimistic, skeptic, or pragmatic?",
+      "For individuals to assess AI/GenAI mindset: optimistic, skeptic, or pragmatic",
     pdf: "/pdf/AssessmentPdf/Mindset.pdf",
   },
   {
     title: "Leadership",
     description:
-      "Assess your digital competencies to drive AI/GenAI transformation",
+      "For leaders to assess digital competencies to drive AI/GenAI transformation",
     pdf: "/pdf/AssessmentPdf/Leadership.pdf",
   },
   {
