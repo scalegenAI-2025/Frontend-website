@@ -126,7 +126,7 @@ const HowItWorks: React.FC = () => {
       number: "04",
       title: "Question Posting",
       description:
-        "When a collaborator wants to seek knowledge, he/she can post a new question by creating a new discussion thread on the collaboration forum, after specifying a knowledge category.",
+        "Collaborator can post a question on the collaboration forum, after specifying its knowledge category.",
     },
     {
       number: "05",

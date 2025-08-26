@@ -455,7 +455,7 @@ const courses = [
   {
     title: "AI/GenAI Operational Readiness",
     audience: "For executives and middle managers",
-    hours: "6 hours",
+    hours: "12 hours",
     mode: "Instructor-led",
     delivery: "Online or in-person",
   },

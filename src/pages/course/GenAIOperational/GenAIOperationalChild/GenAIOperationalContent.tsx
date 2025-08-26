@@ -82,7 +82,8 @@ const GenAIOperationalContent: React.FC = () => {
     <div className={classes.container}>
       <h1 className={classes.title}>Content</h1>
       <p className={classes.subtitle}>
-        Instructor-led, in-person/virtual, 6 hours, 1-2-1 coaching (1 hour free)
+        Instructor-led, in-person/virtual, 12 hours, 1-2-1 coaching (1 hour
+        free)
       </p>
 
       <div className={classes.contentWrapper}>
