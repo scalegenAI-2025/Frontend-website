@@ -251,6 +251,12 @@ const useStyles = createUseStyles({
       color: "black",
     },
   },
+  note: {
+    color: "gray",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 // ---------- DATA ----------
@@ -354,8 +360,9 @@ const categories: Categories = {
       pdf: "/pdf/AssetsPdf/I-GenAI Impact finance.pdf",
     },
     {
-      title: "GenAI Impact on CMT",
-      description: "Transformation in communications, media, and technology.",
+      title: "GenAI Impact on Communications",
+      description:
+        "Transformation in cellular, internet, and consumer electronics.",
       pdf: "/pdf/AssetsPdf/I-GenAI impact-communications.pdf",
     },
     {
@@ -423,9 +430,13 @@ function CategorySection({ category, items }: CategorySectionProps) {
 
   return (
     <section aria-labelledby={`${category}-header`}>
+      <p className={classes.note}>
+        <i> Only member enterprises can download assets</i>
+      </p>
       <h2 id={`${category}-header`} className={classes.categoryHeader}>
         {category}
       </h2>
+
       <div className={classes.cardsContainer}>
         {items.map((item) => (
           <Card key={item.title} item={item} />
