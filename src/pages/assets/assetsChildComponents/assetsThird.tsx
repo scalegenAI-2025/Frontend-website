@@ -256,6 +256,9 @@ const useStyles = createUseStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    "@media (max-width: 500px)": {
+      fontSize: 12,
+    },
   },
 });
 
