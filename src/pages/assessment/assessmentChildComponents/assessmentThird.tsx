@@ -304,6 +304,15 @@ const useStyles = createUseStyles({
       color: "#111",
     },
   },
+  note: {
+    color: "gray",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    "@media (max-width: 500px)": {
+      fontSize: 12,
+    },
+  },
 });
 
 const cardData = [
@@ -384,6 +393,9 @@ const AssessmentThirdComponent = () => {
   };
   return (
     <div className={classes.container}>
+      <p className={classes.note}>
+        <i> Only member enterprises can download Assessments</i>
+      </p>
       <h1 className={classes.header}>All you need to Scale</h1>
       <div className={classes.cardsContainer}>
         {cardData.map((card, index) => (
