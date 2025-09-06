@@ -205,8 +205,9 @@ const EcosystemHero = () => {
         <div className={classes.container}>
           {/* <h1 className={classes.heading2}>Need help with ecosystem?</h1> */}
           <h1 className={classes.heading2}>
-            An ecosystem is a cohort where people share AI knowledge, skills,
-            and best practices related to a certain AI topic with each other.
+            An ecosystem is a cohort where people seek and share AI knowledge,
+            skills, and best practices related to a certain AI topic with each
+            other.
           </h1>
 
           <button className={classes.button} onClick={handleClick}>
