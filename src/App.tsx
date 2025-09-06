@@ -47,11 +47,26 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/assets" element={<Assets />} />
         <Route path="/courses" element={<Course />} />
-        <Route path="/courses/course1" element={<AIGenAILeadersBook />} />
-        <Route path="/courses/course2" element={<GenerativeAI />} />
-        <Route path="/courses/course3" element={<GenAITransformation />} />
-        <Route path="/courses/course5" element={<GenAIOperational />} />
-        <Route path="/courses/course4" element={<GenAIMindset />} />
+        <Route
+          path="/courses/Essential-Competencies-of-AI/GenAI-Leader"
+          element={<AIGenAILeadersBook />}
+        />
+        <Route
+          path="/courses/Generative-AI-Technical-Masterclass"
+          element={<GenerativeAI />}
+        />
+        <Route
+          path="/courses/AI/GenAI-Transformation-Strategy"
+          element={<GenAITransformation />}
+        />
+        <Route
+          path="/courses/Cultivating-AI/GenAI-Mindset"
+          element={<GenAIOperational />}
+        />
+        <Route
+          path="/courses/AI/GenAI-Operational-Readiness"
+          element={<GenAIMindset />}
+        />
         <Route path="/assessments" element={<Assessment />} />
         <Route path="/ecosystem" element={<Ecosystem />} />
         {/* <Route path="/register" element={<Register />} />
