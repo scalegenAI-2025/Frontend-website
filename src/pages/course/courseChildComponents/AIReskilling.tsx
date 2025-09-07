@@ -88,7 +88,7 @@ const AIReskilling = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("");
+    navigate("https://www.digiculum.com/Reskilling");
   };
 
   return (
