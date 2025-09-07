@@ -88,7 +88,7 @@ const AIReskilling = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("https://www.digiculum.com/Reskilling");
+    navigate("");
   };
 
   return (
@@ -103,9 +103,11 @@ const AIReskilling = () => {
           {/* Fill out the membership form and we shall get back to you for a
           consultation. */}
         </p>
-        <button className={classes.button} onClick={handleClick}>
-          Explore →
-        </button>
+        <a href="https://www.digiculum.com/Reskilling">
+          <button className={classes.button} onClick={handleClick}>
+            Explore →
+          </button>
+        </a>
       </div>
     </div>
   );
