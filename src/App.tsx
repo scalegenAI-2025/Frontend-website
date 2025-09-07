@@ -61,11 +61,11 @@ function App() {
         />
         <Route
           path="/courses/Cultivating-AI/GenAI-Mindset"
-          element={<GenAIOperational />}
+          element={<GenAIMindset />}
         />
         <Route
           path="/courses/AI/GenAI-Operational-Readiness"
-          element={<GenAIMindset />}
+          element={<GenAIOperational />}
         />
         <Route path="/assessments" element={<Assessment />} />
         <Route path="/ecosystem" element={<Ecosystem />} />
